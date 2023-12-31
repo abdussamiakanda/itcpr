@@ -8,9 +8,7 @@ function myHeader() {
                 <div class="about-items">
                     <div onclick="goTo('./story')">Our Story</div>
                     <div onclick="goTo('./charter')">Institutional Charter</div>
-                    <div onclick="goTo('./policy')">Research Policy</div>
-                    <div onclick="goTo('./collaboration')">Collaboration Agreement</div>
-                    <div onclick="goTo('./technology')">Technology and Security Policy</div>
+                    <div onclick="goTo('./policy')">Research Facilities</div>
                 </div>
             </div>
             <div class="menu-item research">Research <i class="fa-solid fa-chevron-down"></i>
