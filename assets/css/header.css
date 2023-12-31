@@ -1,63 +1,134 @@
 @media screen and (min-width: 40em) {
-  .introduction {
-    padding: 100px 10px 80px 10px;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0px auto;
+  html {
+    width: 100%;
+    margin: 0px;
   }
-  .introduction .name {
-    font-size: 45px;
-    font-weight: bold;
-  }
-  
-  .academic-divs {
-    background-color: rgba(104, 136, 111, 0.1);
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    padding: 30px 35px;
-    margin: 0px 50px 50px 50px;
-    border-radius: 20px;
-    transition-duration: 0.5s;
-  }
-  .academic-divs:hover {
+  body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
     background-color: rgb(241, 241, 241);
-    box-shadow: 0px 0px 10px rgba(104, 136, 111, 0.5);
+    color: rgb(49, 49, 49);
+    font-size: 16px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px auto;
+    position: relative;
   }
-  .div-title {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 20px;
+
+  /* MENU CSS */
+
+  .menu {
+    position: fixed;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: -90px;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+    transform: translateY(100px);
+    z-index: 100;
+  }
+  .menu .head {
+    width: 60px;
+    height: 60px;
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    transition-duration: 0.5s;
-    display: inline-block;
   }
-  .div-title i {
-    margin-right: 10px;
+  .menu .head:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   }
-  .div-title:hover {
-    color: rgb(21, 126, 251);
-  }
-  .div-title:hover .fa-arrow-right {
-    margin-left: 10px;
-    transition-duration: 0.5s;
+  .menu .head img {
+    width: 40px;
   }
 
-
+  .pc-menu {
+    font-size: 20px;
+    padding: 5px;
+    margin: 0px 20px;
+    border-radius: 20px;
+    background-color: rgb(241, 241, 241);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pc-menu:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  }
+  .pc-menu .menu-item {
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  .pc-menu .menu-item:hover {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 18px;
+    transition: 0.5s;
+  }
+  .about-items {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 40px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+  }
+  .about:hover .about-items {
+    display: block;
+  }
+  .research-items {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 40px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+  }
+  .research:hover .research-items {
+    display: block;
+  }
+  .pc-menu .menu-item div div {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .pc-menu .menu-item div div:hover {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+    transition: 0.5s;
+  }
 }
 
 @media screen and (min-width: 0em) and (max-width: 40em) {
-  html{
-    width:100%;
+  html {
+    width: 100%;
     margin: 0px;
     user-select: none;
     -moz-user-select: none;
   }
-  body{
-    font-family: 'Poppins', sans-serif;
+  body {
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     background-color: rgb(241, 241, 241);
     color: rgb(49, 49, 49);
     font-size: 14px;
-    width:100%;
+    width: 100%;
     padding: 0px;
     margin: 0px auto;
     position: relative;
@@ -87,10 +158,10 @@
     justify-content: center;
     background-color: white;
     border-radius: 100%;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     cursor: pointer;
   }
-  .menu .head:hover img{
+  .menu .head:hover img {
     transform: rotateZ(360deg);
     transition-duration: 1s;
   }
@@ -102,16 +173,16 @@
     padding: 3px;
     border-radius: 50px;
     background-color: rgb(241, 241, 241);
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .center-menu:hover {
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   }
   .center-menu .selected {
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     background-color: white;
     border-radius: 50px;
     transition: 0.5s;
@@ -126,7 +197,7 @@
     margin: 0px 10px;
     background-color: white;
     border-radius: 100%;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,7 +209,7 @@
     transform: rotateZ(360deg);
     transition-duration: 1s;
   }
-  
+
   .bar {
     width: 22px;
     height: 3px;
@@ -147,7 +218,7 @@
     border-radius: 3px;
     transition: 0.5s;
   }
-  
+
   .active .bar:nth-child(2) {
     opacity: 0;
   }
@@ -163,7 +234,7 @@
     top: 55px;
     right: 0px;
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     font-size: 15px;
     padding: 2px;
@@ -175,7 +246,7 @@
   }
   .right-menu .right-menu-options div:hover {
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     padding: 3px 10px;
   }
@@ -189,7 +260,7 @@
     width: 100%;
     height: 100%;
     z-index: -10;
-    color: rgba(0,0,0,0.1);
+    color: rgba(0, 0, 0, 0.1);
   }
   .background div div {
     font-size: 25px;
@@ -208,15 +279,25 @@
     font-size: 28px;
     font-weight: bold;
   }
-  
+
   .colorful {
-    background-image: linear-gradient(90deg, #FC466B 0%, #8075ff 58%, #3F5EFB 100%);
+    background-image: linear-gradient(
+      90deg,
+      #fc466b 0%,
+      #8075ff 58%,
+      #3f5efb 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .colorful2 {
-    background-image: linear-gradient(90deg, rgba(252, 70, 107, 0.2) 0%, rgba(128, 117, 255, 0.2) 58%, rgba(63, 94, 251, 0.2) 100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(252, 70, 107, 0.2) 0%,
+      rgba(128, 117, 255, 0.2) 58%,
+      rgba(63, 94, 251, 0.2) 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -250,7 +331,7 @@
     display: inline-block;
     color: rgb(49, 49, 49);
     background-color: white;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     padding: 5px 10px;
     margin: 3px 0px;
@@ -259,7 +340,7 @@
   .links a:hover {
     padding: 5px 10px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
     transition: 0.5s;
   }
   .links a:hover i {
@@ -268,21 +349,21 @@
   }
 
   /* SKILLS CSS */
-  
-  .skills{
+
+  .skills {
     padding: 10px 0px;
     width: 100%;
   }
-  .skill{
+  .skill {
     width: 100%;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     margin: 3px 0px;
     font-size: 12px;
   }
-  .percent{
+  .percent {
     padding: 5px 10px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     font-size: 12px;
   }
@@ -306,26 +387,30 @@
     height: 100px;
     object-fit: cover;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   }
-
 
   /* SOCIAL CSS */
 
-  .social{
+  .social {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .social-item{
+  .social-item {
     margin: 5px;
     padding: 0px 5px;
     font-size: 30px;
     cursor: pointer;
   }
-  .social-item:hover{
-    background-image: linear-gradient(141deg, #adf1e0, #2e1bff 28%, #18ff23 98%);
+  .social-item:hover {
+    background-image: linear-gradient(
+      141deg,
+      #adf1e0,
+      #2e1bff 28%,
+      #18ff23 98%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -335,7 +420,4 @@
     margin: 20px 0px;
     text-align: center;
   }
-
-
-
 }

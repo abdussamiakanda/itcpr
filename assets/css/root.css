@@ -1,0 +1,32 @@
+:root {
+    scroll-behavior: smooth;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    padding: 0px;
+    margin: 0px;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(21, 126, 251);
+  }
+  a:hover {
+    color: rgb(0, 76, 153);
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  input,select{
+    font-family: 'Poppins', sans-serif;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  .hide {
+    display: none;
+  }
