@@ -57,7 +57,7 @@
   .boxes div .profile {
     display: block;
     padding: 10px;
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
