@@ -1,15 +1,7 @@
 @media screen and (min-width: 40em) {
-  .introduction {
-    padding: 100px 10px 80px 10px;
-    text-align: center;
-    max-width: 1000px;
-    margin: 0px auto;
+  .top {
+    margin-top: 120px;
   }
-  .introduction .name {
-    font-size: 45px;
-    font-weight: bold;
-  }
-  
   .academic-divs {
     background-color: rgba(104, 136, 111, 0.1);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -22,25 +14,17 @@
     background-color: rgb(241, 241, 241);
     box-shadow: 0px 0px 10px rgba(104, 136, 111, 0.5);
   }
-  .div-title {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition-duration: 0.5s;
-    display: inline-block;
-  }
-  .div-title i {
-    margin-right: 10px;
-  }
-  .div-title:hover {
-    color: rgb(21, 126, 251);
-  }
-  .div-title:hover .fa-arrow-right {
-    margin-left: 10px;
-    transition-duration: 0.5s;
-  }
 
+  .objective {
+    max-width: 1200px;
+    margin: 0px auto;
+  }
+  .obj-name {
+    padding-bottom: 10px;
+    text-align: justify;
+  }
+  
+  
   .boxes {
     display: flex;
     flex-direction: row;
@@ -61,14 +45,11 @@
     transition-duration: 0.5s;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     background-color: #333;
-    color: white
+    color: white;
   }
-  .boxes div span {
-    font-size: 14px;
-    padding: 10px 10px 5px 10px;
-  }
-  .boxes div b {
-    padding: 0px 10px 10px 10px;
+  .boxes div h3 {
+    padding: 10px;
+    text-align: center;
   }
   .boxes div img {
     width: 300px;
@@ -76,24 +57,22 @@
     border-radius: 10px 10px 0px 0px;
     object-fit: cover;
   }
-
-
 }
 
 @media screen and (min-width: 0em) and (max-width: 40em) {
-  html{
-    width:100%;
+  html {
+    width: 100%;
     margin: 0px;
     user-select: none;
     -moz-user-select: none;
   }
-  body{
-    font-family: 'Poppins', sans-serif;
+  body {
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     background-color: rgb(241, 241, 241);
     color: rgb(49, 49, 49);
     font-size: 14px;
-    width:100%;
+    width: 100%;
     padding: 0px;
     margin: 0px auto;
     position: relative;
@@ -123,10 +102,10 @@
     justify-content: center;
     background-color: white;
     border-radius: 100%;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     cursor: pointer;
   }
-  .menu .head:hover img{
+  .menu .head:hover img {
     transform: rotateZ(360deg);
     transition-duration: 1s;
   }
@@ -138,16 +117,16 @@
     padding: 3px;
     border-radius: 50px;
     background-color: rgb(241, 241, 241);
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .center-menu:hover {
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   }
   .center-menu .selected {
-    box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     background-color: white;
     border-radius: 50px;
     transition: 0.5s;
@@ -162,7 +141,7 @@
     margin: 0px 10px;
     background-color: white;
     border-radius: 100%;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -174,7 +153,7 @@
     transform: rotateZ(360deg);
     transition-duration: 1s;
   }
-  
+
   .bar {
     width: 22px;
     height: 3px;
@@ -183,7 +162,7 @@
     border-radius: 3px;
     transition: 0.5s;
   }
-  
+
   .active .bar:nth-child(2) {
     opacity: 0;
   }
@@ -199,7 +178,7 @@
     top: 55px;
     right: 0px;
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     font-size: 15px;
     padding: 2px;
@@ -211,7 +190,7 @@
   }
   .right-menu .right-menu-options div:hover {
     background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
     padding: 3px 10px;
   }
@@ -225,7 +204,7 @@
     width: 100%;
     height: 100%;
     z-index: -10;
-    color: rgba(0,0,0,0.1);
+    color: rgba(0, 0, 0, 0.1);
   }
   .background div div {
     font-size: 25px;
@@ -244,15 +223,25 @@
     font-size: 28px;
     font-weight: bold;
   }
-  
+
   .colorful {
-    background-image: linear-gradient(90deg, #FC466B 0%, #8075ff 58%, #3F5EFB 100%);
+    background-image: linear-gradient(
+      90deg,
+      #fc466b 0%,
+      #8075ff 58%,
+      #3f5efb 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .colorful2 {
-    background-image: linear-gradient(90deg, rgba(252, 70, 107, 0.2) 0%, rgba(128, 117, 255, 0.2) 58%, rgba(63, 94, 251, 0.2) 100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(252, 70, 107, 0.2) 0%,
+      rgba(128, 117, 255, 0.2) 58%,
+      rgba(63, 94, 251, 0.2) 100%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -286,7 +275,7 @@
     display: inline-block;
     color: rgb(49, 49, 49);
     background-color: white;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     padding: 5px 10px;
     margin: 3px 0px;
@@ -295,7 +284,7 @@
   .links a:hover {
     padding: 5px 10px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
     transition: 0.5s;
   }
   .links a:hover i {
@@ -304,21 +293,21 @@
   }
 
   /* SKILLS CSS */
-  
-  .skills{
+
+  .skills {
     padding: 10px 0px;
     width: 100%;
   }
-  .skill{
+  .skill {
     width: 100%;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     margin: 3px 0px;
     font-size: 12px;
   }
-  .percent{
+  .percent {
     padding: 5px 10px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     font-size: 12px;
   }
@@ -342,26 +331,30 @@
     height: 100px;
     object-fit: cover;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   }
-
 
   /* SOCIAL CSS */
 
-  .social{
+  .social {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
-  .social-item{
+  .social-item {
     margin: 5px;
     padding: 0px 5px;
     font-size: 30px;
     cursor: pointer;
   }
-  .social-item:hover{
-    background-image: linear-gradient(141deg, #adf1e0, #2e1bff 28%, #18ff23 98%);
+  .social-item:hover {
+    background-image: linear-gradient(
+      141deg,
+      #adf1e0,
+      #2e1bff 28%,
+      #18ff23 98%
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -371,7 +364,4 @@
     margin: 20px 0px;
     text-align: center;
   }
-
-
-
 }
