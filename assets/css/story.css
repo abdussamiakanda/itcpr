@@ -48,6 +48,26 @@
     margin: 0px 0px 10px 0px;
     color: green;
   }
+  .publications {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .publications .publication {
+    padding: 10px;
+    margin: 0px 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .publications .publication .number {
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 10px;
+    width: 120px;
+  }
 }
 
 @media screen and (min-width: 0em) and (max-width: 40em) {
