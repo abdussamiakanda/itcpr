@@ -1,7 +1,7 @@
 function myHeader() {
   document.getElementById("header").innerHTML = `<div class="menu">
         <div class="head" onclick="goTo('./')">
-            ITCPR
+            <img src="./assets/image/icon.png" alt="">
         </div>
         <div class="pc-menu">
             <div class="menu-item about">About <i class="fa-solid fa-chevron-down"></i>

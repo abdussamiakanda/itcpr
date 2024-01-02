@@ -32,8 +32,8 @@
     z-index: 100;
   }
   .menu .head {
-    width: 60px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
     margin: 0px 20px;
     display: flex;
     align-items: center;
@@ -47,7 +47,11 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
   }
   .menu .head img {
-    width: 40px;
+    width: 60px;
+  }
+  .menu .head:hover img{
+    transform: rotateZ(360deg);
+    transition-duration: 1s;
   }
 
   .pc-menu {
