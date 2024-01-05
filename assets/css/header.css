@@ -201,7 +201,7 @@
     background-color: rgb(102, 102, 102);
     padding: 10px;
     z-index: 500;
-    transition-duration: 1s;
+    transition-duration: 0.8s;
   }
   .moblie-menu .menu-item {
     background-color: white;
