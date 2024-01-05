@@ -55,10 +55,10 @@
     padding-bottom: 5px;
     text-align: justify;
   }
-  /* .obj-name img {
+  .obj-name img {
     display: block;
     margin: 0px auto;
-    width: 400px;
+    width: 250px;
     border-radius: 5px;
-  } */
+  }
 }
