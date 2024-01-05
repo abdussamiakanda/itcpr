@@ -194,13 +194,13 @@
   .moblie-menu {
     position: fixed;
     top: 0px;
+    left: -450px;
     width: 100%;
     height: 100vh;
     font-size: 18px;
     background-color: rgb(102, 102, 102);
     padding: 10px;
     z-index: 500;
-    display: none;
     transition-duration: 1s;
   }
   .moblie-menu .menu-item {
@@ -222,9 +222,8 @@
     color: white;
     display: block;
     font-size: 35px;
-    position: fixed;
-    right: 10px;
-    top: 5px;
+    margin-left: 85%;
+    margin-bottom: 20px;
   }
 
   .pc-menu {

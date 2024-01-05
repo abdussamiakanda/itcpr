@@ -42,9 +42,9 @@ function myHeader() {
 
 function handleMenu(val) {
     if (val === 'o')  {
-        document.getElementById('moblie-menu').style.display = 'block';
+        document.getElementById('moblie-menu').style.left = '0px';
     } else {
-        document.getElementById('moblie-menu').style.display = 'none';
+        document.getElementById('moblie-menu').style.left = '-450px';
     }
 }
 function goTo(path) {
