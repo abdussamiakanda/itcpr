@@ -15,7 +15,7 @@ function myHeader() {
             <div class="menu-item research">Research <i class="fa-solid fa-chevron-down"></i>
                 <div class="research-items">
                     <div onclick="goTo('./../../../groups')">Research Groups</div>
-                    <div onclick="goTo('./publications')">Publications</div>
+                    <div onclick="goTo('./../../../publications')">Publications</div>
                 </div>
             </div>
             <div class="menu-item" onclick="goTo('./../../../outreach')">Outreach</div>
