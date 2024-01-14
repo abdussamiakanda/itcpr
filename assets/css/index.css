@@ -11,16 +11,16 @@
   }
   
   .academic-divs {
-    background-color: rgba(104, 136, 111, 0.1);
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: var(--color4rgba1);
+    box-shadow: 0px 0px 5px var(--color1rgba05);
     padding: 30px 35px;
     margin: 0px 50px 50px 50px;
     border-radius: 20px;
     transition-duration: 0.5s;
   }
   .academic-divs:hover {
-    background-color: rgb(241, 241, 241);
-    box-shadow: 0px 0px 10px rgba(104, 136, 111, 0.5);
+    background-color: var(--color4rgba01);
+    box-shadow: 0px 0px 10px var(--color1rgba1);
   }
   .div-title {
     font-size: 25px;
@@ -34,7 +34,7 @@
     margin-right: 10px;
   }
   .div-title:hover {
-    color: rgb(21, 126, 251);
+    color: var(--color2rgba1);
   }
   .div-title:hover .fa-arrow-right {
     margin-left: 10px;
@@ -51,7 +51,7 @@
   .boxes div {
     width: 300px;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(104, 136, 111, 0.5);
+    box-shadow: 0px 0px 15px var(--color1rgba05);
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -59,9 +59,9 @@
   }
   .boxes div:hover {
     transition-duration: 0.5s;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    background-color: #333;
-    color: white
+    box-shadow: 0px 0px 15px var(--color1rgba07);
+    background-color: var(--color1rgba1);
+    color: var(--color4rgba1);
   }
   .boxes div span {
     font-size: 14px;
@@ -91,16 +91,16 @@
     font-weight: bold;
   }
   .academic-divs {
-    background-color: rgba(104, 136, 111, 0.1);
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: var(--color4rgba1);
+    box-shadow: 0px 0px 5px var(--color1rgba05);
     padding: 10px ;
     margin: 0px 10px 20px 10px;
     border-radius: 10px;
     transition-duration: 0.5s;
   }
   .academic-divs:hover {
-    background-color: rgb(241, 241, 241);
-    box-shadow: 0px 0px 10px rgba(104, 136, 111, 0.5);
+    background-color: var(--color4rgba01);
+    box-shadow: 0px 0px 10px var(--color1rgba1);
   }
   .div-title {
     font-size: 18px;
@@ -114,7 +114,7 @@
     margin-right: 5px;
   }
   .div-title:hover {
-    color: rgb(21, 126, 251);
+    color: var(--color2rgba1);
   }
   .div-title:hover .fa-arrow-right {
     margin-left: 5px;
@@ -131,7 +131,7 @@
   .boxes div {
     width: 150px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(104, 136, 111, 0.5);
+    box-shadow: 0px 0px 15px var(--color1rgba05);
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -139,9 +139,9 @@
   }
   .boxes div:hover {
     transition-duration: 0.5s;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    background-color: #333;
-    color: white
+    box-shadow: 0px 0px 15px var(--color1rgba07);
+    background-color: var(--color1rgba1);
+    color: var(--color4rgba1);
   }
   .boxes div span {
     font-size: 10px;

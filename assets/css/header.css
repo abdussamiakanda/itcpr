@@ -6,8 +6,8 @@
   body {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    background-color: rgb(241, 241, 241);
-    color: rgb(49, 49, 49);
+    background-color: var(--color4rgba1);
+    color: var(--color1rgba1);
     font-size: 16px;
     max-width: 1200px;
     width: 100%;
@@ -38,13 +38,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: var(--color4rgba1);
     border-radius: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px var(--color1rgba05);
     cursor: pointer;
   }
   .menu .head:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 10px var(--color1rgba08);
   }
   .menu .head img {
     width: 60px;
@@ -60,14 +60,14 @@
     padding: 5px;
     margin: 0px 20px;
     border-radius: 20px;
-    background-color: rgb(241, 241, 241);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    background-color: var(--color4rgba1);
+    box-shadow: 0px 0px 10px var(--color1rgba03);
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .pc-menu:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px var(--color1rgba05);
   }
   .pc-menu .menu-item {
     padding: 5px 10px;
@@ -75,8 +75,8 @@
     position: relative;
   }
   .pc-menu .menu-item:hover {
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 2px var(--color1rgba05);
+    background-color: var(--color1rgba01);
     border-radius: 18px;
     transition: 0.5s;
   }
@@ -87,8 +87,8 @@
     top: 40px;
     padding: 5px;
     border-radius: 20px;
-    background-color: white;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    background-color: var(--color4rgba1);
+    box-shadow: 0px 0px 5px var(--color1rgba05);
     white-space: nowrap;
   }
   .about:hover .about-items {
@@ -101,8 +101,8 @@
     top: 40px;
     padding: 5px;
     border-radius: 20px;
-    background-color: white;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    background-color: var(--color4rgba1);
+    box-shadow: 0px 0px 5px var(--color1rgba05);
     white-space: nowrap;
   }
   .research:hover .research-items {
@@ -113,8 +113,8 @@
     cursor: pointer;
   }
   .pc-menu .menu-item div div:hover {
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 2px var(--color1rgba05);
+    background-color: var(--color1rgba01);
     border-radius: 18px;
     transition: 0.5s;
   }
@@ -133,8 +133,8 @@
   body {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    background-color: rgb(241, 241, 241);
-    color: rgb(49, 49, 49);
+    background-color: var(--color4rgba1);
+    color: var(--color1rgba1);
     font-size: 14px;
     width: 100%;
     padding: 0px;
@@ -170,9 +170,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: var(--color4rgba1);
     border-radius: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px var(--color1rgba05);
     cursor: pointer;
   }
   .menu .head:hover img {
@@ -188,30 +188,31 @@
     padding: 10px;
     margin-left: 10px;
     font-size: 25px;
-    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 5px 10px var(--color1rgba02);
+    cursor: pointer;
   }
 
   .moblie-menu {
     position: fixed;
     top: 0px;
-    left: -450px;
+    left: -650px;
     width: 100%;
     height: 100vh;
     font-size: 18px;
-    background-color: rgb(102, 102, 102);
+    background-color: var(--color1rgba08);
     padding: 10px;
     z-index: 500;
     transition-duration: 0.8s;
   }
   .moblie-menu .menu-item {
-    background-color: white;
+    background-color: var(--color4rgba1);
     padding: 2px 10px;
     border-radius: 5px;
     width: 250px;
     margin-bottom: 5px;
   }
   .moblie-menu .menu-item1 {
-    background-color: white;
+    background-color: var(--color4rgba1);
     padding: 2px 10px;
     border-radius: 5px;
     width: 220px;
@@ -219,11 +220,12 @@
     margin-bottom: 5px;
   }
   .cross {
-    color: white;
+    color: var(--color4rgba1);
     display: block;
     font-size: 35px;
     margin-left: 87%;
     margin-bottom: 20px;
+    cursor: pointer;
   }
 
   .pc-menu {

@@ -3,16 +3,16 @@
     margin-top: 120px;
   }
   .academic-divs {
-    background-color: rgba(104, 136, 111, 0.1);
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: var(--color4rgba1);
+    box-shadow: 0px 0px 5px var(--color1rgba05);
     padding: 30px 35px;
     margin: 0px 50px 50px 50px;
     border-radius: 20px;
     transition-duration: 0.5s;
   }
   .academic-divs:hover {
-    background-color: rgb(241, 241, 241);
-    box-shadow: 0px 0px 10px rgba(104, 136, 111, 0.5);
+    background-color: var(--color4rgba01);
+    box-shadow: 0px 0px 10px var(--color1rgba1);
   }
 
   .objective {
@@ -34,16 +34,16 @@
   .boxes div {
     width: 250px;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(104, 136, 111, 0.5);
+    box-shadow: 0px 0px 15px var(--color1rgba05);
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
   }
   .boxes div:hover {
     transition-duration: 0.5s;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    background-color: #333;
-    color: white;
+    box-shadow: 0px 0px 15px var(--color1rgba07);
+    background-color: var(--color1rgba1);
+    color: var(--color4rgba1);
   }
   .boxes div b {
     padding: 10px 10px 0px 10px;
@@ -59,8 +59,8 @@
     padding: 10px;
     margin: 0px 10px 10px 10px;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: var(--color1rgba06);
+    color: var(--color4rgba1);
     cursor: pointer;
   }
   .boxes div .profile:hover .fa-arrow-right {
@@ -69,9 +69,8 @@
   }
   .boxes div:hover .profile {
     transition-duration: 0.5s;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    background-color: white;
-    color: black;
+    background-color: var(--color4rgba1);
+    color: var(--color1rgba1);
   }
   .boxes div img {
     width: 250px;
@@ -86,16 +85,16 @@
     margin-top: 80px;
   }
   .academic-divs {
-    background-color: rgba(104, 136, 111, 0.1);
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: var(--color4rgba1);
+    box-shadow: 0px 0px 5px var(--color1rgba05);
     padding: 10px ;
     margin: 0px 10px 20px 10px;
     border-radius: 10px;
     transition-duration: 0.5s;
   }
   .academic-divs:hover {
-    background-color: rgb(241, 241, 241);
-    box-shadow: 0px 0px 10px rgba(104, 136, 111, 0.5);
+    background-color: var(--color4rgba01);
+    box-shadow: 0px 0px 10px var(--color1rgba1);
   }
 
   .objective {
@@ -110,17 +109,17 @@
     margin-top: 10px;
     padding: 2px 8px;
     font-weight: bold;
-    background-color: black;
-    color: white;
-    border: 2px solid black;
+    background-color: var(--color1rgba1);
+    color: var(--color4rgba1);
+    border: 2px solid var(--color1rgba1);
     border-radius: 5px;
     cursor: pointer;
     transition-duration: 0.5s;
   }
   .obj-name .apply:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid black;
+    background-color: var(--color4rgba1);
+    color: var(--color1rgba1);
+    border: 2px solid var(--color1rgba1);
   }
 
   
@@ -134,16 +133,16 @@
   .boxes div {
     width: 150px;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(104, 136, 111, 0.5);
+    box-shadow: 0px 0px 15px var(--color1rgba05);
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
   }
   .boxes div:hover {
     transition-duration: 0.5s;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    background-color: #333;
-    color: white
+    box-shadow: 0px 0px 15px var(--color1rgba07);
+    background-color: var(--color1rgba1);
+    color: var(--color4rgba1);
   }
   .boxes div span {
     font-size: 12px;
@@ -160,8 +159,8 @@
     padding: 5px 8px;
     margin: 0px 5px 5px 5px;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: var(--color1rgba06);
+    color: var(--color4rgba1);
     cursor: pointer;
   }
   .boxes div .profile:hover .fa-arrow-right {
@@ -170,9 +169,8 @@
   }
   .boxes div:hover .profile {
     transition-duration: 0.5s;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    background-color: white;
-    color: black;
+    background-color: var(--color4rgba1);
+    color: var(--color1rgba1);
   }
   .boxes div img {
     width: 150px;

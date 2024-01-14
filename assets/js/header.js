@@ -44,7 +44,7 @@ function handleMenu(val) {
     if (val === 'o')  {
         document.getElementById('moblie-menu').style.left = '0px';
     } else {
-        document.getElementById('moblie-menu').style.left = '-450px';
+        document.getElementById('moblie-menu').style.left = '-650px';
     }
 }
 function goTo(path) {
