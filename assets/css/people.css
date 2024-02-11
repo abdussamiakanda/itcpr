@@ -127,39 +127,29 @@
     color: black;
   }
 
-
-  .boxes2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .boxes2 div {
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px var(--color1rgba05);
+  
+  .publications {
     display: flex;
     flex-direction: column;
-    word-wrap: break-word;
+    gap: 20px;
   }
-  .boxes2 div:hover {
-    transition-duration: 0.5s;
-    box-shadow: 0px 0px 15px var(--color1rgba07);
-    background-color: var(--color1rgba1);
-    color: var(--color4rgba1);
-  }
-  .boxes2 div b {
+  .publications .publication {
     padding: 10px;
-    font-size: 14px;
-    text-align: center;
+    margin: 0px 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
-  .boxes2 div img {
-    width: 200px;
-    height: 150px;
-    border-radius: 10px 10px 0px 0px;
-    object-fit: cover;
+  .publications .publication .number {
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 10px;
+    width: 120px;
   }
+
+
 }
 
 @media screen and (min-width: 0em) and (max-width: 40em) {
