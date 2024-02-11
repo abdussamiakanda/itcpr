@@ -1,52 +1,87 @@
 @media screen and (min-width: 40em) {
   .top {
-    margin-top: 120px;
+    padding: 50px;
   }
-  .academic-divs {
-    background-color: var(--color4rgba1);
-    box-shadow: 0px 0px 5px var(--color1rgba05);
-    padding: 30px 35px;
-    margin: 0px 50px 50px 50px;
-    border-radius: 20px;
-    transition-duration: 0.5s;
+  .page-top .page-head {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
-  .academic-divs:hover {
-    background-color: var(--color4rgba01);
-    box-shadow: 0px 0px 10px var(--color1rgba1);
+  .page-top .page-title {
+    background-color: rgb(48, 48, 48);
+    padding: 5px;
+    color: white;
   }
-
-  .objective {
+  .page-top .page-title div {
+    max-width: 1200px;
+    margin: 0px auto;
+    position: relative;
+  }
+  .page-top .page-title div div {
+    display: block;
+    margin: 0px auto;
+    position: absolute;
+    top: -70px;
+    background-color: rgb(157, 157, 189);
+    color: black;
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .academic1 {
+    background-color: white;
+    padding: 50px 35px;
     max-width: 1200px;
     margin: 0px auto;
   }
-  .obj-name {
-    padding-bottom: 10px;
-    text-align: justify;
+  .academic1 div .title {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .academic1 div .bar {
+    display: block;
+    width: 50px;
+    border: 3px solid rgb(157, 157, 189);
+    margin: 10px 0px;
+  }
+  
+  .academic2 {
+    background-color: rgb(48, 48, 48);
+    padding: 50px 35px;
+  }
+  .academic2 .inner {
+    max-width: 1200px;
+    margin: 0px auto;
+    color: white;
+  }
+  .academic2 div .title {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px;
+  }
+  .academic2 div .bar {
+    display: block;
+    width: 50px;
+    border: 3px solid rgb(157, 157, 189);
+    margin: 10px 0px;
   }
 
-  .obj-name .type {
-    display: inline-block;
-    font-size: 14px;
-    padding: 2px 5px;
-    border-radius: 5px;
-    color: var(--color4rgba1);
-    background-color: rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+  
+  .academic1 a {
+    color: rgb(157, 157, 189);
   }
-
-  .obj-name .profile-head {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+  .academic1 a:hover {
+    color: black;
   }
-  .obj-name .profile-head img {
-    width: 180px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+  .academic2 a {
+    color: rgb(157, 157, 189);
   }
-
+  .academic2 a:hover {
+    color: white;
+  }
 }
 
 @media screen and (min-width: 0em) and (max-width: 40em) {

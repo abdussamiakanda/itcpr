@@ -8,6 +8,7 @@
     background-image: url("https://images.hindustantimes.com/tech/img/2021/07/31/960x540/Screenshot_2021-07-31_at_6.17.55_PM_1627735690053_1627735748173.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
   }
   .page-top .page-title {
     background-color: rgb(48, 48, 48);
