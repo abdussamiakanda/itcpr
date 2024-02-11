@@ -1,80 +1,151 @@
 @media screen and (min-width: 40em) {
   .introduction {
-    padding: 100px 10px 80px 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .introduction::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.hindustantimes.com/tech/img/2021/07/31/960x540/Screenshot_2021-07-31_at_6.17.55_PM_1627735690053_1627735748173.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+  }
+  .introduction div {
+    padding: 200px 10px 120px 10px;
     text-align: center;
     max-width: 1000px;
     margin: 0px auto;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
   }
-  .introduction .name {
+  .introduction div .name {
+    padding: 0px;
     font-size: 45px;
     font-weight: bold;
   }
   
   .academic-divs {
-    background-color: var(--color4rgba1);
-    box-shadow: 0px 0px 5px var(--color1rgba05);
-    padding: 30px 35px;
-    margin: 0px 50px 50px 50px;
-    border-radius: 20px;
-    transition-duration: 0.5s;
+    padding: 50px 35px;
+    max-width: 1200px;
+    margin: 0px auto;
   }
-  .academic-divs:hover {
-    background-color: var(--color4rgba01);
-    box-shadow: 0px 0px 10px var(--color1rgba1);
-  }
-  .div-title {
-    font-size: 25px;
+  .academic-divs .index-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 20px;
+  }
+  .academic-divs .index-menu div i {
+    font-size: 80px;
+    width: 120px;
+    height: 120px;
+    padding: 30px;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    transition-duration: 0.5s;
-    display: inline-block;
   }
-  .div-title i {
-    margin-right: 10px;
-  }
-  .div-title:hover {
-    color: var(--color2rgba1);
-  }
-  .div-title:hover .fa-arrow-right {
-    margin-left: 10px;
-    transition-duration: 0.5s;
+  .academic-divs .index-menu div i:hover {
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
-  .boxes {
+  .academic2 {
+    background-color: rgb(48, 48, 48);
+    text-align: center;
+    padding: 50px 35px;
+  }
+  .academic2 .title {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+  .academic2 .bar {
+    display: block;
+    width: 50px;
+    border: 3px solid rgb(157, 157, 189);
+    margin: 10px auto;
+  }
+  .academic2 div {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 5px;
   }
-  .boxes div {
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px var(--color1rgba05);
-    cursor: pointer;
+  .academic2 div div {
+    display: block;
+    padding: 20px;
+    width: 250px;
+    background-color: white;
+    border-bottom: 5px solid rgb(157, 157, 189);
+  }
+  .academic2 div div b {
+    display: block;
+    font-size: 24px;
+    padding: 0px 20px;
+  }
+  .academic2 div div i {
+    display: block;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 100px;
+    padding: 10px 0px;
+  }
+
+  .academic1 {
+    background-color: white;
+    text-align: center;
+    padding: 50px 35px;
+    max-width: 1200px;
+    margin: 0px auto;
+  }
+  .academic1 .title {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .academic1 .bar {
+    display: block;
+    width: 50px;
+    border: 3px solid rgb(157, 157, 189);
+    margin: 10px auto;
+  }
+  .academic1 div {
     display: flex;
-    flex-direction: column;
-    word-wrap: break-word;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
-  .boxes div:hover {
-    transition-duration: 0.5s;
-    box-shadow: 0px 0px 15px var(--color1rgba07);
-    background-color: var(--color1rgba1);
-    color: var(--color4rgba1);
+  .academic1 div div {
+    display: block;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    cursor: pointer;
   }
-  .boxes div span {
-    font-size: 14px;
-    padding: 10px 10px 5px 10px;
+  .academic1 div div:hover {
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   }
-  .boxes div b {
-    padding: 0px 10px 10px 10px;
+  .academic1 div div b {
+    display: block;
+    padding: 5px 0px 10px 0px;
   }
-  .boxes div img {
+  .academic1 div div img {
     width: 300px;
     height: 200px;
-    border-radius: 10px 10px 0px 0px;
     object-fit: cover;
+    border-bottom: 5px solid rgb(157, 157, 189);
   }
 
 

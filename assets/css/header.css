@@ -2,93 +2,98 @@
   html {
     width: 100%;
     margin: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
   }
   body {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    background-color: var(--color4rgba1);
-    color: var(--color1rgba1);
+    background-color: white;
+    color: black;
     font-size: 16px;
-    max-width: 1200px;
     width: 100%;
     padding: 0px;
     margin: 0px auto;
     position: relative;
+  }
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   /* MENU CSS */
 
   .menu {
     position: fixed;
-    max-width: 1200px;
     width: 100%;
+    z-index: 100;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  }
+  .menu .menu-top {
+    color: white;
+    background-color: rgb(80, 80, 80);
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .menu .menu-top div {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  .menu .menu-top div:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  .menu .menu-top .bar {
+    padding: 15px 0px;
+    border: 1px solid white;
+    cursor:auto;
+  }
+
+  .menu .menu-bar {
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    top: -90px;
-    transition: 0.5s;
-    transition-delay: 0.1s;
-    transform: translateY(100px);
-    z-index: 100;
   }
-  .menu .head {
-    width: 58px;
-    height: 58px;
-    margin: 0px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color4rgba1);
-    border-radius: 100%;
-    box-shadow: 0px 0px 10px var(--color1rgba05);
+
+  .menu .icon {
+    color: rgb(157, 157, 189);
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0px 20px;
   }
-  .menu .head:hover {
-    box-shadow: 0px 0px 10px var(--color1rgba08);
+  .menu .icon:hover {
+    color: black;
   }
-  .menu .head img {
-    width: 60px;
-    border-radius: 100%;
-  }
-  .menu .head:hover img{
-    transform: rotateZ(360deg);
-    transition-duration: 1s;
-  }
+  
 
   .pc-menu {
     font-size: 20px;
-    padding: 5px;
-    margin: 0px 20px;
-    border-radius: 20px;
-    background-color: var(--color4rgba1);
-    box-shadow: 0px 0px 10px var(--color1rgba03);
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .pc-menu:hover {
-    box-shadow: 0px 0px 10px var(--color1rgba05);
-  }
   .pc-menu .menu-item {
-    padding: 5px 10px;
+    padding: 15px 30px;
     cursor: pointer;
     position: relative;
   }
   .pc-menu .menu-item:hover {
-    box-shadow: 0px 0px 2px var(--color1rgba05);
-    background-color: var(--color1rgba01);
-    border-radius: 18px;
-    transition: 0.5s;
+    color: white;
+    background-color: rgb(157, 157, 189);
   }
   .about-items {
     position: absolute;
     display: none;
     left: 0;
-    top: 40px;
-    padding: 5px;
-    border-radius: 20px;
-    background-color: var(--color4rgba1);
-    box-shadow: 0px 0px 5px var(--color1rgba05);
+    top: 60px;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     white-space: nowrap;
   }
   .about:hover .about-items {
@@ -98,26 +103,25 @@
     position: absolute;
     display: none;
     left: 0;
-    top: 40px;
-    padding: 5px;
-    border-radius: 20px;
-    background-color: var(--color4rgba1);
-    box-shadow: 0px 0px 5px var(--color1rgba05);
+    top: 60px;
+    color: black;
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     white-space: nowrap;
   }
   .research:hover .research-items {
     display: block;
   }
   .pc-menu .menu-item div div {
-    padding: 5px 10px;
     cursor: pointer;
+    padding: 8px 20px;
   }
   .pc-menu .menu-item div div:hover {
-    box-shadow: 0px 0px 2px var(--color1rgba05);
-    background-color: var(--color1rgba01);
-    border-radius: 18px;
-    transition: 0.5s;
+    color: white;
+    background-color: rgb(157, 157, 189);
   }
+
+  
   .bars, .moblie-menu {
     display: none;
   }

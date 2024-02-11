@@ -1,6 +1,37 @@
 @media screen and (min-width: 40em) {
-  .social-div p {
-    margin: 20px 0px 40px 0px;
+  #footer .academic2 .links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0px auto;
+    color: white;
+    text-align: left;
+  }
+  #footer .academic2 .links .footer-div {
+    background-color: inherit;
+    border: none;
+    padding: 0px;
+  }
+  #footer .academic2 .links .footer-div b {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+  }
+  #footer .academic2 .links .footer-div .bar {
+    display: block;
+    width: 50px;
+    border: 3px solid rgb(157, 157, 189);
+    margin: 10px 0px;
+  }
+  #footer .academic2 .links .footer-div a {
+    color: white;
+  }
+  #footer .academic2 .links .footer-div a:hover {
+    color: rgb(157, 157, 189);
+  }
+  #footer p {
+    margin: 20px 0px;
     text-align: center;
   }
 }
