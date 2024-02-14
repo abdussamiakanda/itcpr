@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Connecting to Our Remote Server - ITCPR</title>
+    <meta charset="utf-8" />
+    <meta name="visibility" content="visible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      property="og:title"
+      content="Connecting to Our Remote Server - ITCPR" />
+    <meta
+      property="og:description"
+      content="ITCPR, a burgeoning institution in theoretical and computational physics, is committed to transcending traditional boundaries in science. We focus on providing research opportunities to individuals typically overlooked in the scientific field, creating a platform where untapped talent can significantly contribute to global scientific progress." />
+    <meta property="og:image" content="./../../../assets/image/logo.png" />
+    <link rel="shortcut icon" href="./../../../assets/image/short.png" />
+    <script
+      src="./../../../assets/js/a1b0511c5a.js"
+      crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./../../../assets/css/root.css" />
+    <link rel="stylesheet" href="./../../../assets/css/header.css" />
+    <link rel="stylesheet" href="./../../../assets/css/footer.css" />
+    <link rel="stylesheet" href="./../../../assets/css/story.css" />
+  </head>
+  <body>
+    <section id="header"></section>
+
+    <section class="top"></section>
+
+    <section class="page-top">
+      <div
+        class="page-head"
+        style="
+          background-image: url('./../assets/image/posts/server_background_image.png');
+        "></div>
+      <div class="page-title">
+        <div>
+          <div>Connecting to Our Remote Server</div>
+          ITCPR / Posts / Connecting to Our Remote Server
+        </div>
+      </div>
+    </section>
+
+    <section class="academic1">
+      <div>
+        <div class="title">Introduction</div>
+        <span class="bar"></span>
+        This ultimate guide is designed to help you securely connect to our
+        organization's remote server from your personal computer. It's crafted
+        for users with varying levels of technical expertise, ensuring everyone
+        can successfully set up and use ZeroTier, WinSCP, Putty, and Remote
+        Desktop.
+      </div>
+    </section>
+
+    <section class="academic2">
+      <div class="inner">
+        <div class="title">Preparing Your Computer</div>
+        <span class="bar"></span>
+        <ul>
+          <li>
+            Ensure your Windows is up to date to avoid compatibility issues.
+          </li>
+          <li>
+            Have your server credentials ready: server IP, username, and
+            password. These will be provided by ITCPR.
+          </li>
+          <li>
+            Ensure you have administrative rights on your PC for software
+            installations.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="academic1">
+      <div>
+        <div class="title">
+          Part 1: Establishing a Secure Connection with ZeroTier
+        </div>
+        <span class="bar"></span>
+        ZeroTier creates a virtual network over the internet, simulating the
+        experience of being directly connected to the remote server's local
+        network.
+        <br /><br />
+        <h3>Step 1: Downloading ZeroTier</h3>
+        <ul>
+          <li>
+            Visit
+            <a href="https://www.zerotier.com/download/" target="_blank"
+              >ZeroTier's download page</a
+            >.
+          </li>
+          <li>Select the Windows version and download the installer.</li>
+          <li>Run the installer and follow the installation prompts.</li>
+        </ul>
+
+        <h3>Step 2: Joining the Network</h3>
+        <ul>
+          <li>Launch ZeroTier from the Start Menu or System Tray.</li>
+          <li>Navigate to the 'Networks' tab and click 'Join Network'.</li>
+          <li>Enter the network ID provided by ITCPR.</li>
+          <li>
+            Let us know you have joined the network to receive network approval.
+          </li>
+        </ul>
+
+        <h3>Step 3: Verifying Connectivity</h3>
+        <ul>
+          <li>
+            Check the status in the ZeroTier application; a successful
+            connection is indicated by "OK".
+          </li>
+          <li>
+            If the status does not show "OK", try restarting ZeroTier or
+            checking with ITCPR for network approval.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="academic2">
+      <div class="inner">
+        <div class="title">Part 2: File Transfer with WinSCP</div>
+        <span class="bar"></span>
+        WinSCP allows for secure file transfer between your PC and the server.
+        <br /><br />
+        <h3>Step 1: Installing WinSCP</h3>
+        <ul>
+          <li>
+            Visit
+            <a href="https://winscp.net/eng/download.php" target="_blank"
+              >WinSCP's download page</a
+            >.
+          </li>
+          <li>Run the installer and follow the installation prompts.</li>
+        </ul>
+
+        <h3>Step 2: Connecting to the Server</h3>
+        <ul>
+          <li>Open WinSCP and fill in the session details:</li>
+          <ul>
+            <li>Host name: server.itcpr.org</li>
+            <li>User name: (Provided by ITCPR)</li>
+            <li>Password: (Provided by ITCPR)</li>
+            <li>Port number: 22</li>
+          </ul>
+          <li>Click 'Login' to establish the connection.</li>
+          <li>
+            If unable to connect, verify network connectivity and credentials.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="academic1">
+      <div>
+        <div class="title">Part 3: Command Line Access with PuTTY</div>
+        <span class="bar"></span>
+        PuTTY provides SSH access for executing commands on the server.
+        <br /><br />
+        <h3>Step 1: Downloading and Installing PuTTY</h3>
+        <ul>
+          <li>
+            Navigate to
+            <a href="https://www.zerotier.com/download/" target="_blank"
+              >PuTTY's download page</a
+            >
+            and download the installer.
+          </li>
+          <li>Install PuTTY by following the on-screen instructions.</li>
+        </ul>
+
+        <h3>Step 2: SSH into the Server</h3>
+        <ul>
+          <li>
+            Open WinSCP and go to 'Options' >> 'Preferences' >> 'Applications'.
+          </li>
+          <li>
+            Check the option 'Remember session password and pass it to PuTTY
+            (SSH)'.
+          </li>
+          <li>
+            Press 'Ctrl + P' or click on the 'Open session in PuTTY' icon on the
+            top.
+          </li>
+          <li>
+            If the connection fails, check the server IP, port, and network
+            status.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="academic2">
+      <div class="inner">
+        <div class="title">
+          Part 4: Remote Desktop for a Graphical Interface
+        </div>
+        <span class="bar"></span>
+        Remote Desktop Connection provides a Windows graphical interface for
+        interacting with the server.
+        <br /><br />
+        <h3>Setting Up Remote Desktop Connection</h3>
+        <ul>
+          <li>Search for 'Remote Desktop Connection' in the Start menu.</li>
+          <li>Enter the server's IP address and click 'Connect'.</li>
+          <li>Input your credentials when prompted.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="academic1">
+      <div>
+        <div class="title">Conclusion</div>
+        <span class="bar"></span>
+        By following these detailed instructions, you'll be able to connect to
+        our remote server securely and efficiently. Remember, this guide is a
+        starting point. Depending on your specific needs and configurations,
+        additional steps may be required.
+      </div>
+    </section>
+
+    <section class="academic2">
+      <div class="inner">
+        <div class="title">Additional Resources</div>
+        <span class="bar"></span>
+        <ul>
+          <li>
+            ZeroTier Knowledge Base: For advanced network configuration and
+            troubleshooting.
+          </li>
+          <li>
+            WinSCP Documentation: Detailed guides on using WinSCP effectively.
+          </li>
+          <li>
+            PuTTY FAQ: Solutions to common problems encountered with PuTTY.
+          </li>
+          <li>
+            Microsoft Remote Desktop Support: For troubleshooting and advanced
+            configurations.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="academic1">
+      <div>
+        <div class="title">Seeking Help</div>
+        <span class="bar"></span>
+        If you encounter issues at any step, please don't hesitate to reach out
+        to us. Provide us with the step you're on, the issue you're facing, and
+        any error messages you're seeing for the most efficient assistance.
+      </div>
+    </section>
+
+    <section id="footer"></section>
+
+    <script src="./../../../assets/js/header.js"></script>
+    <script src="./../../../assets/js/footer.js"></script>
+  </body>
+</html>
