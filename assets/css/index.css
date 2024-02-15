@@ -142,6 +142,10 @@
     display: block;
     padding: 5px 0px 10px 0px;
   }
+  .academic1 div div span {
+    display: block;
+    font-size: 13px;
+  }
   .academic1 div div img {
     width: 300px;
     height: 200px;

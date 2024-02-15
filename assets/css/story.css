@@ -23,7 +23,7 @@
     display: block;
     margin: 0px auto;
     position: absolute;
-    top: -70px;
+    bottom: 30px;
     background-color: rgb(157, 157, 189);
     color: black;
     padding: 10px 20px;
