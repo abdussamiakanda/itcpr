@@ -158,79 +158,162 @@
 
 @media screen and (min-width: 0em) and (max-width: 40em) {
   .introduction {
-    padding: 80px 10px 40px 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .introduction::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/image/index.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(5px);
+    z-index: -1;
+  }
+  .introduction div {
+    padding: 100px 5px 30px 5px;
     text-align: center;
     margin: 0px auto;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
   }
-  .introduction .name {
+  .introduction div .name {
+    padding: 0px;
     font-size: 25px;
     font-weight: bold;
   }
-  .academic-divs {
-    background-color: var(--color4rgba1);
-    box-shadow: 0px 0px 5px var(--color1rgba05);
-    padding: 10px ;
-    margin: 0px 10px 20px 10px;
-    border-radius: 10px;
-    transition-duration: 0.5s;
-  }
-  .academic-divs:hover {
-    background-color: var(--color4rgba01);
-    box-shadow: 0px 0px 10px var(--color1rgba1);
-  }
-  .div-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition-duration: 0.5s;
-    display: inline-block;
-  }
-  .div-title i {
-    margin-right: 5px;
-  }
-  .div-title:hover {
-    color: var(--color2rgba1);
-  }
-  .div-title:hover .fa-arrow-right {
-    margin-left: 5px;
-    transition-duration: 0.5s;
-  }
 
-  .boxes {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+  .academic-divs {
+    padding: 30px 10px;
+    margin: 0px auto;
   }
-  .boxes div {
-    width: 150px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 15px var(--color1rgba05);
-    cursor: pointer;
+  .academic-divs .index-menu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    text-align: center;
+    font-weight: bold;
+    line-break: normal;
+  }
+  .academic-divs .index-menu div {
     display: flex;
     flex-direction: column;
-    word-wrap: break-word;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100px;
   }
-  .boxes div:hover {
-    transition-duration: 0.5s;
-    box-shadow: 0px 0px 15px var(--color1rgba07);
-    background-color: var(--color1rgba1);
-    color: var(--color4rgba1);
+  .academic-divs .index-menu div i {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    padding: 30px;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
-  .boxes div span {
+  .academic-divs .index-menu div i:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .academic2 {
+    background-color: rgb(48, 48, 48);
+    text-align: center;
+    padding: 30px 10px;
+  }
+  .academic2 .title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+  }
+  .academic2 .bar {
+    display: block;
+    width: 30px;
+    border: 2px solid rgb(157, 157, 189);
+    margin: 5px auto;
+  }
+  .academic2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .academic2 div div {
+    display: block;
+    padding: 10px;
+    width: 250px;
+    background-color: white;
+    border-bottom: 3px solid rgb(157, 157, 189);
+  }
+  .academic2 div div b {
+    display: block;
+    font-size: 16px;
+    padding: 0px 10px;
+  }
+  .academic2 div div i {
+    display: block;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 50px;
+    padding: 10px 0px;
+  }
+
+  .academic1 {
+    background-color: white;
+    text-align: center;
+    padding: 30px 10px;
+    margin: 0px auto;
+  }
+  .academic1 .title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .academic1 .bar {
+    display: block;
+    width: 30px;
+    border: 2px solid rgb(157, 157, 189);
+    margin: 5px auto;
+  }
+  .academic1 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .academic1 div div {
+    display: block;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    cursor: pointer;
+  }
+  .academic1 div div:hover {
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  }
+  .academic1 div div b {
+    display: block;
+    padding: 2px 0px 5px 0px;
+  }
+  .academic1 div div span {
+    display: block;
     font-size: 10px;
-    padding: 5px 5px 5px 5px;
   }
-  .boxes div b {
-    font-size: 14px;
-    padding: 0px 5px 5px 5px;
-  }
-  .boxes div img {
-    width: 150px;
-    height: 100px;
-    border-radius: 5px 5px 0px 0px;
+  .academic1 div div img {
+    width: 300px;
+    height: 150px;
     object-fit: cover;
+    border-bottom: 3px solid rgb(157, 157, 189);
   }
 }

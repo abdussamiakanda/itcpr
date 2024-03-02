@@ -1,5 +1,5 @@
 function myFooter() {
-  document.getElementById("footer").innerHTML = `<div class="academic2">
+  document.getElementById("footer").innerHTML = `<div class="footer">
     <div class="links">
       <div class="footer-div">
         <b>Contact Info</b>
@@ -22,7 +22,7 @@ function myFooter() {
     </div>
   </div>
   <p>
-    Copyright © 2024 Institution for Theoretical and Computational Physics
+    Copyright © 2024 - Institution for Theoretical and Computational Physics
     Research.
     <br />
     All rights reserved.

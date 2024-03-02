@@ -230,75 +230,134 @@
 
 @media screen and (min-width: 0em) and (max-width: 40em) {
   .top {
-    margin-top: 80px;
+    padding: 0px;
   }
-  .academic-divs {
-    background-color: var(--color4rgba1);
-    box-shadow: 0px 0px 5px var(--color1rgba05);
-    padding: 10px ;
-    margin: 0px 10px 20px 10px;
-    border-radius: 10px;
-    transition-duration: 0.5s;
+  .page-top .page-head {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
-  .academic-divs:hover {
-    background-color: var(--color4rgba01);
-    box-shadow: 0px 0px 10px var(--color1rgba1);
+  .page-top .page-title {
+    background-color: rgb(48, 48, 48);
+    padding: 5px;
+    color: white;
   }
-
-  .objective {
+  .page-top .page-title div {
+    margin: 0px auto;
+    position: relative;
+    font-size: 10px;
+  }
+  .page-top .page-title div div {
+    display: block;
+    margin: 0px auto;
+    position: absolute;
+    bottom: 21px;
+    background-color: rgb(157, 157, 189);
+    color: black;
+    padding: 0px 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .academic1 {
+    background-color: white;
+    padding: 30px 10px;
     margin: 0px auto;
   }
-  .obj-name {
-    padding-bottom: 5px;
-    text-align: justify;
-  }
-  .obj-name .apply {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 2px 8px;
+  .academic1 div .title {
+    font-size: 20px;
     font-weight: bold;
-    background-color: var(--color1rgba1);
-    color: var(--color4rgba1);
-    border: 2px solid var(--color1rgba1);
-    border-radius: 5px;
-    cursor: pointer;
-    transition-duration: 0.5s;
   }
-  .obj-name .apply:hover {
-    background-color: var(--color4rgba1);
-    color: var(--color1rgba1);
-    border: 2px solid var(--color1rgba1);
+  .academic1 div .bar {
+    display: block;
+    width: 30px;
+    border: 2px solid rgb(157, 157, 189);
+    margin: 5px 0px;
+  }
+
+  
+  .academic2 {
+    background-color: rgb(48, 48, 48);
+    padding: 30px 10px;
+  }
+  .academic2 .inner {
+    margin: 0px auto;
+    color: white;
+  }
+  .academic2 div .title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px;
+  }
+  .academic2 div .bar {
+    display: block;
+    width: 30px;
+    border: 2px solid rgb(157, 157, 189);
+    margin: 5px 0px;
+  }
+
+  
+  .academic2 form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+  }
+  .academic2 form .email {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    color: black;
+    width: 330px;
+    border: 2px solid white;
+  }
+  .academic2 form .email:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px white;
+  }
+  .academic2 form .submit {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid white;
+  }
+  .academic2 form .submit:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
   }
 
   .boxes {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
   }
   .boxes div {
     width: 150px;
     border-radius: 5px;
-    box-shadow: 0px 0px 15px var(--color1rgba05);
+    box-shadow: 0px 0px 5px white;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
   }
   .boxes div:hover {
-    transition-duration: 0.5s;
-    box-shadow: 0px 0px 15px var(--color1rgba07);
-    background-color: var(--color1rgba1);
-    color: var(--color4rgba1);
-  }
-  .boxes div span {
-    font-size: 10px;
-    padding: 5px 5px 5px 5px;
+    box-shadow: 0px 0px 15px white;
+    background-color: white;
+    color: black;
   }
   .boxes div h3 {
-    font-size: 14px;
-    padding: 5px;
+    padding: 5px 10px;
     text-align: center;
   }
   .boxes div img {
@@ -306,6 +365,95 @@
     height: 100px;
     border-radius: 5px 5px 0px 0px;
     object-fit: cover;
+  }
+
+  .boxes-desc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .boxes-desc div {
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  .boxes-desc div:hover {
+    background-color: black;
+    color: white;
+  }
+  .boxes-desc div b {
+    padding: 5px 5px 0px 5px;
+    font-size: 16px;
+  }
+  .boxes-desc div span {
+    display: block;
+    padding: 0px 5px 5px 5px;
+    font-size: 12px;
+  }
+  .boxes-desc div img {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px 5px 0px 0px;
+    object-fit: cover;
+  }
+
+  
+  .benefactors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .benefactors div {
+    padding: 2px 5px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    text-align: center;
+  }
+  .benefactors div:hover {
+    background-color: black;
+  }
+  .benefactors div b {
+    font-size: 14px;
+  }
+
+  
+  .academic1 a {
+    color: rgb(157, 157, 189);
+  }
+  .academic1 a:hover {
+    color: black;
+  }
+  .academic2 a {
+    color: rgb(157, 157, 189);
+  }
+  .academic2 a:hover {
+    color: white;
+  }
+
+  .academic1 div .apply {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-weight: bold;
+    background-color: rgb(157, 157, 189);
+    border: 2px solid rgb(157, 157, 189);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .academic1 div .apply:hover {
+    background-color: white;
+    border: 2px solid rgb(157, 157, 189);
   }
 
 }

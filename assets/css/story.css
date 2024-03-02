@@ -122,34 +122,100 @@
 
 @media screen and (min-width: 0em) and (max-width: 40em) {
   .top {
-    margin-top: 80px;
+    padding: 0px;
   }
-  .academic-divs {
-    background-color: var(--color4rgba1);
-    box-shadow: 0px 0px 5px var(--color1rgba05);
-    padding: 10px ;
-    margin: 0px 10px 20px 10px;
-    border-radius: 10px;
-    transition-duration: 0.5s;
+  .page-top .page-head {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
-  .academic-divs:hover {
-    background-color: var(--color4rgba01);
-    box-shadow: 0px 0px 10px var(--color1rgba1);
+  .page-top .page-title {
+    background-color: rgb(48, 48, 48);
+    padding: 5px;
+    color: white;
   }
-
-  .objective {
+  .page-top .page-title div {
     margin: 0px auto;
+    position: relative;
+    font-size: 10px;
   }
-  .obj-name {
-    padding-bottom: 5px;
-    text-align: justify;
-  }
-  .obj-name span {
+  .page-top .page-title div div {
     display: block;
-    color: var(--color1rgba1);
+    margin: 0px auto;
+    position: absolute;
+    bottom: 21px;
+    background-color: rgb(157, 157, 189);
+    color: black;
+    padding: 0px 10px;
+    font-size: 20px;
     font-weight: bold;
   }
+
+  .flex {
+    display: block;
+  }
+
+  .academic1 {
+    background-color: white;
+    padding: 30px 10px;
+    margin: 0px auto;
+  }
+  .academic1 div .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .academic1 div .bar {
+    display: block;
+    width: 30px;
+    border: 2px solid rgb(157, 157, 189);
+    margin: 5px 0px;
+  }
+  .academic1 img {
+    display: block;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px auto 0px auto;
+    border-radius: 5px;
+  }
+
+  .academic2 {
+    background-color: rgb(48, 48, 48);
+    padding: 30px 10px;
+  }
+  .academic2 .inner {
+    margin: 0px auto;
+    color: white;
+  }
+  .academic2 div .title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px;
+  }
+  .academic2 div .bar {
+    display: block;
+    width: 30px;
+    border: 2px solid rgb(157, 157, 189);
+    margin: 5px 0px;
+  }
+
   
+  .academic1 a {
+    color: rgb(157, 157, 189);
+  }
+  .academic1 a:hover {
+    color: black;
+  }
+
+  .academic2 a {
+    color: rgb(157, 157, 189);
+  }
+  .academic2 a:hover {
+    color: white;
+  }
+
   .publications {
     display: flex;
     flex-direction: column;
@@ -157,7 +223,8 @@
   }
   .publications .publication {
     padding: 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin: 0px 5px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     display: flex;
     align-items: flex-start;
@@ -166,7 +233,8 @@
   .publications .publication .number {
     font-size: 18px;
     font-weight: bold;
-    padding-left: 2px;
-    width: 95px;
+    padding-left: 5px;
+    width: 85px;
   }
+
 }
