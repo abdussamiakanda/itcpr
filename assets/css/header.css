@@ -137,19 +137,13 @@
   body {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    background-color: var(--color4rgba1);
-    color: var(--color1rgba1);
+    background-color: white;
+    color: black;
     font-size: 14px;
     width: 100%;
     padding: 0px;
     margin: 0px auto;
     position: relative;
-  }
-  h1 {
-    font-size: 22px;
-  }
-  h3 {
-    font-size: 18px;
   }
 
   /* MENU CSS */
@@ -157,41 +151,57 @@
     position: fixed;
     max-width: 100vw;
     width: 100%;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  .menu .menu-top {
+    color: white;
+    background-color: rgb(80, 80, 80);
+    font-size: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    top: -62px;
-    transition: 0.5s;
-    transition-delay: 0.1s;
-    transform: translateY(70px);
-    z-index: 100;
+    justify-content: flex-end;
   }
-  .menu .head {
-    width: 40px;
-    height: 40px;
-    margin: 0px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color4rgba1);
-    border-radius: 100%;
-    box-shadow: 0px 0px 10px var(--color1rgba05);
+  .menu .menu-top div {
+    padding: 0px 8px;
     cursor: pointer;
   }
-  .menu .head:hover img {
-    transform: rotateZ(360deg);
-    transition-duration: 1s;
+  .menu .menu-top div:hover {
+    background-color: rgba(255, 255, 255, 0.25);
   }
-  .menu .head img {
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
+  .menu .menu-top .bar {
+    padding: 10px 0px;
+    border: 1px solid white;
+    cursor:auto;
   }
+  .menu .menu-bar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu .icon {
+    color: rgb(157, 157, 189);
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0px 8px;
+  }
+  .menu .icon:hover {
+    color: black;
+  }
+
+  .pc-menu {
+    display: none;
+  }
+
   .bars {
     padding: 10px;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 20px;
     text-shadow: 0px 5px 10px var(--color1rgba02);
     cursor: pointer;
   }

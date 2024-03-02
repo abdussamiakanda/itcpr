@@ -1,6 +1,5 @@
 function myHeader() {
   document.getElementById("header").innerHTML = `<div class="menu">
-  <i class="fa-solid fa-bars bars" onclick="handleMenu('o')"></i>
   <div class="menu-top">
     <div onclick="goTo('./../../../internships')">APPLY</div>
     <div onclick="goTo('./../../../support')">SUPPORT</div>
@@ -11,6 +10,7 @@ function myHeader() {
     <div class="icon" onclick="goTo('./../../../')">
       ITCPR
     </div>
+    <i class="fa-solid fa-bars bars" onclick="handleMenu('o')"></i>
     <div class="pc-menu">
       <div class="menu-item about">
         ABOUT
