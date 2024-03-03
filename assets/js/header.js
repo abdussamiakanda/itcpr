@@ -4,7 +4,7 @@ function myHeader() {
     <div onclick="goTo('./../../../internships')">APPLY</div>
     <div onclick="goTo('./../../../support')">SUPPORT</div>
     <div class="bar"></div>
-    <div>LOGIN</div>
+    <div onclick="goToExternal('https://portal.itcpr.org')">LOGIN</div>
   </div>
   <div class="menu-bar">
     <div class="icon" onclick="goTo('./../../../')">
