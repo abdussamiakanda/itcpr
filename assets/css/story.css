@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    filter: blur(6px);
   }
   .page-top .page-title {
     background-color: rgb(48, 48, 48);
@@ -23,7 +24,7 @@
     display: block;
     margin: 0px auto;
     position: absolute;
-    bottom: 30px;
+    bottom: 29px;
     background-color: rgb(157, 157, 189);
     color: black;
     padding: 10px 20px;
@@ -130,6 +131,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    filter: blur(6px);
   }
   .page-top .page-title {
     background-color: rgb(48, 48, 48);
@@ -145,7 +147,7 @@
     display: block;
     margin: 0px auto;
     position: absolute;
-    bottom: 21px;
+    bottom: 20px;
     background-color: rgb(157, 157, 189);
     color: black;
     padding: 0px 10px;

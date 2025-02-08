@@ -76,7 +76,7 @@ function handleMenu(val) {
         document.getElementById('moblie-menu').style.top = '0px';
         document.getElementById('headerbtn').innerHTML = `<i class="fa-solid fa-xmark cross" onclick="handleMenu('c')"></i>`;
     } else {
-        document.getElementById('moblie-menu').style.top = '-1000px';
+        document.getElementById('moblie-menu').style.top = '-2000px';
         document.getElementById('headerbtn').innerHTML = `<i class="fa-solid fa-bars bars" onclick="handleMenu('o')"></i>`;
     }
 }
