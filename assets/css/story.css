@@ -27,6 +27,7 @@
     bottom: 29px;
     background-color: rgb(157, 157, 189);
     color: black;
+    border-radius: 10px 10px 0px 0px;
     padding: 10px 20px;
     font-size: 30px;
     font-weight: bold;
@@ -113,11 +114,19 @@
     align-items: flex-start;
     justify-content: flex-start;
   }
+  .publications .publication.black {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  }
   .publications .publication .number {
     font-size: 40px;
     font-weight: bold;
     padding-left: 10px;
     width: 120px;
+  }
+  .publications .publication.black a:hover {
+    color: white;
   }
 }
 
@@ -150,6 +159,7 @@
     bottom: 20px;
     background-color: rgb(157, 157, 189);
     color: black;
+    border-radius: 5px 5px 0px 0px;
     padding: 0px 10px;
     font-size: 20px;
     font-weight: bold;

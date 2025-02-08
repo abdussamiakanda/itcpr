@@ -29,6 +29,7 @@
     background-color: rgb(157, 157, 189);
     color: black;
     padding: 10px 20px;
+    border-radius: 10px 10px 0px 0px;
     font-size: 30px;
     font-weight: bold;
   }
@@ -183,6 +184,7 @@
     bottom: 20px;
     background-color: rgb(157, 157, 189);
     color: black;
+    border-radius: 5px 5px 0px 0px;
     padding: 0px 10px;
     font-size: 20px;
     font-weight: bold;
