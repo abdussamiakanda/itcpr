@@ -9,7 +9,7 @@ function myFooter() {
         <div class="footer-div-icon">
           <a href="https://www.facebook.com/itcpr.org" target="_blank"><i class="fab fa-facebook"></i></a>
           <a href="https://www.linkedin.com/company/itcpr-org" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.youtube.com/@itcpr-edu" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.youtube.com/@itcpr-org" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
       <div class="footer-div">
