@@ -98,6 +98,15 @@
   }
   .about:hover .about-items {
     display: block;
+    animation: fadeIn 1s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   .research-items {
     position: absolute;
@@ -111,6 +120,7 @@
   }
   .research:hover .research-items {
     display: block;
+    animation: fadeIn 0.5s ease-in-out;
   }
   .pc-menu .menu-item div div {
     cursor: pointer;
