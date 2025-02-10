@@ -27,6 +27,17 @@
     border: none;
     padding: 0px;
   }
+  #footer .footer .links .footer-div-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0px auto;
+    font-size: 25px;
+  }
+  #footer .footer .links .footer-div-icon a:hover {
+    color: rgb(157, 157, 189);
+    transform: scale(1.1);
+  }
   #footer .footer .links .footer-div b {
     font-size: 20px;
     padding: 0px;
