@@ -27,7 +27,7 @@ function myFooter() {
     </div>
   </div>
   <p>
-    Copyright © 2024 - Institute for Theoretical and Computational Physics Research.
+    Copyright © ${new Date().getFullYear()} - Institute for Theoretical and Computational Physics Research.
     <br />
     All rights reserved.
   </p>`;
