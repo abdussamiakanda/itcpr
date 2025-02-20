@@ -1,4 +1,29 @@
 @media screen and (min-width: 40em) {
+  .academic1 .application-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .academic1 .application-btn-container a {
+    background-color: rgb(157, 157, 189);
+    color: white;
+    min-width: 200px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .academic1 .application-btn-container a:hover {
+    background-color: rgb(128, 128, 156);
+    color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+  }
+  .academic1 .application-btn-container a i {
+    margin-right: 10px;
+  }
   #footer .footer {
     background-color: rgb(48, 48, 48);
     text-align: center;
