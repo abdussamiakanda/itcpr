@@ -124,6 +124,10 @@
     margin-left: 10px;
     transition-duration: 0.5s;
   }
+  .boxes-desc div .profile:hover .fa-arrow-trend-up {
+    margin-left: 10px;
+    transition-duration: 0.5s;
+  }
   .boxes-desc div:hover .profile {
     transition-duration: 0.5s;
     background-color: white;
@@ -304,4 +308,53 @@
     padding-left: 5px;
     width: 85px;
   }
+}
+
+.boxes-members {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.boxes-members div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  cursor: pointer;
+  word-wrap: break-word;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.boxes-members div:hover {
+  transition: 0.3s;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+}
+.boxes-members div span {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: white;
+  text-shadow: 0 2px 10px black;
+  font-weight: bold;
+}
+.boxes-members div:hover span {
+  opacity: 1;
+  transition: 0.3s;
+}
+.boxes-members div img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.boxes-members div:hover img {
+  filter: blur(5px);
 }
