@@ -216,9 +216,14 @@
     color: white;
   }
 
-  .academic1 div .apply {
-    display: inline-block;
+  .academic1 div .apply,
+  .academic2 div .apply {
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin: 0px auto;
     margin-top: 20px;
+    color: white;
     padding: 8px 20px;
     font-weight: bold;
     background-color: rgb(157, 157, 189);
@@ -226,9 +231,33 @@
     border-radius: 15px;
     cursor: pointer;
   }
-  .academic1 div .apply:hover {
+  .academic1 div .apply:hover,
+  .academic2 div .apply:hover {
     background-color: white;
+    color: rgb(157, 157, 189);
     border: 2px solid rgb(157, 157, 189);
+  }
+
+
+  .video-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .video-grid a {
+    display: inline-block;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  .video-grid a:hover {
+    transform: scale(1.05);
+  }
+  .video-grid img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
   }
   
 }

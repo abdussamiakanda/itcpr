@@ -39,6 +39,12 @@
     justify-content: space-between;
   }
 
+  .flex-end {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
   .academic1 {
     background-color: white;
     padding: 50px 35px;
@@ -166,6 +172,10 @@
   }
 
   .flex {
+    display: block;
+  }
+
+  .flex-end {
     display: block;
   }
 
