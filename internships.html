@@ -153,12 +153,24 @@
       <div>
         <div class="title">Start Your Application</div>
         <span class="bar"></span>
-        To start your application,
-        <div class="application-btn-container">
-          <a href="https://portal.itcpr.org" target="_blank">
-            <i class="fa-brands fa-wpforms"></i> ITCPR Portal</a
-          >
-        </div>
+        
+        
+          <script>
+            const date = new Date();
+            const currentYear = date.getFullYear();
+            const daynow = date.getDate();
+            const monthnow = date.getMonth();
+            const applicationYear = currentYear + 1;
+            if (monthnow !== 12 || (monthnow === 12 && daynow > 25)) {
+              document.write(
+                `Application portal for Internship ${applicationYear} is currently closed.`
+              );
+            } else {
+              document.write(
+                `To start your application, click on the button below: <br><br><br><div class="application-btn-container"> <a href="https://portal.itcpr.org" target="_blank"><i class="fa-brands fa-wpforms"></i> Apply for Internship ${applicationYear}</a> </div>`
+              );
+            };
+          </script>
       </div>
     </section>
 
