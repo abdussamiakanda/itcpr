@@ -237,29 +237,103 @@
     color: rgb(157, 157, 189);
     border: 2px solid rgb(157, 157, 189);
   }
+  
+  /* TALKS STYLE */
 
-
-  .video-grid {
+  .talks-list {
+    margin-top: 20px;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .talk {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .talk:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .talk-image {
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  .talk-content {
+    flex-grow: 1;
+  }
+
+  .talk-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 5px;
+  }
+
+  .talk-details {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  .talk-details a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .talk-details a:hover {
+    text-decoration: underline;
+  }
+
+  /* SEMINARS STYLE */
+
+  .seminars-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 15px;
   }
-  .video-grid a {
-    display: inline-block;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
+
+  .seminar {
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
   }
-  .video-grid a:hover {
-    transform: scale(1.05);
+
+  .seminar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   }
-  .video-grid img {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
+
+  .seminar-image {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
   }
-  
+
+  .seminar-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
 }
 
 @media screen and (min-width: 0em) and (max-width: 40em) {
@@ -492,4 +566,101 @@
     border: 2px solid rgb(157, 157, 189);
   }
 
+  /* TALKS STYLE */
+
+  .talks-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .talk {
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .talk:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .talk-image {
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  .talk-content {
+    flex-grow: 1;
+  }
+
+  .talk-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 5px;
+  }
+
+  .talk-details {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  .talk-details a {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .talk-details a:hover {
+    text-decoration: underline;
+  }
+
+  /* SEMINARS STYLE */
+
+  .seminars-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .seminar {
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .seminar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .seminar-image {
+    max-width: 100%;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .seminar-title {
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 6px;
+  }
+
 }
+
+
