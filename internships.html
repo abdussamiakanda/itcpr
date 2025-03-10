@@ -163,13 +163,18 @@
             const applicationYear = currentYear + 1;
             if (monthnow !== 12 || (monthnow === 12 && daynow > 25)) {
               document.write(
-                `Application portal for Internship ${monthnow === 12 ? applicationYear : currentYear} is currently closed.`
+                `The internship application portal for ${monthnow === 12 ? applicationYear : currentYear} is currently closed.`
               );
             } else {
               document.write(
-                `To start your application, click on the button below: <br><br><br><div class="application-btn-container"> <a href="https://portal.itcpr.org" target="_blank"><i class="fa-brands fa-wpforms"></i> Apply for Internship ${applicationYear}</a> </div>`
+                `The internship application portal for ${applicationYear} is now open. Click the button below to apply:<br><br><br>
+                <div class="application-btn-container">
+                  <a href="https://portal.itcpr.org" target="_blank">
+                    <i class="fa-brands fa-wpforms"></i> Apply for Internship ${applicationYear}
+                  </a>
+                </div>`
               );
-            };
+            }
           </script>
       </div>
     </section>
