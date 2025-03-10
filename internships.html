@@ -163,7 +163,7 @@
             const applicationYear = currentYear + 1;
             if (monthnow !== 12 || (monthnow === 12 && daynow > 25)) {
               document.write(
-                `Application portal for Internship ${applicationYear} is currently closed.`
+                `Application portal for Internship ${monthnow === 12 ? applicationYear : currentYear} is currently closed.`
               );
             } else {
               document.write(
