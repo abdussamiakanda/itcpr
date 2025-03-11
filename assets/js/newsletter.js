@@ -2,6 +2,10 @@ document.getElementById("newsletter").addEventListener("submit", function(event)
     event.preventDefault();
     
     let email = document.getElementById("email").value;
+    if (!email) {
+        return;
+    }
+
     let formData = new FormData();
     formData.append("entry.818826994", email);
 
