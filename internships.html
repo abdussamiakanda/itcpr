@@ -157,27 +157,64 @@
         <span class="bar"></span>
         
         
-          <script>
-            const date = new Date();
-            const currentYear = date.getFullYear();
-            const daynow = date.getDate();
-            const monthnow = date.getMonth();
-            const applicationYear = monthnow === 11 ? currentYear + 1 : currentYear;
-            if ((monthnow !== 11 || (monthnow === 11 && daynow > 25)) && (monthnow !== 5 || (monthnow === 5 && daynow > 25))) {
-              document.write(
-                `The internship application portal for ${applicationYear} is currently closed.`
-              );
-            } else {
-              document.write(
-                `The internship application portal for ${applicationYear} is now open. Click the button below to apply:<br><br><br>
-                <div class="application-btn-container">
-                  <a href="https://portal.itcpr.org" target="_blank">
-                    <i class="fa-brands fa-wpforms"></i> Apply for Internship ${applicationYear}
-                  </a>
-                </div>`
-              );
+        <script>
+          const today = new Date();
+          const year = today.getFullYear();
+          const month = today.getMonth(); // 0 = January, 11 = December
+          const day = today.getDate();
+          
+          let message = '';
+          let applicationYear = year;
+          let cycle = '';
+          let nextCycleMessage = '';
+          
+          if ((month === 11 && day >= 1 && day <= 25)) {
+            // 1st Cycle: Dec 1 to Dec 25
+            applicationYear = year + 1; // Internship is next year
+            cycle = '1st';
+            message = `
+              The internship application portal for ${applicationYear} (${cycle} cycle) is now open. <br><br>
+              <div class="application-btn-container">
+                <a href="https://portal.itcpr.org/application" target="_blank">
+                  <i class="fa-brands fa-wpforms"></i> Apply for Internship ${applicationYear}
+                </a>
+              </div>
+            `;
+          } else if ((month === 5 && day >= 1 && day <= 25)) {
+            // 2nd Cycle: June 1 to June 25
+            applicationYear = year;
+            cycle = '2nd';
+            message = `
+              The internship application portal for ${applicationYear} (${cycle} cycle) is now open. <br><br>
+              <div class="application-btn-container">
+                <a href="https://portal.itcpr.org/application" target="_blank">
+                  <i class="fa-brands fa-wpforms"></i> Apply for Internship ${applicationYear}
+                </a>
+              </div>
+            `;
+          } else {
+            // Portal closed - figure out next opening
+            if (month < 5 || (month === 5 && day > 25)) {
+              // Before June or after June 25: next opening is June 1
+              nextCycleMessage = `The application portal opens on June 1st for the 2nd cycle of ${year}.`;
+              cycle = '1st';
+              applicationYear = year;
+            } else if (month < 11 || (month === 11 && day > 25)) {
+              // Before December or after Dec 25: next opening is Dec 1
+              nextCycleMessage = `The application portal opens on December 1st for the 1st cycle of ${year + 1}.`;
+              cycle = '2nd';
+              applicationYear = year + 1;
             }
-          </script>
+          
+            message = `
+              The internship application portal for ${applicationYear} (${cycle} cycle) is currently closed.<br><br>
+              ${nextCycleMessage}
+            `;
+          }
+          
+          document.write(message);
+        </script>
+          
       </div>
     </section>
 
