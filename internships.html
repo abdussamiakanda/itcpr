@@ -162,10 +162,10 @@
             const currentYear = date.getFullYear();
             const daynow = date.getDate();
             const monthnow = date.getMonth();
-            const applicationYear = currentYear + 1;
-            if (monthnow !== 12 || (monthnow === 12 && daynow > 25)) {
+            const applicationYear = monthnow === 11 ? currentYear + 1 : currentYear;
+            if ((monthnow !== 11 || (monthnow === 11 && daynow > 25)) && (monthnow !== 5 || (monthnow === 5 && daynow > 25))) {
               document.write(
-                `The internship application portal for ${monthnow === 12 ? applicationYear : currentYear} is currently closed.`
+                `The internship application portal for ${applicationYear} is currently closed.`
               );
             } else {
               document.write(
@@ -188,7 +188,7 @@
       const ctx = document.getElementById('barChart').getContext('2d');
 
       const data = {
-          labels: ['2025'],
+          labels: ['2025 (1st Cycle)'],
           datasets: [{
               label: 'Acceptance Rate',
               data: [88.89],
