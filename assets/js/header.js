@@ -21,7 +21,7 @@ function myHeader() {
           <div onclick="goTo('./../../../charter')">
             Institutional Charter
           </div>
-          <div onclick="goTo('./../../../facilities')">
+          <div onclick="goToExternal('https://server.itcpr.org')">
             Research Facilities
           </div>
         </div>
