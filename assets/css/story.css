@@ -55,6 +55,9 @@
     font-size: 30px;
     font-weight: bold;
   }
+  .academic1 div .title.article {
+    margin-top: 1rem;
+  }
   .academic1 div .bar {
     display: block;
     width: 50px;
