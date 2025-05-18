@@ -15,7 +15,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    filter: blur(5px);
+    filter: blur(10px);
     z-index: -1;
   }
   .introduction div {
