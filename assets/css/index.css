@@ -123,20 +123,23 @@
   }
   .academic1 div {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
-    gap: 10px;
+    gap: 1rem;
   }
   .academic1 div div {
     display: block;
     width: 300px;
     background-color: rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    border-radius: 6px;
   }
   .academic1 div div:hover {
     background-color: white;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-1px);
+    transition: all 0.2s ease-in-out;
   }
   .academic1 div div b {
     display: block;
@@ -148,7 +151,8 @@
   }
   .academic1 div div img {
     width: 300px;
-    height: 200px;
+    height: 150px;
+    border-radius: 6px 6px 0 0;
     object-fit: cover;
     border-bottom: 5px solid rgb(157, 157, 189);
   }
