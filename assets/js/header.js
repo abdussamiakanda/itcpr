@@ -1,85 +1,99 @@
 function myHeader() {
-  document.getElementById("header").innerHTML = `<div class="menu">
-  <div class="menu-top">
-    <div onclick="goTo('./../../../internships')">APPLY</div>
-    <div onclick="goTo('./../../../support')">SUPPORT</div>
-    <div class="bar"></div>
-    <div onclick="goToExternal('https://portal.itcpr.org')">LOGIN</div>
-  </div>
-  <div class="menu-bar">
-    <div class="icon" onclick="goTo('./../../../')">
-      ITCPR
-    </div>
-    <div id="headerbtn">
-      <i class="fa-solid fa-bars bars" onclick="handleMenu('o')"></i>
-    </div>
-    <div class="pc-menu">
-      <div class="menu-item about">
-        ABOUT
-        <div class="about-items">
-          <div onclick="goTo('./../../../story')">Our Story</div>
-          <div onclick="goTo('./../../../charter')">
-            Institutional Charter
-          </div>
-          <div onclick="goToExternal('https://server.itcpr.org')">
-            Research Facilities
-          </div>
+  document.getElementById("header").innerHTML = `
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-right">
+          <a href="https://twitter.com/itcpr" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/company/itcpr" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/itcpr" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.facebook.com/itcpr.org" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="top-bar-left">
+          <a href="/internships">APPLY</a>
+          <a href="/support">SUPPORT</a>
+          <a href="https://portal.itcpr.org" target="_blank">LOGIN</a>
         </div>
       </div>
-      <div class="menu-item research">
-        RESEARCH
-        <div class="research-items">
-          <div onclick="goTo('./../../../groups')">Research Groups</div>
-          <div onclick="goTo('./../../../publications')">Publications</div>
+    </div>
+    <div class="main-header">
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="/assets/image/logo.png" alt="ITCPR Logo">
+            <span>ITCPR</span>
+          </a>
         </div>
-      </div>
-      <div class="menu-item" onclick="goTo('./../../../outreach')">
-        OUTREACH
-      </div>
-      <div class="menu-item" onclick="goTo('./../../../people')">
-        PEOPLE
+        <nav class="main-nav">
+          <div class="nav-item has-dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-menu">
+              <a href="/story">Our Story</a>
+              <a href="/charter">Institutional Charter</a>
+              <a href="https://server.itcpr.org" target="_blank">Research Facilities</a>
+            </div>
+          </div>
+          <div class="nav-item has-dropdown">
+            <a href="#">Research</a>
+            <div class="dropdown-menu">
+              <a href="/groups">Research Groups</a>
+              <a href="/publications">Publications</a>
+            </div>
+          </div>
+          <a href="/outreach" class="nav-item">Outreach</a>
+          <a href="/people" class="nav-item">People</a>
+          <a href="/contact" class="nav-item">Contact</a>
+        </nav>
+        <button class="mobile-menu-toggle" onclick="handleMenu('o')">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </div>
-  </div>
-
-</div>
-<div class="moblie-menu" id="moblie-menu">
-  <div class="menu-item">About</div>
-  <div class="menu-item1" onclick="goTo('./../../../story')">
-    Our Story
-  </div>
-  <div class="menu-item1" onclick="goTo('./../../../charter')">
-    Institutional Charter
-  </div>
-  <div class="menu-item1" onclick="goTo('./../../../facilities')">
-    Research Facilities
-  </div>
-  <div class="menu-item">Research</div>
-  <div class="menu-item1" onclick="goTo('./../../../groups')">
-    Research Groups
-  </div>
-  <div class="menu-item1" onclick="goTo('./../../../publications')">
-    Publications
-  </div>
-  <div class="menu-item" onclick="goTo('./../../../outreach')">
-    Outreach
-  </div>
-  <div class="menu-item" onclick="goTo('./../../../people')">People</div>
-  <div class="menu-item" onclick="goTo('./../../../contact')">
-    Contact
-  </div>
-</div>`;
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu-header">
+        <button class="close-menu" onclick="handleMenu('c')">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="mobile-menu-content">
+        <div class="mobile-nav-item">
+          <a href="/story">Our Story</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="/charter">Institutional Charter</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="https://server.itcpr.org">Research Facilities</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="/groups">Research Groups</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="/publications">Publications</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="/outreach">Outreach</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="/people">People</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="/contact">Contact</a>
+        </div>
+      </div>
+    </div>`;
 }
 
 function handleMenu(val) {
-    if (val === 'o')  {
-        document.getElementById('moblie-menu').style.top = '0px';
-        document.getElementById('headerbtn').innerHTML = `<i class="fa-solid fa-xmark cross" onclick="handleMenu('c')"></i>`;
-    } else {
-        document.getElementById('moblie-menu').style.top = '-2000px';
-        document.getElementById('headerbtn').innerHTML = `<i class="fa-solid fa-bars bars" onclick="handleMenu('o')"></i>`;
-    }
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (val === 'o') {
+    mobileMenu.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  } else {
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 }
+
 function goTo(path) {
   window.location.assign(path);
 }

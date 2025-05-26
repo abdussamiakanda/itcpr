@@ -1,3 +1,199 @@
+/* Global Styles */
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #34a853;
+  --text-color: #202124;
+  --light-text: #5f6368;
+  --background-light: #f8f9fa;
+  --border-color: #dadce0;
+  --container-width: 1200px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Page Header */
+.page-header {
+  position: relative;
+  background-color: var(--background-light);
+  padding: 4rem 0;
+  margin-bottom: 4rem;
+}
+
+.page-header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.125rem;
+  color: var(--light-text);
+}
+
+/* Story Section */
+.story-section {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.story-content h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.story-content p {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Vision Section */
+.vision-section {
+  padding: 4rem 0;
+  background-color: var(--background-light);
+}
+
+.vision-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vision-content h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.vision-content p {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+/* Objectives Section */
+.objectives-section {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.objectives-content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.objectives-content h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.objective-group {
+  margin-bottom: 2rem;
+}
+
+.objective-group h3 {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.objective-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.objective-group li {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.objective-group li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .story-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-image {
+    order: -1;
+  }
+
+  .page-header {
+    padding: 3rem 0;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .story-content h2,
+  .vision-content h2,
+  .objectives-content h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 2rem 0;
+  }
+
+  .story-section,
+  .vision-section,
+  .objectives-section {
+    padding: 2rem 0;
+  }
+}
+
 @media screen and (min-width: 40em) {
   .top {
     padding: 50px;

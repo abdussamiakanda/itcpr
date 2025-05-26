@@ -10,48 +10,49 @@
     <meta
       property="og:description"
       content="ITCPR, a burgeoning institute in theoretical and computational physics, is committed to transcending traditional boundaries in science. We focus on providing research opportunities to individuals typically overlooked in the scientific field, creating a platform where untapped talent can significantly contribute to global scientific progress." />
-    <meta property="og:image" content="./../../../assets/image/logo.png" />
-    <link rel="shortcut icon" href="./../../../assets/image/short.png" />
+    <meta property="og:image" content="/assets/image/logo.png" />
+    <link rel="shortcut icon" href="/assets/image/short.png" />
     <script
-      src="./../../../assets/js/a1b0511c5a.js"
+      src="https://kit.fontawesome.com/a1b0511c5a.js"
       crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet" />
-    <link rel="stylesheet" href="./../../../assets/css/root.css" />
-    <link rel="stylesheet" href="./../../../assets/css/header.css" />
-    <link rel="stylesheet" href="./../../../assets/css/footer.css" />
-    <link rel="stylesheet" href="./../../../assets/css/story.css" />
+    <link rel="stylesheet" href="/assets/css/root.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/charter.css" />
   </head>
   <body>
     <section id="header"></section>
 
-    <section class="top"></section>
-
-    <section class="page-top">
-      <div class="page-head"
-      style="
-        background-image: url('./../assets/image/charter.png');
-      "></div>
-      <div class="page-title">
-        <div>
-          <div>Institutional Charter</div>
-          ITCPR / About / Institutional Charter
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <div class="page-header-content">
+            <h1>Institutional Charter</h1>
+            <p>Our guiding principles and organizational framework that shape ITCPR's mission and operations.</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="academic1 flex">
-      <div id="charter">
-      </div>
-    </section>
+      <!-- Charter Content -->
+      <section class="charter-section">
+        <div class="container">
+          <div class="charter-content" id="charter">
+            <!-- Content will be dynamically loaded from charter.json -->
+          </div>
+        </div>
+      </section>
+    </main>
 
     <section id="footer"></section>
 
-    <script src="./../../../assets/js/header.js"></script>
-    <script src="./../../../assets/js/footer.js"></script>
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/footer.js"></script>
 
     <script>
       function renderCharter(data) {
@@ -59,20 +60,44 @@
 
         // Render Preamble
         if (data.preamble) {
-          container.appendChild(createTitle(data.preamble.title));
-          container.appendChild(createBar());
-          container.appendChild(createParagraph(data.preamble.content));
+          const preambleDiv = document.createElement("div");
+          preambleDiv.className = "article-section";
+          
+          const title = document.createElement("h2");
+          title.className = "charter-title";
+          title.textContent = data.preamble.title;
+          preambleDiv.appendChild(title);
+
+          const bar = document.createElement("div");
+          bar.className = "charter-bar";
+          preambleDiv.appendChild(bar);
+
+          const text = document.createElement("p");
+          text.className = "charter-text";
+          text.innerHTML = data.preamble.content.replace(/\n/g, "<br>");
+          preambleDiv.appendChild(text);
+
+          container.appendChild(preambleDiv);
         }
 
         // Render Articles
         data.articles.forEach(article => {
-          container.appendChild(createTitle(article.title));
-          container.appendChild(createBar());
+          const articleDiv = document.createElement("div");
+          articleDiv.className = "article-section";
+
+          const title = document.createElement("h2");
+          title.className = "charter-title";
+          title.textContent = article.title;
+          articleDiv.appendChild(title);
+
+          const bar = document.createElement("div");
+          bar.className = "charter-bar";
+          articleDiv.appendChild(bar);
 
           article.sections.forEach(section => {
             const sectionHeading = document.createElement("h3");
             sectionHeading.textContent = section.title;
-            container.appendChild(sectionHeading);
+            articleDiv.appendChild(sectionHeading);
 
             const ul = document.createElement("ul");
             section.items.forEach(item => {
@@ -83,28 +108,11 @@
               ul.appendChild(li);
             });
 
-            container.appendChild(ul);
+            articleDiv.appendChild(ul);
           });
+
+          container.appendChild(articleDiv);
         });
-      }
-
-      function createTitle(text) {
-        const div = document.createElement("div");
-        div.className = "title article";
-        div.textContent = text;
-        return div;
-      }
-
-      function createBar() {
-        const span = document.createElement("span");
-        span.className = "bar";
-        return span;
-      }
-
-      function createParagraph(text) {
-        const p = document.createElement("p");
-        p.innerHTML = text.replace(/\n/g, "<br>");
-        return p;
       }
 
       document.addEventListener("DOMContentLoaded", () => {
@@ -117,7 +125,5 @@
           });
       });
     </script>
-
-
   </body>
 </html>

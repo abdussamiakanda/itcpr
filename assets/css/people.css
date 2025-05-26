@@ -1,362 +1,244 @@
-@media screen and (min-width: 40em) {
-  .top {
-    padding: 50px;
-  }
-  .page-top .page-head {
-    width: 100%;
-    height: 150px;
-    background-image: url("https://images.hindustantimes.com/tech/img/2021/07/31/960x540/Screenshot_2021-07-31_at_6.17.55_PM_1627735690053_1627735748173.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    filter: blur(6px);
-  }
-  .page-top .page-title {
-    background-color: rgb(48, 48, 48);
-    padding: 5px;
-    color: white;
-  }
-  .page-top .page-title div {
-    max-width: 1200px;
-    margin: 0px auto;
-    position: relative;
-  }
-  .page-top .page-title div div {
-    display: block;
-    margin: 0px auto;
-    position: absolute;
-    bottom: 29px;
-    background-color: rgb(157, 157, 189);
-    color: black;
-    padding: 10px 20px;
-    border-radius: 10px 10px 0px 0px;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  
-  .academic1 {
-    background-color: white;
-    padding: 50px 35px;
-    max-width: 1200px;
-    margin: 0px auto;
-  }
-  .academic1 div .title {
-    font-size: 30px;
-    font-weight: bold;
-  }
-  .academic1 div .bar {
-    display: block;
-    width: 50px;
-    border: 3px solid rgb(157, 157, 189);
-    margin: 10px 0px;
-  }
-  
-  .academic2 {
-    background-color: rgb(48, 48, 48);
-    padding: 50px 35px;
-  }
-  .academic2 .inner {
-    max-width: 1200px;
-    margin: 0px auto;
-    color: white;
-  }
-  .academic2 div .title {
-    font-size: 30px;
-    font-weight: bold;
-    padding: 0px;
-  }
-  .academic2 div .bar {
-    display: block;
-    width: 50px;
-    border: 3px solid rgb(157, 157, 189);
-    margin: 10px 0px;
-  }
-
-
-  .boxes-desc {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .boxes-desc .person {
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    text-wrap: nowrap;
-  }
-  .boxes-desc .person div {
-    padding: 10px 5px 5px 5px;
-    width: 100%;
-  }
-  .boxes-desc .person:hover {
-    transform: translateY(-3px);
-    transition: 0.3s;
-  }
-  .boxes-desc .person b {
-    padding: 10px;
-    font-size: 18px;
-  }
-  .boxes-desc .person span {
-    display: block;
-    padding: 0px 10px 10px 10px;
-    font-size: 15px;
-  }
-  .boxes-desc .person img {
-    width: 100px;
-    height: 130px;
-    border-radius: 10px 0px 0px 10px;
-    object-fit: cover;
-  }
-  .boxes-desc .person .profile {
-    display: block;
-    padding: 10px;
-    margin: 0px 10px 10px 10px;
-    border-radius: 10px;
-    background-color: rgb(157, 157, 189);
-    color: white;
-    cursor: pointer;
-    text-align: center;
-  }
-  .boxes-desc .person .profile:hover .fa-arrow-right {
-    margin-left: 10px;
-    transition-duration: 0.5s;
-  }
-  .boxes-desc .person .profile:hover .fa-arrow-trend-up {
-    margin-left: 10px;
-    transition-duration: 0.5s;
-  }
-  .boxes-desc .person:hover .profile {
-    transition-duration: 0.5s;
-  }
-
-  
-  .publications {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .publications .publication {
-    padding: 10px;
-    margin: 0px 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .publications .publication .number {
-    font-size: 40px;
-    font-weight: bold;
-    padding-left: 10px;
-    width: 120px;
-  }
-
-
+/* Global Styles */
+:root {
+  --primary-color: #1a73e8;
+  --secondary-color: #34a853;
+  --text-color: #202124;
+  --light-text: #5f6368;
+  --background-light: #f8f9fa;
+  --border-color: #dadce0;
+  --container-width: 1200px;
 }
 
-@media screen and (min-width: 0em) and (max-width: 40em) {
-  .top {
-    padding: 0px;
-  }
-  .page-top .page-head {
-    width: 100%;
-    height: 200px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    filter: blur(6px);
-  }
-  .page-top .page-title {
-    background-color: rgb(48, 48, 48);
-    padding: 5px;
-    color: white;
-  }
-  .page-top .page-title div {
-    margin: 0px auto;
-    position: relative;
-    font-size: 10px;
-  }
-  .page-top .page-title div div {
-    display: block;
-    margin: 0px auto;
-    position: absolute;
-    bottom: 20px;
-    background-color: rgb(157, 157, 189);
-    color: black;
-    border-radius: 5px 5px 0px 0px;
-    padding: 0px 10px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  .academic1 {
-    background-color: white;
-    padding: 30px 10px;
-    margin: 0px auto;
-  }
-  .academic1 div .title {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .academic1 div .bar {
-    display: block;
-    width: 30px;
-    border: 2px solid rgb(157, 157, 189);
-    margin: 5px 0px;
-  }
-
-  .academic2 {
-    background-color: rgb(48, 48, 48);
-    padding: 30px 10px;
-  }
-  .academic2 .inner {
-    margin: 0px auto;
-    color: white;
-  }
-  .academic2 div .title {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 0px;
-  }
-  .academic2 div .bar {
-    display: block;
-    width: 30px;
-    border: 2px solid rgb(157, 157, 189);
-    margin: 5px 0px;
-  }
-  
-  
-  .boxes-desc {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  .boxes-desc div {
-    width: 150px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    word-wrap: break-word;
-    text-align: center;
-  }
-  .boxes-desc div:hover {
-    background-color: black;
-    color: white;
-  }
-  .boxes-desc div b {
-    padding: 5px 5px 0px 5px;
-    font-size: 16px;
-  }
-  .boxes-desc div span {
-    display: block;
-    padding: 0px 5px 5px 5px;
-    font-size: 12px;
-  }
-  .boxes-desc div img {
-    width: 150px;
-    height: 100px;
-    border-radius: 5px 5px 0px 0px;
-    object-fit: cover;
-  }
-  .boxes-desc div .profile {
-    display: block;
-    padding: 5px;
-    margin: 0px 5px 5px 5px;
-    border-radius: 5px;
-    background-color: rgb(157, 157, 189);
-    color: white;
-    cursor: pointer;
-  }
-  .boxes-desc div .profile:hover .fa-arrow-right {
-    margin-left: 10px;
-    transition-duration: 0.5s;
-  }
-  .boxes-desc div:hover .profile {
-    transition-duration: 0.5s;
-    background-color: white;
-    color: black;
-  }
-
-  .publications {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .publications .publication {
-    padding: 5px;
-    margin: 0px 5px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .publications .publication .number {
-    font-size: 18px;
-    font-weight: bold;
-    padding-left: 5px;
-    width: 85px;
-  }
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.boxes-members {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.boxes-members div {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-  cursor: pointer;
-  word-wrap: break-word;
-  text-align: center;
+/* Page Header */
+.page-header {
   position: relative;
+  background-color: var(--background-light);
+  padding: 4rem 0;
+}
+
+.page-header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+/* Team Sections */
+.team-section {
+  padding: 4rem 0;
+}
+
+.team-section:nth-child(even) {
+  background-color: var(--background-light);
+}
+
+.team-content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.team-content h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.team-content p {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Team Member Card */
+.team-card {
+  background: white;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  margin: 0 auto;
 }
-.boxes-members div:hover {
-  transition: 0.3s;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
-.boxes-members div span {
-  opacity: 0;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  color: white;
-  text-shadow: 0 2px 10px black;
-  font-weight: bold;
-}
-.boxes-members div:hover span {
-  opacity: 1;
-  transition: 0.3s;
-}
-.boxes-members div img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+
+.team-card img {
+  width: 100%;
+  height: 250px;
   object-fit: cover;
-  object-position: center;
 }
-.boxes-members div:hover img {
-  filter: blur(5px);
+
+.team-info {
+  padding: 1.25rem;
+}
+
+.team-info h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.team-info p {
+  font-size: 0.9375rem;
+  color: var(--light-text);
+  margin-bottom: 1rem;
+}
+
+.team-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.team-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.team-link i {
+  transition: transform 0.3s ease;
+}
+
+.team-link:hover i {
+  transform: translateX(5px);
+}
+
+/* Members Grid */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.member-card {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: scale(1.05);
+}
+
+.member-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.member-card:hover .member-overlay {
+  opacity: 1;
+}
+
+.member-name {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 3rem 0;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .team-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .team-section {
+    padding: 3rem 0;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 2rem 0;
+  }
+
+  .team-section {
+    padding: 2rem 0;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .members-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
 }
