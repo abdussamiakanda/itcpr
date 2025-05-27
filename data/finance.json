@@ -1,0 +1,99 @@
+{
+  "last_updated": "2025-05-26",
+  "years": {
+    "2024": {
+      "total_budget": 4076.33,
+      "research_expenditures": {
+        "categories": {
+          "research_traveling": {
+            "amount": 0,
+            "items": [
+              "N/A"
+            ]
+          },
+          "publication": {
+            "amount": 0,
+            "items": [
+              "D-Shaped Butterfly-Core PCF-SPR Sensor"
+            ]
+          }
+        }
+      },
+      "operational_costs": {
+        "categories": {
+          "facility_maintenance": {
+            "amount": 0,
+            "items": [
+              ""
+            ]
+          },
+          "server_maintenance": {
+            "amount": 0,
+            "items": [
+              ""
+            ]
+          }
+        }
+      },
+      "educational_initiatives": {
+        "categories": {
+          "educational_programs": {
+            "amount": 0,
+            "items": [
+              ""
+            ]
+          },
+          "student_support": {
+            "amount": 0,
+            "items": [
+              ""
+            ]
+          }
+        }
+      },
+      "outreach_&amp;_communication": {
+        "categories": {
+          "community_engagement": {
+            "amount": 0,
+            "items": [
+              "gjbghb"
+            ]
+          },
+          "promotional_activity": {
+            "amount": 0,
+            "items": [
+              "gthukhjk"
+            ]
+          }
+        }
+      },
+      "funding_sources": {
+        "individual_donations": {
+          "total": 0
+        },
+        "corporate_sponsorships": {
+          "total": 0
+        },
+        "research_grants": {
+          "total": 0
+        },
+        "industry_partnerships": {
+          "total": 0
+        },
+        "academic_institutions": {
+          "total": 0
+        }
+      },
+      "key_metrics": {
+        "research_output": 0,
+        "active_projects": 2,
+        "student_researchers": 10
+      },
+      "financial_controls": {
+        "monthly_reviews": "Board of Directors",
+        "annual_audit": "Comprehensive internal financial review",
+        "compliance_reviews": "Regular internal check-ins with donors"
+      }
+    }
+  }
+}

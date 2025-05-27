@@ -26,7 +26,7 @@ function myFooter() {
               <li><a href="/support">Support Us</a></li>
               <li><a href="/newsletters">Newsletters</a></li>
               <li><a href="https://events.itcpr.org" target="_blank">Seminars</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="/financials">Financials</a></li>
             </ul>
           </div>
           

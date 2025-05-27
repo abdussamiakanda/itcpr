@@ -116,7 +116,7 @@
       }
 
       document.addEventListener("DOMContentLoaded", () => {
-        fetch("charter.json")
+        fetch("data/charter.json")
           .then(res => res.json())
           .then(data => renderCharter(data))
           .catch(err => {
