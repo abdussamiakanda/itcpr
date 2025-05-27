@@ -54,6 +54,27 @@
   font-size: 2rem;
   color: var(--text-color);
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.charter-title:hover {
+  color: var(--primary-color);
+}
+
+.expand-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.expandable-header[aria-expanded="true"] .expand-icon {
+  transform: rotate(90deg);
 }
 
 .charter-bar {
@@ -141,4 +162,4 @@
   .charter-section {
     padding: 2rem 0;
   }
-} 
+}

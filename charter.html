@@ -80,25 +80,47 @@
           container.appendChild(preambleDiv);
         }
 
-        // Render Articles
-        data.articles.forEach(article => {
+        // Render Articles (Expandable, icon inside h2, left)
+        data.articles.forEach((article, idx) => {
           const articleDiv = document.createElement("div");
-          articleDiv.className = "article-section";
+          articleDiv.className = "article-section expandable-article";
+
+          // Article Header (clickable, icon inside h2, left)
+          const header = document.createElement("div");
+          header.className = "expandable-header";
+          header.tabIndex = 0;
+          header.setAttribute('role', 'button');
+          header.setAttribute('aria-expanded', 'false');
+          header.setAttribute('aria-controls', `article-content-${idx}`);
 
           const title = document.createElement("h2");
           title.className = "charter-title";
-          title.textContent = article.title;
-          articleDiv.appendChild(title);
+          // Expand/collapse icon inside h2, left
+          const icon = document.createElement("span");
+          icon.className = "expand-icon";
+          icon.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`; // ▶
+          title.appendChild(icon);
+          // Insert icon as first child, then text
+          title.insertBefore(icon, title.firstChild);
+          title.appendChild(document.createTextNode(" " + article.title));
+          header.appendChild(title);
 
           const bar = document.createElement("div");
           bar.className = "charter-bar";
-          articleDiv.appendChild(bar);
+          header.appendChild(bar);
+
+          articleDiv.appendChild(header);
+
+          // Article Content (collapsible)
+          const contentDiv = document.createElement("div");
+          contentDiv.className = "expandable-content";
+          contentDiv.id = `article-content-${idx}`;
+          contentDiv.style.display = "none";
 
           article.sections.forEach(section => {
             const sectionHeading = document.createElement("h3");
             sectionHeading.textContent = section.title;
-            articleDiv.appendChild(sectionHeading);
-
+            contentDiv.appendChild(sectionHeading);
             const ul = document.createElement("ul");
             section.items.forEach(item => {
               const li = document.createElement("li");
@@ -107,8 +129,21 @@
                 : item.text;
               ul.appendChild(li);
             });
+            contentDiv.appendChild(ul);
+          });
 
-            articleDiv.appendChild(ul);
+          articleDiv.appendChild(contentDiv);
+
+          // Toggle logic
+          header.addEventListener('click', () => {
+            const expanded = header.getAttribute('aria-expanded') === 'true';
+            header.setAttribute('aria-expanded', !expanded);
+            contentDiv.style.display = expanded ? 'none' : 'block';
+          });
+          header.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              header.click();
+            }
           });
 
           container.appendChild(articleDiv);
