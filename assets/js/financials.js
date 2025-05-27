@@ -19,7 +19,7 @@ const createBudgetCard = (title, amount, percentage) => {
     <div class="budget-card">
       <h3>${title}</h3>
       <div class="budget-amount">${formatCurrency(amount)}</div>
-      <div class="budget-percentage">${formatPercentage(percentage)}</div>
+      <div class="budget-percentage">${formatPercentage(percentage)} of budget</div>
     </div>
   `;
 };
@@ -257,11 +257,11 @@ const loadFinancialData = async (year) => {
         yearData.operational_costs.categories.server_maintenance.amount,
         ((yearData.operational_costs.categories.facility_maintenance.amount + 
           yearData.operational_costs.categories.server_maintenance.amount) / yearData.total_budget * 100).toFixed(1))}
-      ${createBudgetCard('Educational Initiatives', yearData.educational_initiatives.categories.educational_programs.amount + 
+      ${createBudgetCard('Initiatives', yearData.educational_initiatives.categories.educational_programs.amount + 
         yearData.educational_initiatives.categories.student_support.amount,
         ((yearData.educational_initiatives.categories.educational_programs.amount + 
           yearData.educational_initiatives.categories.student_support.amount) / yearData.total_budget * 100).toFixed(1))}
-      ${createBudgetCard('Outreach & Communication', yearData['outreach_&amp;_communication'].categories.community_engagement.amount + 
+      ${createBudgetCard('Outreach', yearData['outreach_&amp;_communication'].categories.community_engagement.amount + 
         yearData['outreach_&amp;_communication'].categories.promotional_activity.amount,
         ((yearData['outreach_&amp;_communication'].categories.community_engagement.amount + 
           yearData['outreach_&amp;_communication'].categories.promotional_activity.amount) / yearData.total_budget * 100).toFixed(1))}
