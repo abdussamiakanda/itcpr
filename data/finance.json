@@ -1,7 +1,12 @@
 {
-  "last_updated": "2025-05-26",
+  "last_updated": "15 June 2025",
   "years": {
+    "2025": {
+      "audit": "Pending",
+      "total_budget": 3000
+    },
     "2024": {
+      "audit": "Completed",
       "total_budget": 2500,
       "research_expenditures": {
         "categories": {
