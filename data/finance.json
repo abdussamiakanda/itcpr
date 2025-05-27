@@ -2,7 +2,7 @@
   "last_updated": "2025-05-26",
   "years": {
     "2024": {
-      "total_budget": 4076.33,
+      "total_budget": 2500,
       "research_expenditures": {
         "categories": {
           "research_traveling": {
@@ -22,13 +22,13 @@
       "operational_costs": {
         "categories": {
           "facility_maintenance": {
-            "amount": 0,
+            "amount": 100,
             "items": [
               ""
             ]
           },
           "server_maintenance": {
-            "amount": 0,
+            "amount": 2000,
             "items": [
               ""
             ]
@@ -69,7 +69,7 @@
       },
       "funding_sources": {
         "individual_donations": {
-          "total": 0
+          "total": 2000
         },
         "corporate_sponsorships": {
           "total": 0

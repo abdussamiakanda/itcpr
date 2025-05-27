@@ -263,6 +263,44 @@
           // Update budget summary
           document.getElementById('budgetSummary').innerHTML = `
             ${createBudgetCard('Total Budget', yearData.total_budget, 100)}
+            ${createBudgetCard('Funds Collected', Object.values(yearData.funding_sources).reduce((sum, source) => sum + source.total, 0), 
+              (Object.values(yearData.funding_sources).reduce((sum, source) => sum + source.total, 0) / yearData.total_budget * 100).toFixed(1))}
+            ${createBudgetCard('Total Expenses', 
+              yearData.research_expenditures.categories.research_traveling.amount + 
+              yearData.research_expenditures.categories.publication.amount +
+              yearData.operational_costs.categories.facility_maintenance.amount + 
+              yearData.operational_costs.categories.server_maintenance.amount +
+              yearData.educational_initiatives.categories.educational_programs.amount + 
+              yearData.educational_initiatives.categories.student_support.amount +
+              yearData['outreach_&amp;_communication'].categories.community_engagement.amount + 
+              yearData['outreach_&amp;_communication'].categories.promotional_activity.amount,
+              ((yearData.research_expenditures.categories.research_traveling.amount + 
+                yearData.research_expenditures.categories.publication.amount +
+                yearData.operational_costs.categories.facility_maintenance.amount + 
+                yearData.operational_costs.categories.server_maintenance.amount +
+                yearData.educational_initiatives.categories.educational_programs.amount + 
+                yearData.educational_initiatives.categories.student_support.amount +
+                yearData['outreach_&amp;_communication'].categories.community_engagement.amount + 
+                yearData['outreach_&amp;_communication'].categories.promotional_activity.amount) / yearData.total_budget * 100).toFixed(1))}
+            ${createBudgetCard('Leftover/Deficit', 
+              Object.values(yearData.funding_sources).reduce((sum, source) => sum + source.total, 0) - 
+              (yearData.research_expenditures.categories.research_traveling.amount + 
+              yearData.research_expenditures.categories.publication.amount +
+              yearData.operational_costs.categories.facility_maintenance.amount + 
+              yearData.operational_costs.categories.server_maintenance.amount +
+              yearData.educational_initiatives.categories.educational_programs.amount + 
+              yearData.educational_initiatives.categories.student_support.amount +
+              yearData['outreach_&amp;_communication'].categories.community_engagement.amount + 
+              yearData['outreach_&amp;_communication'].categories.promotional_activity.amount),
+              ((Object.values(yearData.funding_sources).reduce((sum, source) => sum + source.total, 0) - 
+              (yearData.research_expenditures.categories.research_traveling.amount + 
+              yearData.research_expenditures.categories.publication.amount +
+              yearData.operational_costs.categories.facility_maintenance.amount + 
+              yearData.operational_costs.categories.server_maintenance.amount +
+              yearData.educational_initiatives.categories.educational_programs.amount + 
+              yearData.educational_initiatives.categories.student_support.amount +
+              yearData['outreach_&amp;_communication'].categories.community_engagement.amount + 
+              yearData['outreach_&amp;_communication'].categories.promotional_activity.amount)) / yearData.total_budget * 100).toFixed(1))}
             ${createBudgetCard('Research', yearData.research_expenditures.categories.research_traveling.amount + 
               yearData.research_expenditures.categories.publication.amount, 
               ((yearData.research_expenditures.categories.research_traveling.amount + 
