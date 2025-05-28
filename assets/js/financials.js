@@ -145,22 +145,22 @@ const loadFinancialData = async (year) => {
           </div>
         </section>
 
-        <!-- Capacity Building Section -->
+        <!-- Educational Initiatives Section -->
         <section class="content-section expenditure-section">
           <div class="contained">
-            <h2>Capacity Building</h2>
+            <h2>Educational Initiatives</h2>
             <div class="expenditure-grid" id="capacityBuilding">
-              <!-- Capacity building cards will be populated by JavaScript -->
+              <!-- Educational Initiatives cards will be populated by JavaScript -->
             </div>
           </div>
         </section>
 
-        <!-- Administrative Expenses Section -->
+        <!-- Outreach & Communications Section -->
         <section class="content-section expenditure-section">
           <div class="contained">
-            <h2>Administrative Expenses</h2>
+            <h2>Outreach & Communications</h2>
             <div class="expenditure-grid" id="administrativeExpenses">
-              <!-- Administrative expenses cards will be populated by JavaScript -->
+              <!-- Outreach & Communications cards will be populated by JavaScript -->
             </div>
           </div>
         </section>
