@@ -66,7 +66,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
   const statusDiv = document.getElementById('contact-status');
   statusDiv.textContent = 'Sending...';
   const htmlMessage = getEmailTemplate('New message submitted in itcpr.org', `<p>Sender Name: ${name}</p><p>Sender Email: ${email}</p><p>Message:<br>${message.replace(/\n/g, '<br>')}</p>`);
-  const sent = await sendEmail('info@itcpr.org', subject, htmlMessage);
+  const sent = await sendEmail('abdussamiakanda@gmail.com', subject, htmlMessage);
   if (sent) {
     statusDiv.style.color = 'green';
     statusDiv.textContent = 'Your message has been sent successfully!';
