@@ -61,6 +61,7 @@
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .btn-primary {
@@ -358,6 +359,7 @@
 @media (max-width: 480px) {
   .hero-buttons {
     flex-direction: column;
+    box-sizing: border-box;
   }
 
   .btn {

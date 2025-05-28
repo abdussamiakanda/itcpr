@@ -97,6 +97,7 @@
   background-color: white;
   transition: all 0.3s ease;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
 }
 
 .form-group input[type="email"]::placeholder {
