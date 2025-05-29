@@ -230,6 +230,29 @@
   color: var(--secondary-color);
 }
 
+.content-wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.content-wrapper ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+.content-wrapper ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .page-header h1 {
