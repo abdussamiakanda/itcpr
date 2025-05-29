@@ -26,7 +26,7 @@ function myHeader() {
         </div>
         <nav class="main-nav">
           <div class="nav-item has-dropdown">
-            <a href="#">About</a>
+            <a>About</a>
             <div class="dropdown-menu">
               <a href="/story">Our Story</a>
               <a href="/charter">Institutional Charter</a>
@@ -34,7 +34,7 @@ function myHeader() {
             </div>
           </div>
           <div class="nav-item has-dropdown">
-            <a href="#">Research</a>
+            <a>Research</a>
             <div class="dropdown-menu">
               <a href="/groups">Research Groups</a>
               <a href="/publications">Publications</a>
