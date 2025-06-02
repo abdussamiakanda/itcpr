@@ -141,14 +141,12 @@
 
 /* Links */
 .content-wrapper a {
-  color: var(--primary-color);
+  color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.content-wrapper a:hover {
-  color: var(--secondary-color);
+  transition: all 0.3s ease;
+  padding: 1rem 2rem !important;
+  border-radius: 10px;
 }
 
 /* Responsive Design */
