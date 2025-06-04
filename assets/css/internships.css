@@ -140,7 +140,7 @@
 }
 
 /* Links */
-.content-wrapper a {
+.content-wrapper a.application-btn {
   color: white;
   text-decoration: none;
   font-weight: 500;
