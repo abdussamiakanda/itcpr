@@ -89,7 +89,7 @@
 
 .groups-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -115,14 +115,14 @@
 }
 
 .group-content {
-  padding: 1.5rem;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .group-content h3 {
   font-size: 1.5rem;
   text-align: center;
   color: var(--text-color);
-  margin-bottom: 1rem;
 }
 
 /* Collaboration Section */
