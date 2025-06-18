@@ -289,7 +289,7 @@
 }
 
 .top-bar-left a:hover {
-  color: #007bff;
+  color: rgb(157, 157, 189);
 }
 
 .top-bar-right a {
@@ -301,7 +301,7 @@
 }
 
 .top-bar-right a:hover {
-  color: #007bff;
+  color: rgb(157, 157, 189);
 }
 
 /* Main Header Styles */
@@ -331,7 +331,7 @@
 }
 
 .logo a:hover span {
-  color: #007bff;
+  color: rgb(157, 157, 189);
 }
 
 .logo img {
@@ -364,7 +364,7 @@
 }
 
 .nav-item:hover {
-  color: #007bff;
+  color: rgb(157, 157, 189);
 }
 
 .nav-item a {
@@ -376,11 +376,11 @@
 }
 
 .nav-item a:hover {
-  color: #007bff;
+  color: rgb(157, 157, 189);
 }
 
 .nav-item:focus {
-  color: #007bff;
+  color: rgb(157, 157, 189);
 }
 
 .has-dropdown {
@@ -419,7 +419,7 @@
 
 .dropdown-menu a:hover {
   background-color: #f8f9fa;
-  color: #007bff;
+  color: rgb(157, 157, 189);
 }
 
 /* Mobile Menu Toggle */

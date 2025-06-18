@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --primary-color: #1a73e8;
+  --primary-color: rgb(157, 157, 189);
   --secondary-color: #34a853;
   --text-color: #202124;
   --light-text: #5f6368;
@@ -488,7 +488,7 @@
   }
 
   .talk-details a {
-    color: #007bff;
+    color: rgb(157, 157, 189);
     font-weight: bold;
     text-decoration: none;
   }
@@ -853,7 +853,7 @@
   }
 
   .talk-details a {
-    color: #007bff;
+    color: rgb(157, 157, 189);
     font-weight: bold;
     text-decoration: none;
   }
