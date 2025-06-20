@@ -105,6 +105,7 @@
 .application-btn-container {
   margin: 2rem 0;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .application-btn-container a {
@@ -118,6 +119,7 @@
   text-decoration: none;
   font-weight: 500;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
 }
 
 .application-btn-container a:hover {
