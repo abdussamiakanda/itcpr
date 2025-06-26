@@ -157,6 +157,9 @@
               confirmed, they will join the dynamic environment of ITCPR, actively
               engaging in our research initiatives and contributing to the vibrant
               culture of scientific exploration and discovery within our projects.
+              <br>
+              <br>
+              Contact us at <a href="mailto:majasem@mail.itcpr.org">majasem@mail.itcpr.org</a> for any questions or concerns.
             </p>
           </div>
         </div>
@@ -188,29 +191,31 @@
     <section id="footer"></section>
 
     <script>
-      // Application Status Script
       const today = new Date();
       const year = today.getFullYear();
-      const month = today.getMonth();
+      const month = today.getMonth(); // 0-indexed: Jan = 0, Dec = 11
       const day = today.getDate();
-      
+
       let message = '';
-      let applicationYear = year;
+      let applicationYear;
       let cycle = '';
       let nextCycleMessage = '';
-      
-      if ((month === 11 && day >= 1 && day <= 25)) {
+
+      // Determine application status
+      if (month === 11 && day >= 1 && day <= 25) {
+        // December 1–25: 1st cycle for next year
         applicationYear = year + 1;
         cycle = '1st';
         message = `
           <p>The internship application portal for ${applicationYear} (${cycle} cycle) is now open.</p>
           <div class="application-btn-container">
-            <a href="https://portal.itcpr.org/application" target="_blank" rel="noopener noreferrer">
+            <a class="application-btn" href="https://apply.itcpr.org" target="_blank" rel="noopener noreferrer">
               <i class="fa-brands fa-wpforms"></i> Apply for Internship ${applicationYear}
             </a>
           </div>
         `;
-      } else if ((month === 5 && day >= 1 && day <= 25)) {
+      } else if (month === 5 && day >= 1 && day <= 25) {
+        // June 1–25: 2nd cycle for current year
         applicationYear = year;
         cycle = '2nd';
         message = `
@@ -222,30 +227,50 @@
           </div>
         `;
       } else {
-        if (month < 5 || (month === 5 && day > 25)) {
-          nextCycleMessage = `The application portal opens on June 1st for the 2nd cycle of ${year}.`;
-          cycle = '1st';
+        // Currently closed – figure out what the next opening is
+        if (month < 5 || (month === 5 && day < 1)) {
           applicationYear = year;
-        } else if (month < 11 || (month === 11 && day > 25)) {
-          nextCycleMessage = `The application portal opens on December 1st for the 1st cycle of ${year + 1}.`;
           cycle = '2nd';
+          nextCycleMessage = `The application portal opens on June 1st for the ${cycle} cycle of ${applicationYear}.`;
+        } else if (month < 11 || (month === 11 && day < 1)) {
           applicationYear = year + 1;
+          cycle = '1st';
+          nextCycleMessage = `The application portal opens on December 1st for the ${cycle} cycle of ${applicationYear}.`;
+        } else {
+          // After Dec 25, wait for next June (2nd cycle of next year)
+          applicationYear = year + 1;
+          cycle = '2nd';
+          nextCycleMessage = `The application portal opens on June 1st for the ${cycle} cycle of ${applicationYear}.`;
         }
-      
+
         message = `
-          <p>The internship application portal for ${applicationYear} (${cycle} cycle) is currently closed.</p>
+          <p>The internship application portal is currently closed.</p>
           <p>${nextCycleMessage}</p>
         `;
       }
-      
+
       document.getElementById('application-status').innerHTML = message;
 
       // Chart Data
-      const dataset = {
-        // 'cycle': ['acceptance', 'rejection', 'drop out'],
-        '2025-1': [88.89, 11.11, 25],
-        // '2025-2': [85.71, 14.29, 20]
+      const rawdata = {
+        '2025-1': { total: 16, accepted: 14, rejected: 2, drop: 4 },
+        '2025-2': { total: 15, accepted: 0, rejected: 0, drop: 0 },
       };
+
+      const dataset = {};
+
+      for (const cycle in rawdata) {
+        const { total, accepted, rejected, drop } = rawdata[cycle];
+        const acceptanceRate = total > 0 ? (accepted / total) * 100 : 0;
+        const rejectionRate = total > 0 ? (rejected / total) * 100 : 0;
+        const dropOutRate = total > 0 ? (drop / total) * 100 : 0;
+
+        dataset[cycle] = [
+          parseFloat(acceptanceRate.toFixed(2)),
+          parseFloat(rejectionRate.toFixed(2)),
+          parseFloat(dropOutRate.toFixed(2)),
+        ];
+      }
 
       // Chart Configuration
       const ctx = document.getElementById('barChart').getContext('2d');
