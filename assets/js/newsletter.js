@@ -1,46 +1,56 @@
-document.getElementById("newsletter").addEventListener("submit", function(event) {
+import { supabase } from "./footer.js";
+
+document.getElementById("newsletter").addEventListener("submit", async function(event) {
     event.preventDefault();
     
     const emailInput = document.getElementById("email");
-    const email = emailInput.value.trim();
-    
-    // Basic email validation
+    const email = emailInput.value.trim();    // Basic email validation
+
     if (!email) {
         showMessage("Please enter your email address.", "error");
         return;
     }
-    
     if (!isValidEmail(email)) {
         showMessage("Please enter a valid email address.", "error");
         return;
     }
-
-    // Disable form while submitting
+    
     const submitButton = document.getElementById("newsform");
     submitButton.disabled = true;
     submitButton.value = "Subscribing...";
 
-    let formData = new FormData();
-    formData.append("entry.818826994", email);
+    try {
+        const { data: existing, error: fetchError } = await supabase
+        .from('subscribers')
+        .select('email')
+        .eq('email', email)
+        .maybeSingle();
 
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLSdaa_6_iDSpFcERvqBxY8nu6kHHKBtfE0R158phIbVzJhjivQ/formResponse", {
-        method: "POST",
-        body: formData,
-        mode: "no-cors"
-    })
-    .then(() => {
-        showMessage("Thank you for subscribing to the ITCPR Newsletter!", "success");
+        if (existing) {
+            showMessage("You're already subscribed!", "success");
+        } else {
+        submitButton.value = "Subscribing...";
+        const { error: insertError } = await supabase
+            .from('subscribers')
+            .insert([{ email }]);
+
+        if (insertError) {
+            console.error("Insert error:", insertError);
+            showMessage("Something went wrong. Please try again.", "error");
+        } else {
+            showMessage("Successfully subscribed!", "success");
+        }
+        }
+
         emailInput.value = "";
-        document.getElementById("newsletter").reset();
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        showMessage("An error occurred. Please try again later.", "error");
-    })
-    .finally(() => {
+        document.getElementById("footer-form").reset();
+    } catch (err) {
+        console.error("Unexpected error:", err);
+        showMessage("Something went wrong.", "error");
+    } finally {
         submitButton.disabled = false;
         submitButton.value = "Subscribe";
-    });
+    }
 });
 
 function showMessage(message, type) {

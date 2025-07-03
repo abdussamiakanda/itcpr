@@ -1,3 +1,10 @@
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+
+export const supabase = createClient(
+  'https://fkhqjzzqbypkwrpnldgk.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZraHFqenpxYnlwa3dycG5sZGdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2MzM0OTAsImV4cCI6MjA2MzIwOTQ5MH0.O5LjcwITJT3hIbnNnXJNYYYPDeOGBKkLmU6EyUUY478'
+);
+
 function myFooter() {
   document.getElementById("footer").innerHTML = `
     <footer class="footer">
@@ -54,45 +61,54 @@ function myFooter() {
     </footer>
   `;
 
-  document.getElementById("footer-form").addEventListener("submit", function(event) {
+  document.getElementById("footer-form").addEventListener("submit", async function(event) {
     event.preventDefault();
-    
+
     const emailInput = document.getElementById("footer-email");
-    const email = emailInput.value.trim();
-    
-    // Basic email validation
-    if (!email) {
-        return;
-    }
-    
-    if (!isValidEmail(email)) {
-        return;
-    }
-  
-    // Disable form while submitting
+    const email = emailInput.value.trim().toLowerCase();
+
     const submitButton = document.getElementById("footer-submit");
     submitButton.disabled = true;
-    submitButton.value = "Subscribing...";
-  
-    let formData = new FormData();
-    formData.append("entry.818826994", email);
-  
-    fetch("https://docs.google.com/forms/d/e/1FAIpQLSdaa_6_iDSpFcERvqBxY8nu6kHHKBtfE0R158phIbVzJhjivQ/formResponse", {
-        method: "POST",
-        body: formData,
-        mode: "no-cors"
-    })
-    .then(() => {
-        emailInput.value = "";
-        document.getElementById("footer-form").reset();
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    })
-    .finally(() => {
-        submitButton.disabled = false;
-        submitButton.value = "Subscribe";
-    });
+    submitButton.value = "Checking...";
+
+    if (!email || !isValidEmail(email)) {
+      submitButton.disabled = false;
+      submitButton.value = "Subscribe";
+      return;
+    }
+
+    try {
+      const { data: existing, error: fetchError } = await supabase
+        .from('subscribers')
+        .select('email')
+        .eq('email', email)
+        .maybeSingle();
+
+      if (existing) {
+        alert("You're already subscribed!");
+      } else {
+        submitButton.value = "Subscribing...";
+        const { error: insertError } = await supabase
+          .from('subscribers')
+          .insert([{ email }]);
+
+        if (insertError) {
+          console.error("Insert error:", insertError);
+          alert("Something went wrong. Please try again.");
+        } else {
+          alert("Successfully subscribed!");
+        }
+      }
+
+      emailInput.value = "";
+      document.getElementById("footer-form").reset();
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      alert("Something went wrong.");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.value = "Subscribe";
+    }
   });
 }
 
