@@ -32,7 +32,7 @@ document.getElementById("newsletter").addEventListener("submit", async function(
         submitButton.value = "Subscribing...";
         const { error: insertError } = await supabase
             .from('subscribers')
-            .insert([{ email }]);
+            .insert([{ email, location: 'newsletter', title: 'ITCPR Newsletter' }]);
 
         if (insertError) {
             console.error("Insert error:", insertError);

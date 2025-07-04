@@ -90,7 +90,7 @@ function myFooter() {
         submitButton.value = "Subscribing...";
         const { error: insertError } = await supabase
           .from('subscribers')
-          .insert([{ email }]);
+          .insert([{ email, location: 'itcpr', title: 'ITCPR Footer' }]);
 
         if (insertError) {
           console.error("Insert error:", insertError);
