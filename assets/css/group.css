@@ -171,10 +171,10 @@
 }
 
 .publication-tags span {
-  background-color: #5f63688d;
+  background-color: #5f636877;
   color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
   margin-right: 0.5rem;
 }
 
@@ -193,10 +193,10 @@
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 500;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   transition: color 0.3s ease;
   border: 1px solid var(--primary-color);
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.7rem;
   border-radius: 4px;
 }
 
