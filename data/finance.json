@@ -29,13 +29,14 @@
           "facility_maintenance": {
             "amount": 100,
             "items": [
-              ""
+              "Domain name registration",
+              "Google Workspace subscription"
             ]
           },
           "server_maintenance": {
             "amount": 2000,
             "items": [
-              ""
+              "Building and maintaining the server"
             ]
           }
         }
@@ -45,13 +46,13 @@
           "educational_programs": {
             "amount": 0,
             "items": [
-              ""
+              "N/A"
             ]
           },
           "student_support": {
             "amount": 0,
             "items": [
-              ""
+              "N/A"
             ]
           }
         }
@@ -61,13 +62,13 @@
           "community_engagement": {
             "amount": 0,
             "items": [
-              "gjbghb"
+              "N/A"
             ]
           },
           "promotional_activity": {
             "amount": 0,
             "items": [
-              "gthukhjk"
+              "N/A"
             ]
           }
         }
