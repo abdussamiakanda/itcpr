@@ -68,6 +68,43 @@ function isValidEmail(email) {
 }
 
 // Function to handle newsletter card clicks
-function goTo(url) {
+window.goTo = function(url) {
     window.location.href = url;
 }
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', async () => {
+    const { data: newsData, error: fetchError } = await supabase
+        .from('news')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+    if (fetchError) {
+        console.error('Error fetching news data:', fetchError);
+        return;
+    }
+
+    const newsContainer = document.getElementById('newsletter-list');
+
+    newsData.forEach(news => {
+        const newsCard = document.createElement('div');
+        newsCard.className = 'newsletter-card';
+        newsCard.onclick = () => goTo("/news?id=" + news.id);
+        newsCard.innerHTML = `
+            <img src="${news.image}" alt="${news.title}">
+            <div class="newsletter-content">
+                <div class="newsletter-header">
+                    <span>${new Date(news.created_at).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })}</span>
+                    <span class="newsletter-type ${news.type}">${news.type}</span>
+                </div>
+                <b>${news.title}</b>
+                <span class="newsletter-author">Author: ${news.author}</span>
+            </div>
+        `;
+        newsContainer.appendChild(newsCard);
+    });
+});

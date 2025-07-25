@@ -19,9 +19,8 @@
 .page-header {
   position: relative;
   background-color: var(--background-light);
-  padding: 4rem 0;
+  padding: 4rem 0 2rem 0;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .page-header-content {
@@ -88,6 +87,14 @@
   margin-bottom: 1.5rem;
 }
 
+.content-wrapper img {
+  max-width: 600px;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 8px;
+  display: block;
+}
+
 .content-wrapper h3 {
   font-size: 1.5rem;
   color: var(--text-color);
@@ -98,6 +105,15 @@
 .content-wrapper ul {
   list-style: none;
   margin: 0 0;
+  margin-bottom: 1.5rem;
+}
+
+.content-wrapper ul li ul {
+  margin-bottom: 0;
+}
+
+.content-wrapper ul p {
+  margin-bottom: 0;
 }
 
 .content-wrapper ul li {

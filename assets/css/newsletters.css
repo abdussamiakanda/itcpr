@@ -197,14 +197,43 @@
 }
 
 .newsletter-content {
-  padding: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.newsletter-content .newsletter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.newsletter-content .newsletter-header .newsletter-type {
+  border: 1px solid var(--primary-color);
+  padding: 0.05rem 0.3rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.newsletter-content .newsletter-header .newsletter-type.news {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+
+.newsletter-content .newsletter-header .newsletter-type.issue {
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 .newsletter-content span {
   display: block;
-  font-size: 0.875rem;
   color: var(--light-text);
   margin-bottom: 0.5rem;
+}
+
+.newsletter-content .newsletter-author {
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
 
 .newsletter-content b {
