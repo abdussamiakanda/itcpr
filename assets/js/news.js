@@ -12,6 +12,15 @@ async function loadNewsDetails(newsId) {
             throw new Error('Error fetching news data');
         }
 
+        document.title = newsData.title + ' - ITCPR';
+
+        document.querySelector('meta[name="description"]')?.setAttribute('content', newsData.content.substring(0, 150) + '...');
+
+        updateMetaTag('og:title', newsData.title + ' - ITCPR');
+        updateMetaTag('og:description', newsData.content.substring(0, 150) + '...');
+        updateMetaTag('og:image', newsData.image || '/assets/image/logo.png');
+        updateMetaTag('og:url', window.location.href);
+
         document.getElementById('news-title').textContent = newsData.title;
         document.getElementById('news-date').textContent = new Date(newsData.created_at).toLocaleDateString( 'en-US', {
             year: 'numeric',
@@ -26,6 +35,16 @@ async function loadNewsDetails(newsId) {
     } catch (error) {
         console.error('Error fetching news details:', error);
     }
+}
+
+function updateMetaTag(property, content) {
+    let metaTag = document.querySelector(`meta[property='${property}']`);
+    if (!metaTag) {
+        metaTag = document.createElement('meta');
+        metaTag.setAttribute('property', property);
+        document.head.appendChild(metaTag);
+    }
+    metaTag.setAttribute('content', content);
 }
 
 function markdownToHtml(markdownText) {
