@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <span class="newsletter-type ${news.type}">${news.type}</span>
                 </div>
                 <b>${news.title}</b>
-                <span class="newsletter-author">Author: ${news.author}</span>
             </div>
         `;
         newsContainer.appendChild(newsCard);
