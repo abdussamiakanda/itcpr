@@ -42,6 +42,7 @@ function myHeader() {
           </div>
           <a href="/outreach" class="nav-item">Outreach</a>
           <a href="/people" class="nav-item">People</a>
+          <a href="/newsletter" class="nav-item">News</a>
           <a href="/contact" class="nav-item">Contact</a>
         </nav>
         <button class="mobile-menu-toggle" onclick="handleMenu('o')">
@@ -76,6 +77,9 @@ function myHeader() {
         </div>
         <div class="mobile-nav-item">
           <a href="/people">People</a>
+        </div>
+        <div class="mobile-nav-item">
+          <a href="/newsletter">News</a>
         </div>
         <div class="mobile-nav-item">
           <a href="/contact">Contact</a>
