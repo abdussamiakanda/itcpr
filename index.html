@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="/assets/css/header.css" />
     <link rel="stylesheet" href="/assets/css/footer.css" />
     <link rel="stylesheet" href="/assets/css/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
   <body>
     <section id="header"></section>
@@ -128,30 +129,7 @@
             <h2>Featured News</h2>
             <a href="/newsletters" class="view-all">View All News</a>
           </div>
-          <div class="research-grid">
-            <div class="research-card">
-              <div class="card-image">
-                <img src="/assets/image/posts/first_paper.png" alt="First Research Publication">
-              </div>
-              <div class="card-content">
-                <span class="date">February 5, 2025</span>
-                <h3>ITCPR Celebrates Its First Research Publication</h3>
-                <p>A milestone achievement in our journey of scientific discovery.</p>
-                <a href="/news/itcpr_celebrates_its_first_research_publication" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-              </div>
-            </div>
-            <div class="research-card">
-              <div class="card-image">
-                <img src="/assets/image/posts/server_background_image.png" alt="High-Performance PC">
-              </div>
-              <div class="card-content">
-                <span class="date">February 15, 2024</span>
-                <h3>New High-Performance PC Enhances Computational Capabilities</h3>
-                <p>Expanding our research capabilities with cutting-edge technology.</p>
-                <a href="/news/new-high-performance-pc-enhances-computational-capabilities" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
+          <div class="research-grid" id="news-grid"></div>
         </div>
       </section>
     </main>
@@ -160,5 +138,6 @@
 
     <script src="/assets/js/header.js"></script>
     <script type="module" src="/assets/js/footer.js"></script>
+    <script type="module" src="/assets/js/index.js"></script>
   </body>
 </html>
