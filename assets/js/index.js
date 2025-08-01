@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     newsData.forEach(news => {
         const newsCard = document.createElement('div');
-        newsCard.className = 'research-card';
+        newsCard.className = 'research-card news-card';
         newsCard.onclick = () => goTo("/news?id=" + news.id);
         newsCard.innerHTML = `
             <div class="card-image">
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     day: 'numeric'
                 })}</span>
                 <h3>${news.title}</h3>
-                <a href="/news/itcpr_celebrates_its_first_research_publication" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
             </div>
         `;
         newsContainer.appendChild(newsCard);

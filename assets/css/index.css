@@ -145,6 +145,10 @@
   transition: transform 0.3s ease;
 }
 
+.news-card {
+  cursor: pointer;
+}
+
 .research-card:hover {
   transform: translateY(-4px);
 }
