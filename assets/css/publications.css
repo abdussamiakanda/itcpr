@@ -112,6 +112,7 @@
   padding: 0rem 0.5rem;
   border-radius: 5px;
   margin-right: 0.5rem;
+  border: 1px solid #2c89a54c;
 }
 
 .publication-tags span.journal-paper {
