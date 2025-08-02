@@ -114,6 +114,38 @@
   margin-right: 0.5rem;
 }
 
+.publication-tags span.journal-paper {
+  background-color: #f0f4ff;
+}
+
+.publication-tags span.conference-paper {
+  background-color: #e8f5e9;
+}
+
+.publication-tags span.conference-talk {
+  background-color: #fff3e0;
+}
+
+.publication-tags span.poster {
+  background-color: #fce4f6;
+}
+
+.publication-tags span.book {
+  background-color: #e3f2fd;
+}
+
+.publication-tags span.thesis {
+  background-color: #f1f8e9;
+}
+
+.publication-tags span.technical-report {
+  background-color: #e8f5e9;
+}
+
+.publication-tags span.other {
+  background-color: #fce4ec;
+}
+
 .publication-details {
   font-size: 1.125rem;
   color: var(--light-text);
