@@ -2,8 +2,102 @@
   "last_updated": "15 June 2025",
   "years": {
     "2025": {
-      "audit": "Pending",
-      "total_budget": 3000
+      "audit": "Completed",
+      "total_budget": 500,
+      "research_expenditures": {
+        "categories": {
+          "research_traveling": {
+            "amount": 0,
+            "items": [
+              "N/A"
+            ]
+          },
+          "publication": {
+            "amount": 3,
+            "items": [
+              "Journal: D-Shaped Butterfly-Core PCF-SPR Sensor",
+              "Poster: Field-free fast magnetization switching of a synthetic-antiferromagnetic nanodevice by a down chirped current pulse via spin-orbit torque"
+            ]
+          }
+        }
+      },
+      "operational_costs": {
+        "categories": {
+          "facility_maintenance": {
+            "amount": 171.88,
+            "items": [
+              "ITCPR Server API VPS - IONOS",
+              "Zotero 2GB storage subscription",
+              "Institutional Email & Domain Renewal"
+            ]
+          },
+          "server_maintenance": {
+            "amount": 0,
+            "items": [
+              "N/A"
+            ]
+          }
+        }
+      },
+      "educational_initiatives": {
+        "categories": {
+          "educational_programs": {
+            "amount": 0,
+            "items": [
+              "N/A"
+            ]
+          },
+          "student_support": {
+            "amount": 0,
+            "items": [
+              "N/A"
+            ]
+          }
+        }
+      },
+      "outreach_&amp;_communication": {
+        "categories": {
+          "community_engagement": {
+            "amount": 8.43,
+            "items": [
+              "Gift/incentive for researcher"
+            ]
+          },
+          "promotional_activity": {
+            "amount": 0,
+            "items": [
+              "N/A"
+            ]
+          }
+        }
+      },
+      "funding_sources": {
+        "individual_donations": {
+          "total": 161.0
+        },
+        "corporate_sponsorships": {
+          "total": 0
+        },
+        "research_grants": {
+          "total": 0
+        },
+        "industry_partnerships": {
+          "total": 0
+        },
+        "academic_institutions": {
+          "total": 0
+        }
+      },
+      "key_metrics": {
+        "research_output": 3,
+        "active_projects": 6,
+        "student_researchers": 19
+      },
+      "financial_controls": {
+        "monthly_reviews": "Board of Directors",
+        "annual_audit": "Comprehensive internal financial review",
+        "compliance_reviews": "Regular internal check-ins with donors"
+      }
     },
     "2024": {
       "audit": "Completed",
@@ -19,7 +113,7 @@
           "publication": {
             "amount": 0,
             "items": [
-              "D-Shaped Butterfly-Core PCF-SPR Sensor"
+              "N/A"
             ]
           }
         }
