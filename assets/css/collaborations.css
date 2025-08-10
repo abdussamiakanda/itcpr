@@ -56,19 +56,18 @@
 }
 
 .collaboration-content h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--text-color);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .collaboration-content > p {
   font-size: 1.125rem;
   color: var(--light-text);
   line-height: 1.6;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 3rem;
 }
 
 /* Collaboration Grid */
@@ -148,7 +147,7 @@
 }
 
 .collaboration-steps {
-  padding-left: 0;
+  padding-left: 25px;
 }
 
 .collaboration-steps li {
