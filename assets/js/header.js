@@ -30,7 +30,7 @@ function myHeader() {
             <div class="dropdown-menu">
               <a href="/story">Our Story</a>
               <a href="/charter">Institutional Charter</a>
-              <a href="https://server.itcpr.org" target="_blank">Research Facilities</a>
+              <a href="/infrastructure" target="_blank">Our Infrastructure</a>
             </div>
           </div>
           <div class="nav-item has-dropdown">
@@ -64,7 +64,7 @@ function myHeader() {
           <a href="/charter">Institutional Charter</a>
         </div>
         <div class="mobile-nav-item">
-          <a href="https://server.itcpr.org">Research Facilities</a>
+          <a href="/infrastructure" target="_blank">Our Infrastructure</a>
         </div>
         <div class="mobile-nav-item">
           <a href="/groups">Research Groups</a>
