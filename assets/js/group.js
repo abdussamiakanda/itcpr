@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const peepElement = document.createElement('div');
             peepElement.className = 'team-card';
             peepElement.innerHTML = `
-                <img src="${person.image}" alt="${person.name}" />
+                <img src="${person.image || '/assets/image/placeholder-avatar.png'}" alt="${person.name}" />
                 <div class="team-info">
                     <h3>${person.name}</h3>
                     <span class="role">${person.role}</span>
