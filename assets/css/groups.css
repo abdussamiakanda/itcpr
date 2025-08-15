@@ -89,9 +89,9 @@
 
 .groups-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .group-card {
@@ -115,12 +115,12 @@
 }
 
 .group-content {
-  padding: 1rem;
+  padding: 0.5rem;
   border-top: 1px solid var(--border-color);
 }
 
 .group-content h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   color: var(--text-color);
 }

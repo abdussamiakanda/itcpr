@@ -22,8 +22,21 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: "PaperPort", icon: "fa-brands fa-chrome", link: "https://library.itcpr.org/extension", desc: "Browser extension for quick access to academic papers and resources." }
   ];
 
+  const TOOLS = [
+    { name: "Python", icon: "fa-brands fa-python", link: "https://www.python.org", desc: "General-purpose language for data analysis, automation, and scientific computing." },
+    { name: "MATLAB", icon: "fa-solid fa-square-root-variable", link: "https://www.mathworks.com/products/matlab.html", desc: "Numerical computing environment used for prototyping and analysis." },
+    { name: "Bash", icon: "fa-solid fa-terminal", link: "https://www.gnu.org/software/bash/", desc: "Shell scripting for automation, clusters, and pipelines." },
+    { name: "CUDA", icon: "fa-solid fa-microchip", link: "https://developer.nvidia.com/cuda-zone", desc: "GPU programming for accelerated simulations and numerics." },
+
+    { name: "Quantum ESPRESSO", icon: "fa-solid fa-cubes", link: "https://www.quantum-espresso.org", desc: "Plane-wave DFT suite for electronic-structure and materials modeling." },
+    { name: "CASTEP", icon: "fa-solid fa-cube", link: "https://www.castep.org", desc: "First-principles DFT code for properties and spectroscopy." },
+
+    { name: "MuMax3", icon: "fa-solid fa-microchip", link: "https://mumax.github.io", desc: "GPU-accelerated micromagnetic simulations." },
+    { name: "Vampire", icon: "fa-solid fa-atom", link: "https://vampire.york.ac.uk/", desc: "Atomistic spin dynamics for magnetic materials." },
+    { name: "Spirit", icon: "fa-solid fa-atom", link: "https://spirit-code.github.io", desc: "Spin dynamics and magnetism simulations with advanced features." },
+  ];
+
   const grid = document.getElementById("grid");
-  const searchInput = document.getElementById("search");
 
   function render(needle = "") {
     grid.innerHTML = "";
@@ -45,5 +58,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  const gridTools = document.getElementById("grid-tools");
+
+  function renderTools(needle = "") {
+    gridTools.innerHTML = "";
+    const q = needle.trim().toLowerCase();
+    TOOLS.filter(t => !q || t.name.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q)).forEach(t => {
+      const card = document.createElement("div");
+      card.className = "card fancy-card";
+      card.innerHTML = `
+        <div class="card-header">
+          <div class="icon-circle"><i class="${t.icon}"></i></div>
+          <h3 class="name">${t.name}</h3>
+        </div>
+        <p class="desc">${t.desc}</p>
+        <div class="card-footer">
+          <a href="${t.link}" target="_blank" rel="noopener" class="btn btn-accent">Open →</a>
+        </div>
+      `;
+      gridTools.appendChild(card);
+    });
+  }
+
   render();
+  renderTools();
 });

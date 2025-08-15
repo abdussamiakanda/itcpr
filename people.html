@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/assets/css/header.css" />
     <link rel="stylesheet" href="/assets/css/footer.css" />
     <link rel="stylesheet" href="/assets/css/people.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
   <body>
     <section id="header"></section>
@@ -45,87 +46,8 @@
           <div class="team-content">
             <h2>Administrative Team</h2>
             <p>The Administrative Team at ITCPR plays a crucial role in facilitating the institute's smooth operations, expertly managing key areas like finance, human resources, and organizational logistics.</p>
-            
-            <div class="team-grid">
 
-              <div class="team-card">
-                <img src="/assets/image/people/majpikul.jpg" alt="Md Abu Jafar Pikul" />
-                <div class="team-info">
-                  <h3>Md Abu Jafar Pikul</h3>
-                  <p>Executive Director</p>
-                  <a href="https://scholar.google.com/citations?user=xHAaAmYAAAAJ" class="team-link" target="_blank" rel="noopener">
-                    Google Scholar <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="team-card">
-                <img src="/assets/image/people/masakanda.jpg" alt="Md Abdus Sami Akanda" />
-                <div class="team-info">
-                  <h3>Md Abdus Sami Akanda</h3>
-                  <p>Director of Operations</p>
-                  <a href="https://scholar.google.com/citations?user=hCntcSgAAAAJ" class="team-link" target="_blank" rel="noopener">
-                    Google Scholar <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="team-card">
-                <img src="/assets/image/people/mfbhassan.jpg" alt="Md Faiyaz Bin Hassan" />
-                <div class="team-info">
-                  <h3>Md Faiyaz Bin Hassan</h3>
-                  <p>Director of Research</p>
-                  <a href="https://scholar.google.com/citations?user=m9pDnCEAAAAJ" class="team-link" target="_blank" rel="noopener">
-                    Google Scholar <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="team-card">
-                <img src="/assets/image/people/fariha.jpeg" alt="Fariha Tasnim" />
-                <div class="team-info">
-                  <h3>Fariha Tasnim</h3>
-                  <p>Director of Policy</p>
-                  <a href="https://scholar.google.com/citations?user=bd2s3kWi1lsC" class="team-link" target="_blank" rel="noopener">
-                    Google Scholar <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="team-card">
-                <img src="/assets/image/people/mnnamina.jpg" alt="Nourin Nurain Amina" />
-                <div class="team-info">
-                  <h3>Nourin Nurain Amina</h3>
-                  <p>Director of Outreach</p>
-                  <a href="https://scholar.google.com/citations?user=SUS5mykAAAAJ" class="team-link" target="_blank" rel="noopener">
-                    Google Scholar <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="team-card">
-                <img src="/assets/image/people/tmalakar.JPG" alt="Tonmoy Malakar" />
-                <div class="team-info">
-                  <h3>Tonmoy Malakar</h3>
-                  <p>Director of Finance</p>
-                  <a href="https://scholar.google.com/citations?user=pK0l0OwAAAAJ" class="team-link" target="_blank" rel="noopener">
-                    Google Scholar <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="team-card">
-                <img src="/assets/image/people/jasem.jpg" alt="Mohammad Abu Jasem" />
-                <div class="team-info">
-                  <h3>Mohammad Abu Jasem</h3>
-                  <p>Internship Coordinator</p>
-                  <a href="https://www.linkedin.com/in/jasem109/" class="team-link" target="_blank" rel="noopener">
-                    LinkedIn <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-
-            </div>
+            <div class="team-grid" id="teamGrid"></div>
           </div>
         </div>
       </section>
@@ -137,29 +59,7 @@
             <h2>Our Advisors</h2>
             <p>ITCPR is guided by a number of advisors, composed of distinguished individuals who bring a wealth of knowledge and experience to our institute. They play a pivotal role in shaping our strategic direction and ensuring that we adhere to our mission and values.</p>
             
-            <div class="team-grid">
-              <div class="team-card">
-                <img src="/assets/image/people/torikul_islam.png" alt="Dr. Md Torikul Islam" />
-                <div class="team-info">
-                  <h3>Dr. Md Torikul Islam</h3>
-                  <p>Khulna University</p>
-                  <a href="https://scholar.google.com/citations?user=2ktMlvsAAAAJ" class="team-link" target="_blank" rel="noopener">
-                    Google Scholar <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div class="team-card">
-                <img src="/assets/image/people/omar_faruk.jpg" alt="Dr. Md Omar Faruk Rasel" />
-                <div class="team-info">
-                  <h3>Dr. Md Omar Faruk Rasel</h3>
-                  <p>Khulna University</p>
-                  <a href="https://scholar.google.com/citations?user=bXUPSBcAAAAJ" class="team-link" target="_blank" rel="noopener">
-                    Google Scholar <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <div class="team-grid" id="advisorGrid"></div>
           </div>
         </div>
       </section>
@@ -170,30 +70,8 @@
           <div class="team-content">
             <h2>Research Group Leads</h2>
             <p>Our research groups are led by experts in their respective fields, contributing to our diverse range of studies and projects.</p>
-            
-            <div class="team-grid">
-              <div class="team-card">
-                <img src="/assets/image/people/majpikul.jpg" alt="Md Abu Jafar Pikul" />
-                <div class="team-info">
-                  <h3>Md Abu Jafar Pikul</h3>
-                  <p>Spintronics Group Lead</p>
-                  <a href="https://scholar.google.com/citations?user=xHAaAmYAAAAJ" class="team-link" target="_blank" rel="noopener">
-                    Google Scholar <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
 
-              <div class="team-card">
-                <img src="/assets/image/people/mfbhassan.jpg" alt="Md Faiyaz Bin Hassan" />
-                <div class="team-info">
-                  <h3>Md Faiyaz Bin Hassan</h3>
-                  <p>Photonics Group Lead</p>
-                  <a href="https://scholar.google.com/citations?user=m9pDnCEAAAAJ" class="team-link" target="_blank" rel="noopener">
-                    Google Scholar <i class="fa-solid fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <div class="team-grid" id="leadsGrid"></div>
           </div>
         </div>
       </section>
@@ -205,51 +83,7 @@
             <h2>Members</h2>
             <p>Members are actively involved in our research groups, and they are a vital part of our team. Their enthusiasm and new perspectives significantly contribute to our diverse projects, offering them a rich experience in the realm of scientific research.</p>
             
-            <div class="members-grid">
-              
-              <div class="member-card" onclick="window.open('https://scholar.google.com/citations?user=hCntcSgAAAAJ', '_blank', 'noopener')">
-                <img src="/assets/image/people/masakanda.JPG" alt="Md Abdus Sami Akanda" />
-                <div class="member-overlay">
-                  <span class="member-name">Md Abdus Sami Akanda</span>
-                </div>
-              </div>
-
-              <div class="member-card" onclick="window.open('https://scholar.google.com/citations?user=bd2s3kWi1lsC', '_blank', 'noopener')">
-                <img src="/assets/image/people/fariha.jpeg" alt="Fariha Tasnim" />
-                <div class="member-overlay">
-                  <span class="member-name">Fariha Tasnim</span>
-                </div>
-              </div>
-
-              <div class="member-card" onclick="window.open('https://scholar.google.com/citations?user=qtDpEvAAAAAJ', '_blank', 'noopener')">
-                <img src="/assets/image/people/snigdha.png" alt="Snigdha Chowdhury" />
-                <div class="member-overlay">
-                  <span class="member-name">Snigdha Chowdhury</span>
-                </div>
-              </div>
-
-              <div class="member-card" onclick="window.open('https://scholar.google.com/citations?user=SUS5mykAAAAJ', '_blank', 'noopener')">
-                <img src="/assets/image/people/mnnamina.jpg" alt="Nourin Nurain" />
-                <div class="member-overlay">
-                  <span class="member-name">Nourin Nurain Amina</span>
-                </div>
-              </div>
-
-              <div class="member-card" onclick="window.open('https://scholar.google.com/citations?user=pK0l0OwAAAAJ', '_blank', 'noopener')">
-                <img src="/assets/image/people/tmalakar.jpg" alt="Tonmoy Malakar" />
-                <div class="member-overlay">
-                  <span class="member-name">Tonmoy Malakar</span>
-                </div>
-              </div>
-
-              <div class="member-card" onclick="window.open('https://www.linkedin.com/in/jasem109/', '_blank', 'noopener')">
-                <img src="/assets/image/people/jasem.jpg" alt="Mohammad Abu Jasem" />
-                <div class="member-overlay">
-                  <span class="member-name">Mohammad Abu Jasem</span>
-                </div>
-              </div>
-
-            </div>
+            <div class="members-grid" id="membersGrid"></div>
           </div>
         </div>
       </section>
@@ -261,24 +95,29 @@
             <h2>Collaborators</h2>
             <p>Collaborators play a crucial role in our research initiatives. They are external partners who bring unique expertise and insights to our projects.</p>
 
-            <div class="members-grid">
-
-              <div class="member-card" onclick="window.open('https://scholar.google.com/citations?user=9me3zF7Cb7sC', '_blank', 'noopener')">
-                <img src="/assets/image/people/mhbabu.jpg" alt="Majibul Haque Babu" />
-                <div class="member-overlay">
-                  <span class="member-name">Majibul Haque Babu</span>
-                </div>
-              </div>
-
-            </div>
+            <div class="members-grid" id="collaboratorsGrid"></div>
           </div>
         </div>
       </section>
+
+      <!-- Interns Section -->
+      <section class="team-section">
+        <div class="container">
+          <div class="team-content">
+            <h2>Interns</h2>
+            <p>Our interns are a vital part of our team, bringing fresh perspectives and enthusiasm to our projects. They work closely with our researchers and staff, gaining valuable experience in the field.</p>
+
+            <div class="members-grid" id="internsGrid"></div>
+          </div>
+        </div>
+      </section>
+
     </main>
 
     <section id="footer"></section>
 
     <script src="/assets/js/header.js"></script>
     <script type="module" src="/assets/js/footer.js"></script>
+    <script type="module" src="/assets/js/people.js"></script>
   </body>
 </html>
