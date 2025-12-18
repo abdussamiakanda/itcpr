@@ -1,3 +1,5 @@
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/support.css';
 
 /**
@@ -23,6 +25,12 @@ function Support() {
 
   return (
     <div className="support-page">
+      <SEO
+        title="Support ITCPR"
+        description="Support ITCPR's mission to advance theoretical and computational physics research. Learn about donation options, sponsorship opportunities, and how your contribution makes a difference."
+        keywords="support ITCPR, donate, sponsorship, physics research funding, research support"
+        url={location.pathname}
+      />
       <PageHeader />
       <MissionSection />
       <BenefactorsSection benefactors={benefactors} />

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import SEO from '../components/SEO';
 import '../assets/css/publications.css';
 
 /**
@@ -59,6 +61,12 @@ function Publications() {
 
   return (
     <div className="publications-page">
+      <SEO
+        title="Publications"
+        description="Browse ITCPR's research publications in theoretical and computational physics. Explore our latest research papers, articles, and scientific contributions."
+        keywords="ITCPR publications, physics research papers, scientific publications, research articles, theoretical physics"
+        url={location.pathname}
+      />
       <PageHeader />
       <PublicationsSection publications={publications} isLoading={isLoading} />
     </div>

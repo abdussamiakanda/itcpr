@@ -1,11 +1,21 @@
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/legal.css';
 
 /**
  * Accessibility Page Component
  */
 function Accessibility() {
+  const location = useLocation();
+  
   return (
     <div className="accessibility-page">
+      <SEO
+        title="Accessibility Statement"
+        description="Read ITCPR's accessibility statement. Learn about our commitment to making our website accessible to all users."
+        keywords="ITCPR accessibility, web accessibility, accessible website, WCAG"
+        url={location.pathname}
+      />
       <PageHeader />
       <ContentSection />
     </div>

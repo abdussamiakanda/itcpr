@@ -1,3 +1,5 @@
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/story.css';
 
 /**
@@ -5,8 +7,16 @@ import '../assets/css/story.css';
  * Displays information about ITCPR's history, vision, and objectives
  */
 function Story() {
+  const location = useLocation();
+  
   return (
     <div className="story-page">
+      <SEO
+        title="Our Story"
+        description="Learn about ITCPR's mission, vision, and objectives. Discover how we're transcending traditional boundaries in science and providing research opportunities."
+        keywords="ITCPR story, mission, vision, objectives, physics research, science education"
+        url={location.pathname}
+      />
       <PageHeader />
       <StorySection />
       <VisionSection />

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import SEO from '../components/SEO';
 import '../assets/css/people.css';
 
 /**
@@ -181,6 +183,12 @@ function People() {
 
   return (
     <div className="people-page">
+      <SEO
+        title="People"
+        description="Meet the ITCPR team: researchers, advisors, group leads, members, collaborators, and interns contributing to theoretical and computational physics research."
+        keywords="ITCPR team, physics researchers, research team, advisors, collaborators, scientists"
+        url={location.pathname}
+      />
       <PageHeader />
       <PeopleSection 
         title="Administrative Team"

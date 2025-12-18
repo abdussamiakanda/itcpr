@@ -1,4 +1,5 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/groups.css';
 
 /**
@@ -7,6 +8,7 @@ import '../assets/css/groups.css';
  */
 function Groups() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const groups = [
     {
@@ -31,6 +33,12 @@ function Groups() {
 
   return (
     <div className="groups-page">
+      <SEO
+        title="Research Groups"
+        description="Explore ITCPR's research groups: Spintronics, Photonics, and Materials. Learn about our cutting-edge research in theoretical and computational physics."
+        keywords="ITCPR research groups, spintronics, photonics, materials research, physics research groups"
+        url={location.pathname}
+      />
       <PageHeader />
       <GroupsSection groups={groups} navigate={navigate} />
       <CollaborationSection />

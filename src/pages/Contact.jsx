@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/contact.css';
 
 /**
@@ -8,6 +10,7 @@ import '../assets/css/contact.css';
 function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState('');
+  const location = useLocation();
 
   const sendEmail = async (email, subject, message) => {
     try {

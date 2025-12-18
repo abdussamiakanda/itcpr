@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/contact.css';
 
 /**
@@ -85,6 +87,12 @@ function Unsubscribe() {
 
   return (
     <div className="unsubscribe-page">
+      <SEO
+        title="Unsubscribe from Newsletter"
+        description="Unsubscribe from ITCPR newsletters. We respect your privacy and make it easy to opt out of our communications."
+        keywords="unsubscribe, newsletter, ITCPR, email preferences"
+        url={location.pathname}
+      />
       <PageHeader />
       <UnsubscribeSection email={email} setEmail={setEmail} status={status} handleSubmit={handleSubmit} />
     </div>

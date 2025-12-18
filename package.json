@@ -10,11 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.38.4",
+    "marked": "^11.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.20.0",
-    "@supabase/supabase-js": "^2.38.4",
-    "marked": "^11.1.1"
+    "react-helmet-async": "^2.0.5",
+    "react-router-dom": "^6.20.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -23,4 +24,3 @@
     "vite": "^5.0.8"
   }
 }
-

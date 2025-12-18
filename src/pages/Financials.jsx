@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/financials.css';
 
 /**
@@ -117,6 +119,12 @@ function Financials() {
 
   return (
     <div className="financials-page">
+      <SEO
+        title="Financials"
+        description="View ITCPR's financial transparency reports. Explore our budget, funding sources, research expenditures, and operational costs."
+        keywords="ITCPR financials, financial transparency, budget, funding, research expenditures"
+        url={location.pathname}
+      />
       <PageHeader />
       <YearSelectorSection years={years} year={year} setYear={setYear} />
       <FinancialOverviewSection 

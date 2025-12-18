@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/internships.css';
 
 /**
@@ -145,6 +146,12 @@ function Internships() {
 
   return (
     <div className="internships-page">
+      <SEO
+        title="Internships"
+        description="Apply for ITCPR internship programs. Gain hands-on research experience in theoretical and computational physics. Learn about eligibility, application process, and program benefits."
+        keywords="ITCPR internships, physics internships, research internships, computational physics internships, science internships"
+        url={location.pathname}
+      />
       <PageHeader />
       <ProgramOverviewSection />
       <EligibilitySection />

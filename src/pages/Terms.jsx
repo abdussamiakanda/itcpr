@@ -1,11 +1,21 @@
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/legal.css';
 
 /**
  * Terms Page Component
  */
 function Terms() {
+  const location = useLocation();
+  
   return (
     <div className="terms-page">
+      <SEO
+        title="Terms of Service"
+        description="Read ITCPR's terms of service. Understand the terms and conditions for using our website and services."
+        keywords="ITCPR terms of service, terms and conditions, user agreement"
+        url={location.pathname}
+      />
       <PageHeader />
       <ContentSection />
     </div>

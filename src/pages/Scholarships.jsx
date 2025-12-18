@@ -1,11 +1,21 @@
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/collaborations.css';
 
 /**
  * Scholarships Page Component
  */
 function Scholarships() {
+  const location = useLocation();
+  
   return (
     <div className="scholarships-page">
+      <SEO
+        title="Scholarships & Financial Assistance"
+        description="Apply for ITCPR scholarships and financial assistance. Support for conference fees, travel costs, and academic opportunities in science and research."
+        keywords="ITCPR scholarships, financial assistance, research funding, conference support, academic opportunities"
+        url={location.pathname}
+      />
       <PageHeader />
       <TypesOfSupportSection />
       <HowToApplySection />

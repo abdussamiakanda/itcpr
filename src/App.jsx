@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
@@ -26,9 +27,10 @@ import Unsubscribe from './pages/Unsubscribe';
 
 function App() {
   return (
-    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-      <ScrollToTop />
-      <Layout>
+    <HelmetProvider>
+      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+        <ScrollToTop />
+        <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/story" element={<Story />} />
@@ -54,8 +56,9 @@ function App() {
           <Route path="/unsubscribe" element={<Unsubscribe />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </Layout>
-    </Router>
+        </Layout>
+      </Router>
+    </HelmetProvider>
   );
 }
 

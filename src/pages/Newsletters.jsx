@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import SEO from '../components/SEO';
 import '../assets/css/newsletters.css';
 
 /**
@@ -13,6 +14,7 @@ function Newsletters() {
   const [message, setMessage] = useState('');
   const [news, setNews] = useState([]);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const generateSlugFromTitle = (title) => {
     // Get first 10 words
@@ -103,6 +105,12 @@ function Newsletters() {
 
   return (
     <div className="newsletters-page">
+      <SEO
+        title="Newsletters"
+        description="Subscribe to ITCPR newsletters and stay updated with the latest news, research updates, and announcements from the Institute for Theoretical and Computational Physics Research."
+        keywords="ITCPR newsletters, physics news, research updates, science newsletter, subscribe"
+        url={location.pathname}
+      />
       <PageHeader />
       <SubscribeSection 
         email={email}

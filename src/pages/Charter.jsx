@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/charter.css';
 
 /**
@@ -62,6 +64,12 @@ function Charter() {
 
   return (
     <div className="charter-page">
+      <SEO
+        title="Charter"
+        description="Read the ITCPR institutional charter. Learn about our mission, governance structure, articles, and organizational principles."
+        keywords="ITCPR charter, institutional charter, governance, mission statement, organizational structure"
+        url={location.pathname}
+      />
       <PageHeader />
       <CharterSection 
         charterData={charterData}

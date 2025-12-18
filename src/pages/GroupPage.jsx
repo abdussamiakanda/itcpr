@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
+import SEO from '../components/SEO';
 import '../assets/css/group.css';
 
 /**
@@ -9,6 +10,7 @@ import '../assets/css/group.css';
  */
 function GroupPage() {
   const { groupName } = useParams();
+  const location = useLocation();
   const [publications, setPublications] = useState([]);
   const [people, setPeople] = useState([]);
   const [groupInfo, setGroupInfo] = useState(null);
@@ -112,10 +114,31 @@ function GroupPage() {
     fetchData();
   }, [groupName]);
 
-  if (!groupInfo) return <div className="group-page">Loading...</div>;
+  if (!groupInfo) {
+    const currentGroup = groupData[groupName?.toLowerCase()];
+    return (
+      <div className="group-page">
+        <SEO
+          title="Loading..."
+          description="Loading research group information..."
+        />
+        <div>Loading...</div>
+      </div>
+    );
+  }
+
+  const currentGroup = groupData[groupName?.toLowerCase()];
+  const groupTitle = currentGroup?.title || `${groupName} Group`;
+  const groupDescription = currentGroup?.description || `Learn about the ${groupName} research group at ITCPR.`;
 
   return (
     <div className="group-page">
+      <SEO
+        title={groupTitle}
+        description={groupDescription}
+        keywords={`ITCPR, ${groupName}, research group, physics research, ${currentGroup?.title || ''}`}
+        url={location.pathname}
+      />
       <PageHeader groupInfo={groupInfo} />
       {groupInfo.intro && <IntroSection intro={groupInfo.intro} />}
       {groupInfo.researchFocus && (

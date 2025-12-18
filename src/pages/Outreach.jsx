@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/outreach.css';
 
 /**
@@ -39,6 +40,12 @@ function Outreach() {
 
   return (
     <div className="outreach-page">
+      <SEO
+        title="Outreach"
+        description="Discover ITCPR's outreach programs: online seminars, educational workshops, and community engagement initiatives in theoretical and computational physics."
+        keywords="ITCPR outreach, physics seminars, educational programs, science workshops, community engagement"
+        url={location.pathname}
+      />
       <PageHeader />
       {programs.map((program, index) => (
         <ProgramSection key={index} program={program} index={index} />

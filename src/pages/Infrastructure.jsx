@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/infrastructure.css';
 
 /**
@@ -56,6 +58,12 @@ function Infrastructure() {
 
   return (
     <div className="infrastructure-page">
+      <SEO
+        title="Infrastructure"
+        description="Explore ITCPR's research infrastructure: web applications, computational tools, and resources available for theoretical and computational physics research."
+        keywords="ITCPR infrastructure, research tools, computational resources, physics software, research applications"
+        url={location.pathname}
+      />
       <PageHeader />
       <ServicesSection services={services} />
       <ToolsSection tools={tools} />

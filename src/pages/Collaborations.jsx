@@ -1,11 +1,21 @@
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/collaborations.css';
 
 /**
  * Collaborations Page Component
  */
 function Collaborations() {
+  const location = useLocation();
+  
   return (
     <div className="collaborations-page">
+      <SEO
+        title="Research Collaborations"
+        description="Partner with ITCPR for research collaborations. Learn about project collaborations, referral-based partnerships, and how to collaborate with our research teams."
+        keywords="ITCPR collaborations, research partnerships, academic collaboration, physics research collaboration"
+        url={location.pathname}
+      />
       <PageHeader />
       <TypesOfCollaborationsSection />
       <StepsToCollaborateSection />

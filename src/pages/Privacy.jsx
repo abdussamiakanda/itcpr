@@ -1,11 +1,21 @@
+import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 import '../assets/css/legal.css';
 
 /**
  * Privacy Page Component
  */
 function Privacy() {
+  const location = useLocation();
+  
   return (
     <div className="privacy-page">
+      <SEO
+        title="Privacy Policy"
+        description="Read ITCPR's privacy policy. Learn how we collect, use, and protect your personal information when you use our website and services."
+        keywords="ITCPR privacy policy, data protection, privacy, personal information"
+        url={location.pathname}
+      />
       <PageHeader />
       <ContentSection />
     </div>
