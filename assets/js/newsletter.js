@@ -76,6 +76,13 @@ function generateSlugFromTitle(title) {
         .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
 }
 
+function truncateTitle(title, maxLength = 70) {
+    if (title.length <= maxLength) {
+        return title;
+    }
+    return title.substring(0, maxLength).trim() + '...';
+}
+
 // Function to handle newsletter card clicks
 window.goTo = function(url) {
     window.location.href = url;
@@ -112,7 +119,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         })}</span>
                         <span class="newsletter-type ${news.type}">${news.type}</span>
                     </div>
-                    <b>${news.title}</b>
+                    <b>${truncateTitle(news.title)}</b>
                 </div>
             `;
             newsletterList.appendChild(newsCard);
@@ -150,7 +157,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         })}</span>
                         <span class="newsletter-type ${news.type}">${news.type}</span>
                     </div>
-                    <b>${news.title}</b>
+                    <b>${truncateTitle(news.title)}</b>
                 </div>
             `;
             newsGrid.appendChild(newsCard);
