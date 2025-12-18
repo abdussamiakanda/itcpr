@@ -33,7 +33,16 @@ function SEO({
   
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
   const metaDescription = description || defaultDescription;
-  const metaImage = image || defaultImage;
+  
+  // Ensure image URL is absolute
+  let metaImage = image || defaultImage;
+  if (metaImage && !metaImage.startsWith('http')) {
+    // If relative path, make it absolute
+    metaImage = metaImage.startsWith('/') 
+      ? `${siteUrl}${metaImage}` 
+      : `${siteUrl}/${metaImage}`;
+  }
+  
   const canonicalUrl = url ? `${siteUrl}${url}` : siteUrl;
 
   return (
@@ -50,7 +59,11 @@ function SEO({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:image" content={metaImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content="en_US" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />

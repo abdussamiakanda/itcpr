@@ -143,7 +143,11 @@ function News() {
 
   // Prepare SEO data for news article
   const description = truncateText(newsData.content || newsData.description || '');
-  const image = newsData.image || '/assets/image/logo.png';
+  // Ensure image URL is absolute for social sharing
+  let image = newsData.image || '/assets/image/logo.png';
+  if (image && !image.startsWith('http')) {
+    image = image.startsWith('/') ? `https://itcpr.org${image}` : `https://itcpr.org/${image}`;
+  }
   const publishedTime = newsData.created_at ? new Date(newsData.created_at).toISOString() : null;
   const modifiedTime = newsData.updated_at ? new Date(newsData.updated_at).toISOString() : publishedTime;
 
