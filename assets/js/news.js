@@ -1,15 +1,34 @@
 import { supabase } from "./footer.js";
 
-async function loadNewsDetails(newsId) {
+function generateSlugFromTitle(title) {
+    return title
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '') // Remove special characters
+        .replace(/[\s_-]+/g, '-') // Replace spaces, underscores, and multiple hyphens with single hyphen
+        .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+}
+
+async function loadNewsDetails(newsSlug) {
     try {
-        const { data: newsData, error: fetchError } = await supabase
+        // Fetch all news and match by generated slug from title
+        const { data: allNews, error: fetchError } = await supabase
             .from('news')
             .select('*')
-            .eq('id', newsId)
-            .single();
+            .order('created_at', { ascending: false });
 
         if (fetchError) {
             throw new Error('Error fetching news data');
+        }
+
+        // Find news item by matching generated slug from title
+        const newsData = allNews.find(news => {
+            const generatedSlug = generateSlugFromTitle(news.title);
+            return generatedSlug === newsSlug;
+        });
+
+        if (!newsData) {
+            throw new Error('News not found');
         }
 
         document.title = newsData.title + ' - ITCPR';
@@ -58,10 +77,10 @@ function markdownToHtml(markdownText) {
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', async () => {
-    const newsId = new URLSearchParams(window.location.search).get('id');
-    if (newsId) {
-        await loadNewsDetails(newsId);
+    const newsSlug = new URLSearchParams(window.location.search).get('slug');
+    if (newsSlug) {
+        await loadNewsDetails(newsSlug);
     } else {
-        console.error('No news ID provided in the URL.');
+        console.error('No news slug provided in the URL.');
     }
 });

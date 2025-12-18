@@ -67,6 +67,15 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+function generateSlugFromTitle(title) {
+    return title
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '') // Remove special characters
+        .replace(/[\s_-]+/g, '-') // Replace spaces, underscores, and multiple hyphens with single hyphen
+        .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+}
+
 // Function to handle newsletter card clicks
 window.goTo = function(url) {
     window.location.href = url;
@@ -74,9 +83,9 @@ window.goTo = function(url) {
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', async () => {
-    // get current page URL
-    const currentUrl = new URL(window.location.href);
-    if (currentUrl.pathname === '/newsletters') {
+    // Check for newsletter-list (newsletters page)
+    const newsletterList = document.getElementById('newsletter-list');
+    if (newsletterList) {
         const { data: newsData, error: fetchError } = await supabase
             .from('news')
             .select('*')
@@ -87,12 +96,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        const newsContainer = document.getElementById('newsletter-list');
-
         newsData.forEach(news => {
             const newsCard = document.createElement('div');
             newsCard.className = 'newsletter-card';
-            newsCard.onclick = () => goTo("/news?id=" + news.id);
+            const newsSlug = news.slug || generateSlugFromTitle(news.title);
+            newsCard.onclick = () => goTo("/news?slug=" + newsSlug);
             newsCard.innerHTML = `
                 <img src="${news.image}" alt="${news.title}">
                 <div class="newsletter-content">
@@ -107,9 +115,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <b>${news.title}</b>
                 </div>
             `;
-            newsContainer.appendChild(newsCard);
+            newsletterList.appendChild(newsCard);
         });
-    } else {
+        return;
+    }
+
+    // Check for news-grid (other pages)
+    const newsGrid = document.getElementById('news-grid');
+    if (newsGrid) {
         const { data: newsData, error: fetchError } = await supabase
             .from('news')
             .select('*')
@@ -121,12 +134,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        const newsContainer = document.getElementById('news-grid');
-
         newsData.forEach(news => {
             const newsCard = document.createElement('div');
             newsCard.className = 'newsletter-card';
-            newsCard.onclick = () => goTo("/news?id=" + news.id);
+            const newsSlug = news.slug || generateSlugFromTitle(news.title);
+            newsCard.onclick = () => goTo("/news?slug=" + newsSlug);
             newsCard.innerHTML = `
                 <img src="${news.image}" alt="${news.title}">
                 <div class="newsletter-content">
@@ -141,7 +153,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <b>${news.title}</b>
                 </div>
             `;
-            newsContainer.appendChild(newsCard);
+            newsGrid.appendChild(newsCard);
         });
     }
 });
