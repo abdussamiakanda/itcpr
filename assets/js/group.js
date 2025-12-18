@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         .from('publications')
         .select('*')
         .eq('group', groupName)
-        .order('year', { ascending: false })
-        .order('month', { ascending: false });
+        .order('year', { ascending: true })
+        .order('month', { ascending: true });
 
     const { data: people, errorPeople } = await supabase
         .from('itcpr_people')

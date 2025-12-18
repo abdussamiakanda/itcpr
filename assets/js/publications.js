@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const { data: publications, error } = await supabase
         .from('publications')
         .select('*')
-        .order('year', { ascending: false })
-        .order('month', { ascending: false });
+        .order('year', { ascending: true })
+        .order('month', { ascending: true });
 
     if (error) {
         console.error('Error fetching publications:', error);
