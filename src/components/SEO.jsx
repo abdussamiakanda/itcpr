@@ -14,6 +14,7 @@ import { Helmet } from 'react-helmet-async';
  * @param {string} props.author - Article author (for news articles)
  * @param {string} props.publishedTime - Article published time (ISO 8601)
  * @param {string} props.modifiedTime - Article modified time (ISO 8601)
+ * @param {string} props.fbAppId - Facebook App ID (optional)
  */
 function SEO({
   title,
@@ -24,7 +25,8 @@ function SEO({
   type = 'website',
   author,
   publishedTime,
-  modifiedTime
+  modifiedTime,
+  fbAppId
 }) {
   const siteName = 'ITCPR - Institute for Theoretical and Computational Physics Research';
   const siteUrl = 'https://itcpr.org'; // Update with your actual domain
@@ -64,6 +66,7 @@ function SEO({
       <meta property="og:image:type" content="image/png" />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_US" />
+      {fbAppId && <meta property="fb:app_id" content={fbAppId} />}
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
