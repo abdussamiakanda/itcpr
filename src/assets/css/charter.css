@@ -295,9 +295,9 @@
   position: absolute;
   left: 0;
   font-size: 1.5rem;
-  line-height: 1.2;
+  line-height: 1;
   font-weight: bold;
-  top: 0;
+  top: 0.2em;
 }
 
 .charter-page .section-content li b {
@@ -318,25 +318,7 @@
 }
 
 /* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* Common animations (fadeIn, fadeInUp, slideInUp) are defined in root.css */
 
 @keyframes slideDown {
   from {
@@ -351,16 +333,7 @@
   }
 }
 
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* slideInUp is defined in root.css */
 
 /* Responsive Design */
 @media (max-width: 1024px) {
