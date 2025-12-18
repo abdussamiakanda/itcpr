@@ -1,0 +1,428 @@
+/* Financials Page Scoped Styles */
+.financials-page {
+  /* Isolate financials page styles */
+}
+
+/* Page Header - Scoped to financials page */
+.financials-page section.page-header {
+  position: relative !important;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%) !important;
+  padding: 4rem 0 !important;
+  overflow: hidden !important;
+  animation: fadeIn 0.8s ease-in !important;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+}
+
+.financials-page section.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(157, 157, 189, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.financials-page .page-header-content {
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.financials-page section.page-header h1 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  color: var(--text-color) !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--text-color) 0%, #2d4d77 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: fadeInUp 1s ease-out 0.3s both !important;
+  text-align: left !important;
+}
+
+.financials-page .page-header-content p {
+  font-size: 1.25rem !important;
+  color: var(--light-text) !important;
+  line-height: 1.6 !important;
+  max-width: 700px !important;
+  animation: fadeInUp 1s ease-out 0.4s both !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+/* Container */
+.financials-page .container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Content Sections */
+.financials-page .content-section {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.financials-page .content-section:nth-child(even) {
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%);
+}
+
+.financials-page .content-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+/* Section Header */
+.financials-page .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.financials-page .section-header h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Year Selector */
+.financials-page .year-selector {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.financials-page .year-button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #2d4d77 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 12px rgba(157, 157, 189, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.financials-page .year-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #34a853 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.financials-page .year-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(157, 157, 189, 0.4);
+  color: white;
+}
+
+.financials-page .year-button:hover::before {
+  left: 0;
+}
+
+.financials-page .year-button.active {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #34a853 100%);
+  box-shadow: 0 6px 20px rgba(52, 168, 83, 0.4);
+}
+
+/* Budget Summary */
+.financials-page .budget-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Budget Card */
+.financials-page .budget-card {
+  background: linear-gradient(145deg, #ffffff, #fafafa);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.financials-page .budget-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(157, 157, 189, 0.1), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.financials-page .budget-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-left-color: var(--secondary-color);
+}
+
+.financials-page .budget-card:hover::before {
+  left: 100%;
+}
+
+.financials-page .budget-card h3 {
+  font-size: 1.125rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+.financials-page .budget-amount {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.financials-page .budget-percentage {
+  color: var(--light-text);
+  font-size: 0.9375rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Expenditure Section */
+.financials-page .expenditure-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%);
+}
+
+/* Expenditure Grid */
+.financials-page .expenditure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Expenditure Card */
+.financials-page .expenditure-card {
+  background: linear-gradient(145deg, #ffffff, #fafafa);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.financials-page .expenditure-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(157, 157, 189, 0.1), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+  border-radius: 16px;
+}
+
+.financials-page .expenditure-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.financials-page .expenditure-card:hover::before {
+  left: 100%;
+}
+
+.financials-page .expenditure-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+}
+
+.financials-page .expenditure-card .budget-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Expenditure List */
+.financials-page .expenditure-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.financials-page .expenditure-list li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--light-text);
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.financials-page .expenditure-list li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  top: 0;
+  font-weight: bold;
+}
+
+/* Funding Sources */
+.financials-page .funding-sources {
+  padding: 4rem 0;
+}
+
+/* Funding Chart */
+.financials-page .funding-chart {
+  margin: 2rem 0;
+  height: 300px;
+  background: linear-gradient(145deg, #ffffff, #fafafa);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.financials-page .funding-chart:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.financials-page .funding-chart canvas {
+  margin: 0 auto;
+  height: 300px !important;
+  width: 300px !important;
+}
+
+/* Audit Status */
+.financials-page .audit-status {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.financials-page .audit-pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 500;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  box-shadow: 0 4px 12px rgba(133, 100, 4, 0.1);
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.financials-page .audit-pending i {
+  font-size: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .financials-page section.page-header h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .financials-page .budget-summary {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .financials-page .expenditure-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .financials-page section.page-header {
+    padding: 3rem 0 !important;
+  }
+
+  .financials-page section.page-header h1 {
+    font-size: 2rem !important;
+  }
+
+  .financials-page .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .financials-page .content-section {
+    padding: 3rem 0;
+  }
+
+  .financials-page .year-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .financials-page section.page-header {
+    padding: 2rem 0 !important;
+  }
+
+  .financials-page .content-section {
+    padding: 2rem 0;
+  }
+
+  .financials-page .budget-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .financials-page .expenditure-grid {
+    grid-template-columns: 1fr;
+  }
+}

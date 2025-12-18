@@ -1,0 +1,503 @@
+/* Collaborations & Scholarships Pages Scoped Styles */
+:root {
+  --container-width: 1200px;
+}
+
+/* Scholarships Page */
+.scholarships-page {
+  /* Isolate scholarships page styles */
+}
+
+/* Collaborations Page */
+.collaborations-page {
+  /* Isolate collaborations page styles */
+}
+
+/* Page Header - Scoped to both pages */
+.scholarships-page section.page-header,
+.collaborations-page section.page-header {
+  position: relative !important;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%) !important;
+  padding: 4rem 0 !important;
+  overflow: hidden !important;
+  animation: fadeIn 0.8s ease-in !important;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+}
+
+.scholarships-page section.page-header::before,
+.collaborations-page section.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(157, 157, 189, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.scholarships-page .page-header-content,
+.collaborations-page .page-header-content {
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.scholarships-page section.page-header h1,
+.collaborations-page section.page-header h1 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  color: var(--text-color) !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--text-color) 0%, #2d4d77 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: fadeInUp 1s ease-out 0.3s both !important;
+  text-align: left !important;
+}
+
+.scholarships-page .page-header-content p,
+.collaborations-page .page-header-content p {
+  font-size: 1.25rem !important;
+  color: var(--light-text) !important;
+  line-height: 1.6 !important;
+  max-width: 700px !important;
+  animation: fadeInUp 1s ease-out 0.4s both !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+/* Collaboration Sections */
+.scholarships-page .collaboration-section,
+.collaborations-page .collaboration-section {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.scholarships-page .collaboration-section:nth-child(even),
+.collaborations-page .collaboration-section:nth-child(even) {
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%);
+}
+
+.scholarships-page .collaboration-section::before,
+.collaborations-page .collaboration-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+/* Section Header */
+.scholarships-page .section-header,
+.collaborations-page .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.scholarships-page .section-header h2,
+.collaborations-page .section-header h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Section Description */
+.scholarships-page .section-description,
+.collaborations-page .section-description {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.scholarships-page .section-description a,
+.collaborations-page .section-description a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.scholarships-page .section-description a:hover,
+.collaborations-page .section-description a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Collaboration Grid */
+.scholarships-page .collaboration-grid,
+.collaborations-page .collaboration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Collaboration Card */
+.scholarships-page .collaboration-card,
+.collaborations-page .collaboration-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.scholarships-page .collaboration-card::before,
+.collaborations-page .collaboration-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(157, 157, 189, 0.1), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.scholarships-page .collaboration-card:hover,
+.collaborations-page .collaboration-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.scholarships-page .collaboration-card:hover::before,
+.collaborations-page .collaboration-card:hover::before {
+  left: 100%;
+}
+
+.scholarships-page .card-icon,
+.collaborations-page .card-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #2d4d77 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(157, 157, 189, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.scholarships-page .card-icon::before,
+.collaborations-page .card-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.scholarships-page .collaboration-card:hover .card-icon,
+.collaborations-page .collaboration-card:hover .card-icon {
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 0 6px 20px rgba(157, 157, 189, 0.5);
+}
+
+.scholarships-page .collaboration-card:hover .card-icon::before,
+.collaborations-page .collaboration-card:hover .card-icon::before {
+  width: 100px;
+  height: 100px;
+}
+
+.scholarships-page .card-icon i,
+.collaborations-page .card-icon i {
+  font-size: 1.5rem;
+  color: white;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.scholarships-page .collaboration-card:hover .card-icon i,
+.collaborations-page .collaboration-card:hover .card-icon i {
+  transform: scale(1.2);
+}
+
+.scholarships-page .collaboration-card h3,
+.collaborations-page .collaboration-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.scholarships-page .collaboration-card:hover h3,
+.collaborations-page .collaboration-card:hover h3 {
+  color: var(--primary-color);
+}
+
+.scholarships-page .collaboration-card p,
+.collaborations-page .collaboration-card p {
+  color: var(--light-text);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.scholarships-page .collaboration-card:hover p,
+.collaborations-page .collaboration-card:hover p {
+  color: var(--text-color);
+}
+
+/* Collaboration Steps */
+.scholarships-page .collaboration-steps,
+.collaborations-page .collaboration-steps {
+  list-style: none;
+  padding-left: 25px;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.scholarships-page .collaboration-steps li,
+.collaborations-page .collaboration-steps li {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  color: var(--light-text);
+  position: relative;
+  animation: fadeInUp 0.6s ease-out both;
+  text-align: left;
+}
+
+.scholarships-page .collaboration-steps li:last-child,
+.collaborations-page .collaboration-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.scholarships-page .collaboration-steps li strong,
+.collaborations-page .collaboration-steps li strong {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.scholarships-page .collaboration-steps li ul,
+.collaborations-page .collaboration-steps li ul {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.scholarships-page .collaboration-steps li ul li,
+.collaborations-page .collaboration-steps li ul li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Download Section */
+.scholarships-page .download-section,
+.collaborations-page .download-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  border: 1px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+  position: relative;
+  overflow: hidden;
+}
+
+.scholarships-page .download-section::before,
+.collaborations-page .download-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(157, 157, 189, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.scholarships-page .download-section:hover,
+.collaborations-page .download-section:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.scholarships-page .download-section:hover::before,
+.collaborations-page .download-section:hover::before {
+  left: 100%;
+}
+
+.scholarships-page .download-section h3,
+.collaborations-page .download-section h3 {
+  font-size: 1.75rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.scholarships-page .download-section > p,
+.collaborations-page .download-section > p {
+  color: var(--light-text);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.scholarships-page .template-links,
+.collaborations-page .template-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Template Link */
+.scholarships-page .template-link,
+.collaborations-page .template-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: white;
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.scholarships-page .template-link::before,
+.collaborations-page .template-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: left 0.3s ease;
+  z-index: 0;
+}
+
+.scholarships-page .template-link span,
+.collaborations-page .template-link span {
+  position: relative;
+  z-index: 1;
+}
+
+.scholarships-page .template-link:hover,
+.collaborations-page .template-link:hover {
+  background-color: var(--primary-color);
+  color: white !important;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.scholarships-page .template-link:hover::before,
+.collaborations-page .template-link:hover::before {
+  left: 0;
+}
+
+.scholarships-page .template-link i,
+.collaborations-page .template-link i {
+  font-size: 1.25rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.scholarships-page .template-link:hover i,
+.collaborations-page .template-link:hover i {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .scholarships-page section.page-header h1,
+  .collaborations-page section.page-header h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .scholarships-page .collaboration-grid,
+  .collaborations-page .collaboration-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .scholarships-page section.page-header,
+  .collaborations-page section.page-header {
+    padding: 3rem 0 !important;
+  }
+
+  .scholarships-page section.page-header h1,
+  .collaborations-page section.page-header h1 {
+    font-size: 2rem !important;
+  }
+
+  .scholarships-page .section-header h2,
+  .collaborations-page .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .scholarships-page .collaboration-section,
+  .collaborations-page .collaboration-section {
+    padding: 3rem 0;
+  }
+
+  .scholarships-page .collaboration-grid,
+  .collaborations-page .collaboration-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .scholarships-page section.page-header,
+  .collaborations-page section.page-header {
+    padding: 2rem 0 !important;
+  }
+
+  .scholarships-page .collaboration-section,
+  .collaborations-page .collaboration-section {
+    padding: 2rem 0;
+  }
+
+  .scholarships-page .collaboration-card,
+  .collaborations-page .collaboration-card,
+  .scholarships-page .download-section,
+  .collaborations-page .download-section {
+    padding: 1.5rem;
+  }
+}

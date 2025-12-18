@@ -1,0 +1,184 @@
+/* Outreach Page Scoped Styles */
+.outreach-page {
+  /* Isolate outreach page styles */
+}
+
+/* Page Header - Scoped to outreach page */
+.outreach-page section.page-header {
+  position: relative !important;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%) !important;
+  padding: 4rem 0 !important;
+  overflow: hidden !important;
+  animation: fadeIn 0.8s ease-in !important;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+}
+
+.outreach-page section.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(157, 157, 189, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.outreach-page .page-header-content {
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.outreach-page section.page-header h1 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  color: var(--text-color) !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--text-color) 0%, #2d4d77 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: fadeInUp 1s ease-out 0.3s both !important;
+  text-align: left !important;
+}
+
+.outreach-page .page-header-content p {
+  font-size: 1.25rem !important;
+  color: var(--light-text) !important;
+  line-height: 1.6 !important;
+  max-width: 700px !important;
+  animation: fadeInUp 1s ease-out 0.4s both !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+/* Program Section */
+.outreach-page .program-section {
+  padding: 4rem 0;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.outreach-page .program-section:nth-child(even) {
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%);
+}
+
+.outreach-page .program-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.outreach-page .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.outreach-page .section-header h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Action Buttons */
+.outreach-page .action-button,
+.outreach-page a.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #2d4d77 100%);
+  color: white !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(157, 157, 189, 0.3);
+}
+
+.outreach-page .action-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.outreach-page .action-button:hover,
+.outreach-page a.action-button:hover {
+  background: linear-gradient(135deg, #2d4d77 0%, var(--primary-color) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(157, 157, 189, 0.4);
+  color: white !important;
+}
+
+.outreach-page .action-button:hover::before,
+.outreach-page a.action-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .outreach-page section.page-header h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .outreach-page section.page-header {
+    padding: 3rem 0 !important;
+  }
+
+  .outreach-page section.page-header h1 {
+    font-size: 2rem !important;
+  }
+
+  .outreach-page .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .outreach-page .program-section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .outreach-page section.page-header {
+    padding: 2rem 0 !important;
+  }
+
+  .outreach-page .program-section {
+    padding: 2rem 0;
+  }
+
+  .outreach-page .action-button,
+  .outreach-page a.action-button {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

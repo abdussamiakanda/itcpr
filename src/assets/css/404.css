@@ -1,0 +1,191 @@
+/* NotFound Page Scoped Styles */
+.notfound-page {
+  /* Isolate notfound page styles */
+}
+
+:root {
+  --container-width: 1200px;
+}
+
+/* Page Header - Scoped to notfound page */
+.notfound-page section.page-header {
+  position: relative !important;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%) !important;
+  padding: 4rem 0 !important;
+  overflow: hidden !important;
+  animation: fadeIn 0.8s ease-in !important;
+  margin-bottom: 0 !important;
+  text-align: center !important;
+}
+
+.notfound-page section.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(157, 157, 189, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.notfound-page .page-header-content {
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.notfound-page section.page-header h1 {
+  font-size: 6rem !important;
+  font-weight: 700 !important;
+  color: var(--text-color) !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--text-color) 0%, #2d4d77 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: fadeInUp 1s ease-out 0.3s both !important;
+  text-align: center !important;
+}
+
+.notfound-page .page-header-content p {
+  font-size: 1.5rem !important;
+  color: var(--light-text) !important;
+  line-height: 1.6 !important;
+  animation: fadeInUp 1s ease-out 0.4s both !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 400 !important;
+  text-align: center !important;
+}
+
+/* Content Section */
+.notfound-page .content-section {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.notfound-page .content-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.notfound-page .content-wrapper {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  text-align: left;
+}
+
+.notfound-page .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.notfound-page .section-header h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0;
+  text-align: left;
+}
+
+.notfound-page .section-description {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.notfound-page .suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+  display: block;
+}
+
+.notfound-page .suggestions-list li {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+  text-align: left;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.notfound-page .suggestions-list li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.notfound-page .suggestions-list li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.notfound-page .suggestions-list li a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .notfound-page section.page-header h1 {
+    font-size: 5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .notfound-page section.page-header {
+    padding: 3rem 0 !important;
+  }
+
+  .notfound-page section.page-header h1 {
+    font-size: 4rem !important;
+  }
+
+  .notfound-page .page-header-content p {
+    font-size: 1.25rem !important;
+  }
+
+  .notfound-page .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .notfound-page .content-section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound-page section.page-header {
+    padding: 2rem 0 !important;
+  }
+
+  .notfound-page section.page-header h1 {
+    font-size: 3rem !important;
+  }
+
+  .notfound-page .content-section {
+    padding: 2rem 0;
+  }
+}

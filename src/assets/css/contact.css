@@ -1,0 +1,326 @@
+/* Contact Page Scoped Styles */
+.contact-page {
+  /* Isolate contact page styles */
+}
+
+/* Unsubscribe Page Scoped Styles */
+.unsubscribe-page {
+  /* Isolate unsubscribe page styles */
+}
+
+/* Page Header - Scoped to contact and unsubscribe pages */
+.contact-page section.page-header,
+.unsubscribe-page section.page-header {
+  position: relative !important;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%) !important;
+  padding: 4rem 0 !important;
+  overflow: hidden !important;
+  animation: fadeIn 0.8s ease-in !important;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+}
+
+.contact-page section.page-header::before,
+.unsubscribe-page section.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(157, 157, 189, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.contact-page .page-header-content,
+.unsubscribe-page .page-header-content {
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.contact-page section.page-header h1,
+.unsubscribe-page section.page-header h1 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  color: var(--text-color) !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--text-color) 0%, #2d4d77 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: fadeInUp 1s ease-out 0.3s both !important;
+  text-align: left !important;
+}
+
+.contact-page .page-header-content p,
+.unsubscribe-page .page-header-content p {
+  font-size: 1.25rem !important;
+  color: var(--light-text) !important;
+  line-height: 1.6 !important;
+  max-width: 700px !important;
+  animation: fadeInUp 1s ease-out 0.4s both !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+/* Contact Section */
+.contact-page .contact-section,
+.unsubscribe-page .contact-section {
+  padding: 4rem 0;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.contact-page .contact-section::before,
+.unsubscribe-page .contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.contact-page .section-header,
+.unsubscribe-page .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.contact-page .section-header h2,
+.unsubscribe-page .section-header h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.contact-page .section-description,
+.unsubscribe-page .section-description {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.contact-page .section-description a,
+.unsubscribe-page .section-description a {
+  color: var(--primary-color) !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-page .section-description a:hover,
+.unsubscribe-page .section-description a:hover {
+  color: var(--secondary-color) !important;
+  text-decoration: underline !important;
+}
+
+/* Contact Form Styles */
+.contact-page .contact-form,
+.unsubscribe-page .contact-form {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  text-align: left;
+  background: linear-gradient(145deg, #ffffff, #fafafa);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-page .contact-form::before,
+.unsubscribe-page .contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(157, 157, 189, 0.05), transparent);
+  transition: left 0.5s ease;
+}
+
+.contact-page .contact-form:hover::before,
+.unsubscribe-page .contact-form:hover::before {
+  left: 100%;
+}
+
+.contact-page .form-group,
+.unsubscribe-page .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-page .form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-page .form-label,
+.unsubscribe-page .form-label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.9375rem;
+}
+
+.contact-page .form-input,
+.unsubscribe-page .form-input {
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: white;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.contact-page .form-input:focus,
+.unsubscribe-page .form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(157, 157, 189, 0.1);
+  background: white;
+}
+
+.contact-page .form-input:hover,
+.unsubscribe-page .form-input:hover {
+  border-color: var(--primary-color);
+}
+
+.contact-page .contact-submit,
+.unsubscribe-page .contact-submit {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #2d4d77 100%);
+  color: white !important;
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(157, 157, 189, 0.3);
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.contact-page .contact-submit::before,
+.unsubscribe-page .contact-submit::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.contact-page .contact-submit:hover,
+.unsubscribe-page .contact-submit:hover {
+  background: linear-gradient(135deg, #2d4d77 0%, var(--primary-color) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(157, 157, 189, 0.4);
+}
+
+.contact-page .contact-submit:hover::before,
+.unsubscribe-page .contact-submit:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.contact-page .contact-submit:active,
+.unsubscribe-page .contact-submit:active {
+  transform: translateY(0);
+}
+
+.contact-page .contact-status,
+.unsubscribe-page .contact-status {
+  margin-top: 1.2rem;
+  font-weight: 500;
+  min-height: 1.2em;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 6px;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.contact-page .contact-status:empty,
+.unsubscribe-page .contact-status:empty {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-page section.page-header h1,
+  .unsubscribe-page section.page-header h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page section.page-header,
+  .unsubscribe-page section.page-header {
+    padding: 3rem 0 !important;
+  }
+
+  .contact-page section.page-header h1,
+  .unsubscribe-page section.page-header h1 {
+    font-size: 2rem !important;
+  }
+
+  .contact-page .section-header h2,
+  .unsubscribe-page .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .contact-page .contact-section,
+  .unsubscribe-page .contact-section {
+    padding: 3rem 0;
+  }
+
+  .contact-page .contact-form,
+  .unsubscribe-page .contact-form {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page section.page-header,
+  .unsubscribe-page section.page-header {
+    padding: 2rem 0 !important;
+  }
+
+  .contact-page .contact-section,
+  .unsubscribe-page .contact-section {
+    padding: 2rem 0;
+  }
+
+  .contact-page .contact-form,
+  .unsubscribe-page .contact-form {
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+  }
+}

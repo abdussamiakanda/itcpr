@@ -1,0 +1,503 @@
+/* Global Styles */
+:root {
+  --primary-color: rgb(157, 157, 189);
+  --secondary-color: #34a853;
+  --text-color: #202124;
+  --light-text: #5f6368;
+  --background-light: #f8f9fa;
+  --border-color: #dadce0;
+  --container-width: 1200px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Story Page Scoped Styles */
+.story-page {
+  /* Isolate story page styles */
+}
+
+/* Page Header - Scoped to story page with high specificity */
+.story-page section.page-header {
+  position: relative !important;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%) !important;
+  padding: 4rem 0 !important;
+  overflow: hidden !important;
+  animation: fadeIn 0.8s ease-in !important;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+}
+
+.story-page section.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(157, 157, 189, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.story-page .page-header-content {
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.story-page section.page-header h1 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  color: var(--text-color) !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--text-color) 0%, #2d4d77 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: fadeInUp 1s ease-out 0.3s both !important;
+  text-align: left !important;
+}
+
+.story-page .page-header-content p {
+  font-size: 1.25rem !important;
+  color: var(--light-text) !important;
+  line-height: 1.6 !important;
+  max-width: 700px !important;
+  animation: fadeInUp 1s ease-out 0.4s both !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+/* Story Section */
+.story-page .story-section {
+  padding: 4rem 0;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-page .story-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.story-page .story-content {
+  animation: fadeInLeft 1s ease-out 0.2s both;
+}
+
+.story-page .story-content h2 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.story-page .story-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+  border-radius: 2px;
+}
+
+.story-page .story-content p {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.story-page .story-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  animation: fadeInRight 1s ease-out 0.3s both;
+}
+
+.story-page .story-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(157, 157, 189, 0.1) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.story-page .story-image:hover::before {
+  opacity: 1;
+}
+
+.story-page .story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+.story-page .story-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Vision Section */
+.story-page .vision-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.story-page .vision-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.story-page .vision-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.story-page .vision-content h2 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.story-page .vision-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  border-radius: 2px;
+}
+
+.story-page .vision-content p {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.story-page .vision-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Objectives Section */
+.story-page .objectives-section {
+  padding: 4rem 0;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-page .objectives-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.story-page .objectives-content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.objectives-content h2 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 3rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.story-page .objectives-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+  border-radius: 2px;
+}
+
+.objective-group {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.story-page .objective-group:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.story-page .objective-group:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.story-page .objective-group:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.story-page .objective-group:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.story-page .objective-group:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.story-page .objective-group::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(157, 157, 189, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.story-page .objective-group:hover {
+  transform: translateX(8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-left-color: #2d4d77;
+}
+
+.story-page .objective-group:hover::before {
+  left: 100%;
+}
+
+.objective-group h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.story-page .objective-group h3::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.story-page .objective-group:hover h3::before {
+  transform: translateX(5px);
+}
+
+.story-page .objective-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.story-page .objective-group ul li {
+  font-size: 1.0625rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.story-page .objective-group ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.story-page .objective-group ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .story-grid {
+    gap: 3rem;
+  }
+  
+  .story-page .page-header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .story-page .page-header {
+    padding: 3rem 0;
+  }
+  
+  .story-page .page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .story-page .page-header-content p {
+    font-size: 1.125rem;
+  }
+  
+  .story-page .story-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .story-page .story-content h2,
+  .story-page .vision-content h2,
+  .story-page .objectives-content h2 {
+    font-size: 2rem;
+  }
+  
+  .story-page .story-section,
+  .story-page .vision-section,
+  .story-page .objectives-section {
+    padding: 3rem 0;
+  }
+  
+  .story-page .objective-group {
+    padding: 1.5rem;
+  }
+  
+  .story-page .objective-group h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-page .page-header {
+    padding: 2.5rem 0;
+  }
+  
+  .story-page .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .story-page .story-content h2,
+  .story-page .vision-content h2,
+  .story-page .objectives-content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .story-page .objective-group {
+    padding: 1.25rem;
+  }
+}

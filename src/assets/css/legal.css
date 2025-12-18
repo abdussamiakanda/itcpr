@@ -1,0 +1,244 @@
+/* Legal Pages Scoped Styles */
+:root {
+  --container-width: 1200px;
+}
+
+/* Page Header - Scoped to all legal pages */
+.privacy-page section.page-header,
+.terms-page section.page-header,
+.accessibility-page section.page-header {
+  position: relative !important;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%) !important;
+  padding: 4rem 0 !important;
+  overflow: hidden !important;
+  animation: fadeIn 0.8s ease-in !important;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+}
+
+.privacy-page section.page-header::before,
+.terms-page section.page-header::before,
+.accessibility-page section.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(157, 157, 189, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.privacy-page .page-header-content,
+.terms-page .page-header-content,
+.accessibility-page .page-header-content {
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.privacy-page section.page-header h1,
+.terms-page section.page-header h1,
+.accessibility-page section.page-header h1 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  color: var(--text-color) !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--text-color) 0%, #2d4d77 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: fadeInUp 1s ease-out 0.3s both !important;
+  text-align: left !important;
+}
+
+/* Content Section */
+.privacy-page .content-section,
+.terms-page .content-section,
+.accessibility-page .content-section {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.privacy-page .content-section::before,
+.terms-page .content-section::before,
+.accessibility-page .content-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+/* Content Wrapper */
+.privacy-page .content-wrapper,
+.terms-page .content-wrapper,
+.accessibility-page .content-wrapper {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  text-align: left;
+}
+
+.privacy-page .content-wrapper p,
+.terms-page .content-wrapper p,
+.accessibility-page .content-wrapper p {
+  margin-bottom: 1.5rem;
+  color: var(--light-text);
+  text-align: left;
+}
+
+.privacy-page .content-wrapper h2,
+.terms-page .content-wrapper h2,
+.accessibility-page .content-wrapper h2 {
+  font-size: 1.75rem;
+  color: var(--text-color);
+  margin: 2.5rem 0 1.5rem;
+  font-weight: 600;
+  text-align: left;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.privacy-page .content-wrapper h3,
+.terms-page .content-wrapper h3,
+.accessibility-page .content-wrapper h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 2rem 0 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.privacy-page .content-wrapper ul,
+.terms-page .content-wrapper ul,
+.accessibility-page .content-wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.privacy-page .content-wrapper ul li,
+.terms-page .content-wrapper ul li,
+.accessibility-page .content-wrapper ul li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  text-align: left;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.privacy-page .content-wrapper ul li::before,
+.terms-page .content-wrapper ul li::before,
+.accessibility-page .content-wrapper ul li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  top: 5px;
+  font-weight: bold;
+}
+
+.privacy-page .content-wrapper a,
+.terms-page .content-wrapper a,
+.accessibility-page .content-wrapper a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.privacy-page .content-wrapper a:hover,
+.terms-page .content-wrapper a:hover,
+.accessibility-page .content-wrapper a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.privacy-page .content-wrapper b,
+.terms-page .content-wrapper b,
+.accessibility-page .content-wrapper b {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.privacy-page .last-updated,
+.terms-page .last-updated,
+.accessibility-page .last-updated {
+  font-size: 0.9375rem;
+  color: var(--light-text);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .privacy-page section.page-header h1,
+  .terms-page section.page-header h1,
+  .accessibility-page section.page-header h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .privacy-page section.page-header,
+  .terms-page section.page-header,
+  .accessibility-page section.page-header {
+    padding: 3rem 0 !important;
+  }
+
+  .privacy-page section.page-header h1,
+  .terms-page section.page-header h1,
+  .accessibility-page section.page-header h1 {
+    font-size: 2rem !important;
+  }
+
+  .privacy-page .content-wrapper,
+  .terms-page .content-wrapper,
+  .accessibility-page .content-wrapper {
+    font-size: 1rem;
+  }
+
+  .privacy-page .content-wrapper h2,
+  .terms-page .content-wrapper h2,
+  .accessibility-page .content-wrapper h2 {
+    font-size: 1.5rem;
+  }
+
+  .privacy-page .content-wrapper h3,
+  .terms-page .content-wrapper h3,
+  .accessibility-page .content-wrapper h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-page section.page-header,
+  .terms-page section.page-header,
+  .accessibility-page section.page-header {
+    padding: 2rem 0 !important;
+  }
+
+  .privacy-page section.page-header h1,
+  .terms-page section.page-header h1,
+  .accessibility-page section.page-header h1 {
+    font-size: 1.75rem !important;
+  }
+
+  .privacy-page .content-section,
+  .terms-page .content-section,
+  .accessibility-page .content-section {
+    padding: 2rem 0;
+  }
+}

@@ -1,0 +1,330 @@
+/* Internships Page Scoped Styles */
+.internships-page {
+  /* Isolate internships page styles */
+}
+
+/* Page Header - Scoped to internships page */
+.internships-page section.page-header {
+  position: relative !important;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%) !important;
+  padding: 4rem 0 !important;
+  overflow: hidden !important;
+  animation: fadeIn 0.8s ease-in !important;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+}
+
+.internships-page section.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(157, 157, 189, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.internships-page .page-header-content {
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.internships-page section.page-header h1 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  color: var(--text-color) !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--text-color) 0%, #2d4d77 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: fadeInUp 1s ease-out 0.3s both !important;
+  text-align: left !important;
+}
+
+.internships-page .page-header-content p {
+  font-size: 1.25rem !important;
+  color: var(--light-text) !important;
+  line-height: 1.6 !important;
+  max-width: 700px !important;
+  animation: fadeInUp 1s ease-out 0.4s both !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+/* Content Sections */
+.internships-page .content-section {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.internships-page .content-section:nth-child(even) {
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%);
+}
+
+.internships-page .content-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+/* Section Header */
+.internships-page .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.internships-page .section-header h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Section Description */
+.internships-page .section-description {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.internships-page .section-description a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.internships-page .section-description a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Lists */
+.internships-page .program-list,
+.internships-page .eligibility-list,
+.internships-page .application-list,
+.internships-page .deadlines-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  text-align: left;
+}
+
+.internships-page .program-list li,
+.internships-page .eligibility-list li,
+.internships-page .application-list li,
+.internships-page .deadlines-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  animation: fadeInUp 0.6s ease-out both;
+  text-align: left;
+}
+
+.internships-page .program-list li::before,
+.internships-page .eligibility-list li::before,
+.internships-page .application-list li::before,
+.internships-page .deadlines-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.internships-page .program-list li b,
+.internships-page .eligibility-list li b,
+.internships-page .application-list li b,
+.internships-page .deadlines-list li b {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.internships-page .eligibility-list li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.internships-page .eligibility-list li a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* Application Status Wrapper */
+.internships-page .application-status-wrapper {
+  text-align: left;
+}
+
+.internships-page .application-status-wrapper p {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Application Button */
+.internships-page .application-btn-container {
+  margin: 2rem 0;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.internships-page .application-btn-container p {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  margin-bottom: 1.5rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.internships-page .application-btn-container p:first-of-type {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.internships-page .application-btn-container a,
+.internships-page .application-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #2d4d77 100%);
+  color: white !important;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(157, 157, 189, 0.3);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.internships-page .application-btn-container a::before,
+.internships-page .application-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #34a853 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.internships-page .application-btn-container a:hover,
+.internships-page .application-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(157, 157, 189, 0.4);
+  color: white !important;
+}
+
+.internships-page .application-btn-container a:hover::before,
+.internships-page .application-btn:hover::before {
+  left: 0;
+}
+
+.internships-page .application-btn-container i,
+.internships-page .application-btn i {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.internships-page .application-btn-container a:hover i,
+.internships-page .application-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Chart Container */
+.internships-page .chart-container {
+  background: linear-gradient(145deg, #ffffff, #fafafa);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 2rem 0;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.internships-page .chart-container:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .internships-page section.page-header h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .internships-page section.page-header {
+    padding: 3rem 0 !important;
+  }
+
+  .internships-page section.page-header h1 {
+    font-size: 2rem !important;
+  }
+
+  .internships-page .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .internships-page .content-section {
+    padding: 3rem 0;
+  }
+
+  .internships-page .chart-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .internships-page section.page-header {
+    padding: 2rem 0 !important;
+  }
+
+  .internships-page .content-section {
+    padding: 2rem 0;
+  }
+
+  .internships-page .application-btn-container a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .internships-page .chart-container {
+    padding: 1rem;
+  }
+}

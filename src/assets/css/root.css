@@ -1,0 +1,32 @@
+:root {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+*:focus-visible {
+  outline: none !important;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  padding: 0px;
+  margin: 0px;
+}
+input,select{
+  font-family: 'Poppins', sans-serif;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.hide {
+  display: none;
+}

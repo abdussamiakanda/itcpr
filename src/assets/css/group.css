@@ -1,0 +1,557 @@
+/* Group Page Scoped Styles */
+.group-page {
+  /* Isolate group page styles */
+}
+
+/* Page Header - Scoped to group page */
+.group-page section.page-header {
+  position: relative !important;
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%) !important;
+  padding: 4rem 0 !important;
+  overflow: hidden !important;
+  animation: fadeIn 0.8s ease-in !important;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+}
+
+.group-page section.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(157, 157, 189, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.group-page .page-header-content {
+  position: relative;
+  z-index: 2;
+  animation: slideInUp 0.8s ease-out;
+}
+
+.group-page section.page-header h1 {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  color: var(--text-color) !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--text-color) 0%, #2d4d77 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: fadeInUp 1s ease-out 0.3s both !important;
+  text-align: left !important;
+}
+
+.group-page .page-header-content p {
+  font-size: 1.25rem !important;
+  color: var(--light-text) !important;
+  line-height: 1.6 !important;
+  max-width: 700px !important;
+  animation: fadeInUp 1s ease-out 0.4s both !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+/* Content Sections */
+.group-page .content-section {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.group-page .content-section:nth-child(even) {
+  background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%);
+}
+
+.group-page .content-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+/* Section Header */
+.group-page .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.group-page .section-header h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Section Description */
+.group-page .section-description {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* Lists */
+.group-page .research-areas,
+.group-page .projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  text-align: left;
+}
+
+.group-page .research-areas li,
+.group-page .projects-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.6;
+  animation: fadeInUp 0.6s ease-out both;
+  text-align: left;
+}
+
+.group-page .research-areas li::before,
+.group-page .projects-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.group-page .research-areas li strong {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Team Grid */
+.group-page .team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Team Card */
+.group-page .team-card {
+  background: linear-gradient(145deg, #ffffff, #fafafa);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid transparent;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out both;
+  min-height: 140px;
+}
+
+.group-page .team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(157, 157, 189, 0.1), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.group-page .team-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.group-page .team-card:hover::before {
+  left: 100%;
+}
+
+.group-page .team-card img {
+  width: 120px;
+  height: 100%;
+  min-height: 140px;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  display: block;
+  align-self: stretch;
+}
+
+.group-page .team-info {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  text-align: left;
+}
+
+.group-page .team-info h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+.group-page .team-info .role {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--light-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.group-page .team-info .profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color) !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  margin-top: auto;
+}
+
+.group-page .team-info .profile-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #2d4d77 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.group-page .team-info .profile-link:hover {
+  color: white !important;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(157, 157, 189, 0.3);
+}
+
+.group-page .team-info .profile-link:hover::before {
+  left: 0;
+}
+
+.group-page .team-info .profile-link i {
+  transition: transform 0.3s ease;
+}
+
+.group-page .team-info .profile-link:hover i {
+  transform: translateX(5px);
+}
+
+/* Publications List */
+.group-page .publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Publication Card */
+.group-page .publication-card {
+  background: linear-gradient(145deg, #ffffff, #fafafa);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.group-page .publication-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.group-page .publication-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(157, 157, 189, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.group-page .publication-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.group-page .publication-card:hover::before {
+  left: 100%;
+}
+
+/* Publication Details */
+.group-page .publication-details {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  line-height: 1.8;
+  text-align: left;
+}
+
+.group-page .publication-details .title {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.group-page .publication-details .authors {
+  color: var(--light-text);
+}
+
+.group-page .publication-details .journal {
+  color: var(--primary-color);
+  font-style: italic;
+}
+
+.group-page .publication-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Publication Tags */
+.group-page .publication-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.group-page .publication-tags span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.375rem 0.75rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.group-page .publication-tags span.group-tag {
+  background-color: rgba(157, 157, 189, 0.1);
+  color: var(--primary-color);
+  border-color: rgba(157, 157, 189, 0.2);
+}
+
+.group-page .publication-tags span.journal-paper {
+  background-color: #f0f4ff;
+  color: #1a73e8;
+  border-color: #d2e3fc;
+}
+
+.group-page .publication-tags span.conference-paper {
+  background-color: #e8f5e9;
+  color: #34a853;
+  border-color: #c8e6c9;
+}
+
+.group-page .publication-tags span.conference-talk {
+  background-color: #fff3e0;
+  color: #f57c00;
+  border-color: #ffe0b2;
+}
+
+.group-page .publication-tags span.poster {
+  background-color: #fce4f6;
+  color: #c2185b;
+  border-color: #f8bbd0;
+}
+
+.group-page .publication-tags span.book {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border-color: #bbdefb;
+}
+
+.group-page .publication-tags span.thesis {
+  background-color: #f1f8e9;
+  color: #689f38;
+  border-color: #dcedc8;
+}
+
+.group-page .publication-tags span.technical-report {
+  background-color: #e8f5e9;
+  color: #388e3c;
+  border-color: #c8e6c9;
+}
+
+.group-page .publication-tags span.other {
+  background-color: #fce4ec;
+  color: #c2185b;
+  border-color: #f8bbd0;
+}
+
+.group-page .publication-card:hover .publication-tags span {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Publication Link */
+.group-page .publication-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color) !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.group-page .publication-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #2d4d77 100%);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.group-page .publication-link:hover {
+  color: white !important;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(157, 157, 189, 0.3);
+}
+
+.group-page .publication-link:hover::before {
+  left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .group-page section.page-header h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .group-page .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .group-page section.page-header {
+    padding: 3rem 0 !important;
+  }
+
+  .group-page section.page-header h1 {
+    font-size: 2rem !important;
+  }
+
+  .group-page .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .group-page .content-section {
+    padding: 3rem 0;
+  }
+
+  .group-page .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .group-page .publication-card {
+    padding: 1.5rem;
+  }
+
+  .group-page .publication-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .group-page .publication-link {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+
+  .group-page .publication-details {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .group-page section.page-header {
+    padding: 2rem 0 !important;
+  }
+
+  .group-page .content-section {
+    padding: 2rem 0;
+  }
+
+  .group-page .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .group-page .team-card {
+    flex-direction: column;
+  }
+
+  .group-page .team-card img {
+    width: 100%;
+    height: 200px;
+    min-height: 200px;
+  }
+
+  .group-page .publication-card {
+    padding: 1rem;
+  }
+
+  .group-page .publication-footer {
+    flex-direction: column;
+  }
+}
