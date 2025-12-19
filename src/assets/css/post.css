@@ -3,7 +3,7 @@
   overflow: visible;
 }
 
-/* Page Header - Scoped to news page */
+/* Page Header */
 .news-page section.page-header {
   position: relative !important;
   background: linear-gradient(135deg, var(--background-light) 0%, #ffffff 100%) !important;
@@ -17,10 +17,7 @@
 .news-page section.page-header::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: radial-gradient(circle at 20% 50%, rgba(157, 157, 189, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
@@ -45,6 +42,7 @@
   text-align: left !important;
 }
 
+/* Post Meta */
 .news-page .post-meta {
   display: flex;
   align-items: center;
@@ -76,12 +74,10 @@
 
 /* Content Section */
 .news-page .content-section {
-  padding: 0;
-  padding-bottom: 8rem;
+  padding: 0 0 8rem;
   background-color: white;
   overflow: visible;
   position: relative;
-  min-height: auto;
 }
 
 .news-page .content-section::before {
@@ -106,15 +102,11 @@
   text-align: left;
 }
 
-.news-page .content-wrapper p {
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
-}
-
 .news-page .content-wrapper p:last-child {
   margin-bottom: 0;
 }
 
+/* Images */
 .news-page .content-wrapper img.news-image {
   max-width: 70%;
   width: 70%;
@@ -138,67 +130,73 @@
   display: block;
 }
 
+/* Headings - Consolidated */
+.news-page .content-wrapper h1,
+.news-page .content-wrapper h2,
+.news-page .content-wrapper h3,
+.news-page .content-wrapper h4,
+.news-page .content-wrapper h5,
+.news-page .content-wrapper h6 {
+  color: var(--text-color);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 .news-page .content-wrapper h1 {
   font-size: 2rem;
-  color: var(--text-color);
   margin: 2.5rem 0 1rem;
   font-weight: 700;
-  line-height: 1.3;
 }
 
 .news-page .content-wrapper h2 {
   font-size: 1.75rem;
-  color: var(--text-color);
   margin: 2.5rem 0 1rem;
-  font-weight: 600;
-  line-height: 1.3;
 }
 
 .news-page .content-wrapper h3 {
   font-size: 1.5rem;
-  color: var(--text-color);
   margin: 2rem 0 1rem;
-  font-weight: 600;
-  line-height: 1.3;
 }
 
 .news-page .content-wrapper h4 {
   font-size: 1.25rem;
-  color: var(--text-color);
   margin: 1.5rem 0 0.75rem;
-  font-weight: 600;
-  line-height: 1.3;
 }
 
 .news-page .content-wrapper h5 {
   font-size: 1.125rem;
-  color: var(--text-color);
   margin: 1.5rem 0 0.75rem;
-  font-weight: 600;
 }
 
 .news-page .content-wrapper h6 {
   font-size: 1rem;
-  color: var(--text-color);
   margin: 1.5rem 0 0.75rem;
-  font-weight: 600;
 }
 
+/* Lists - Base */
 .news-page .content-wrapper ul,
 .news-page .content-wrapper ol {
   margin: 1.5rem 0;
   padding-left: 2rem;
-}
-
-.news-page .content-wrapper ul {
   list-style: none;
 }
 
-.news-page .content-wrapper ul li {
-  padding-left: 0.5rem;
-  position: relative;
+.news-page .content-wrapper ul li,
+.news-page .content-wrapper ol li {
   margin-bottom: 0.75rem;
   line-height: 1.8;
+  position: relative;
+}
+
+.news-page .content-wrapper ul li p 
+.news-page .content-wrapper ol li p {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Unordered Lists */
+.news-page .content-wrapper ul li {
+  padding-left: 0.5rem;
 }
 
 .news-page .content-wrapper ul li::before {
@@ -212,17 +210,13 @@
   font-weight: bold;
 }
 
+/* Ordered Lists */
 .news-page .content-wrapper ol {
-  list-style: none;
   counter-reset: list-counter;
-  padding-left: 2rem;
 }
 
 .news-page .content-wrapper ol li {
-  margin-bottom: 0.75rem;
-  line-height: 1.8;
   padding-left: 1.5rem;
-  position: relative;
   counter-increment: list-counter;
 }
 
@@ -236,37 +230,29 @@
   line-height: 1;
 }
 
+/* Nested Lists */
 .news-page .content-wrapper ul ul,
 .news-page .content-wrapper ol ol,
 .news-page .content-wrapper ul ol,
 .news-page .content-wrapper ol ul {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-/* Nested unordered lists - use ::before */
-.news-page .content-wrapper ul ul {
-  list-style: none;
   padding-left: 1.5rem;
+  list-style: none;
 }
 
-.news-page .content-wrapper ul ul li::before {
+/* Nested Unordered Lists */
+.news-page .content-wrapper ul ul li::before,
+.news-page .content-wrapper ol ul li::before {
   content: "◦";
-  color: var(--primary-color);
-  position: absolute;
-  top: 0.2em;
-  left: -1.5rem;
   font-size: 1.25rem;
-  line-height: 1;
-  font-weight: bold;
+  left: -1.5rem;
 }
 
-/* Nested ordered lists - use ::before with counter */
+/* Nested Ordered Lists */
 .news-page .content-wrapper ol ol,
 .news-page .content-wrapper ul ol {
-  list-style: none;
   counter-reset: nested-counter;
-  padding-left: 1.5rem;
 }
 
 .news-page .content-wrapper ol ol li,
@@ -277,35 +263,14 @@
 .news-page .content-wrapper ol ol li::before,
 .news-page .content-wrapper ul ol li::before {
   content: counter(nested-counter, lower-alpha) ".";
-  color: var(--primary-color);
-  position: absolute;
-  top: 0.2em;
   left: 0;
-  font-weight: bold;
-  line-height: 1;
 }
 
-/* Ordered list containing unordered list */
-.news-page .content-wrapper ol ul {
-  list-style: none;
-  padding-left: 1.5rem;
-}
-
-.news-page .content-wrapper ol ul li::before {
-  content: "◦";
-  color: var(--primary-color);
-  position: absolute;
-  top: 0.2em;
-  left: -1.5rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  font-weight: bold;
-}
-
+/* Links and Text Elements */
 .news-page .content-wrapper a {
   color: var(--primary-color);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease;
   border-bottom: 1px solid transparent;
 }
 
@@ -320,6 +285,16 @@
   color: var(--text-color);
 }
 
+.news-page .content-wrapper em {
+  font-style: italic;
+}
+
+.news-page .content-wrapper del {
+  text-decoration: line-through;
+  color: var(--light-text);
+}
+
+/* Blockquote */
 .news-page .content-wrapper blockquote {
   border-left: 4px solid var(--primary-color);
   margin: 2rem 0;
@@ -338,6 +313,7 @@
   margin-bottom: 0;
 }
 
+/* Code */
 .news-page .content-wrapper code {
   background: var(--background-light);
   padding: 0.2rem 0.4rem;
@@ -361,12 +337,14 @@
   font-size: 0.9em;
 }
 
+/* Horizontal Rule */
 .news-page .content-wrapper hr {
   border: none;
   border-top: 2px solid var(--border-color);
   margin: 2.5rem 0;
 }
 
+/* Tables */
 .news-page .content-wrapper table {
   width: 100%;
   border-collapse: collapse;
@@ -384,15 +362,6 @@
   background: var(--background-light);
   font-weight: 600;
   color: var(--text-color);
-}
-
-.news-page .content-wrapper em {
-  font-style: italic;
-}
-
-.news-page .content-wrapper del {
-  text-decoration: line-through;
-  color: var(--light-text);
 }
 
 /* Loading and Error States */
@@ -478,21 +447,10 @@
   animation: fadeInUp 0.6s ease-out both;
 }
 
-.news-page .error-state-content .suggestions-list li:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.news-page .error-state-content .suggestions-list li:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.news-page .error-state-content .suggestions-list li:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.news-page .error-state-content .suggestions-list li:nth-child(4) {
-  animation-delay: 0.4s;
-}
+.news-page .error-state-content .suggestions-list li:nth-child(1) { animation-delay: 0.1s; }
+.news-page .error-state-content .suggestions-list li:nth-child(2) { animation-delay: 0.2s; }
+.news-page .error-state-content .suggestions-list li:nth-child(3) { animation-delay: 0.3s; }
+.news-page .error-state-content .suggestions-list li:nth-child(4) { animation-delay: 0.4s; }
 
 .news-page .error-state-content .suggestions-list li::before {
   content: "→";
@@ -519,6 +477,7 @@
   border-bottom-color: var(--primary-color);
 }
 
+/* Error Actions - Buttons */
 .news-page .error-actions {
   display: flex;
   gap: 1rem;
@@ -548,6 +507,7 @@
   font-family: inherit;
 }
 
+/* Primary Button */
 .news-page .error-actions .btn-primary,
 .news-page .error-actions a.btn-primary {
   background-color: var(--primary-color);
@@ -586,6 +546,7 @@
   height: 300px;
 }
 
+/* Secondary Button */
 .news-page .error-actions .btn-secondary,
 .news-page .error-actions a.btn-secondary {
   background-color: white;
