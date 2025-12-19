@@ -102,6 +102,11 @@
   text-align: left;
 }
 
+.news-page .content-wrapper p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
 .news-page .content-wrapper p:last-child {
   margin-bottom: 0;
 }
@@ -188,9 +193,9 @@
   position: relative;
 }
 
-.news-page .content-wrapper ul li p 
+.news-page .content-wrapper ul li p,
 .news-page .content-wrapper ol li p {
-  margin-bottom: 0 !important;
+  margin: 0 !important;
   padding-bottom: 0 !important;
 }
 
