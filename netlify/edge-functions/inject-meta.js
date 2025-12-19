@@ -5,22 +5,25 @@
 
 // List of known social media crawlers
 const CRAWLER_USER_AGENTS = [
-  'facebookexternalhit',
-  'Facebot',
-  'Twitterbot',
-  'LinkedInBot',
-  'WhatsApp',
-  'Slackbot',
-  'SkypeUriPreview',
-  'Googlebot',
-  'bingbot',
-  'Slurp',
-  'DuckDuckBot',
-  'Baiduspider',
-  'YandexBot',
-  'Sogou',
-  'Exabot',
-  'ia_archiver'
+  // Social & previews
+  'facebookexternalhit','Facebot','Twitterbot','LinkedInBot','WhatsApp',
+  'Slackbot','Discordbot','TelegramBot','SkypeUriPreview',
+  'Pinterest','Pinterestbot','Redditbot','VKShare','VKontakte',
+  'WeChat','Weibo','Line','KakaoTalk','Applebot',
+  // Search engines
+  'Googlebot','Googlebot-Image','Googlebot-News','Googlebot-Video',
+  'AdsBot-Google','bingbot','BingPreview','Slurp','DuckDuckBot',
+  'Baiduspider','YandexBot','Sogou','Exabot','SeznamBot','Qwantify',
+  'MojeekBot','ia_archiver',
+  // SEO / crawlers
+  'AhrefsBot','SemrushBot','MJ12bot','DotBot','CCBot',
+  // AI crawlers
+  'GPTBot','ChatGPT-User','ClaudeBot','PerplexityBot',
+  'Amazonbot','Bytespider',
+  // Email / scanners
+  'Outlook','Thunderbird','YahooMailProxy','Gmail','ProtonMail',
+  // Monitoring
+  'Pingdom','UptimeRobot','StatusCake','Datadog','NewRelicPinger'
 ];
 
 function isCrawler(userAgent) {
