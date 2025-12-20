@@ -93,7 +93,14 @@ function News() {
           description="Loading news article..."
         />
         <div className="loading-state">
-          <p>Loading article...</p>
+          <div className="loading-container">
+            <div className="loading-spinner">
+              <div className="spinner-ring"></div>
+              <div className="spinner-ring"></div>
+              <div className="spinner-ring"></div>
+            </div>
+            <p className="loading-text">Loading article...</p>
+          </div>
         </div>
       </div>
     );
