@@ -209,6 +209,36 @@ function PageHeader({ newsData }) {
  * Displays the news article content
  */
 function ContentSection({ newsData }) {
+  // Configure marked to add target="_blank" to external links
+  const renderer = new marked.Renderer();
+  
+  // Override the link renderer
+  renderer.link = (href, title, text) => {
+    // Check if link is external (starts with http:// or https://)
+    const isExternal = href && (href.startsWith('http://') || href.startsWith('https://'));
+    
+    // Build the link attributes
+    let attributes = `href="${href}"`;
+    
+    if (title) {
+      attributes += ` title="${title}"`;
+    }
+    
+    // Add target="_blank" and rel="noopener noreferrer" for external links
+    if (isExternal) {
+      attributes += ' target="_blank" rel="noopener noreferrer"';
+    }
+    
+    return `<a ${attributes}>${text}</a>`;
+  };
+  
+  // Configure marked options
+  marked.setOptions({
+    renderer: renderer,
+    breaks: true,
+    gfm: true
+  });
+  
   return (
     <section className="content-section">
       <div className="container">
