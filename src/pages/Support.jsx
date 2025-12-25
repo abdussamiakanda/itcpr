@@ -11,16 +11,16 @@ function Support() {
     { name: 'Md Abu Jafar Pikul', country: 'United States' },
     { name: 'Md Abdus Sami Akanda', country: 'United States' },
     { name: 'Fariha Tasnim', country: 'United States' },
-    { name: 'Abhijeet Dutta', country: 'United States' },
-    { name: 'Tasnim Jahan', country: 'United States' },
-    { name: 'Menhajur Rahman Jitu', country: 'Canada' },
-    { name: 'Raihan Khan Nayan', country: 'Canada' },
-    { name: 'Hasib Mahmudul Hasan Rumi', country: 'Germany' },
-    { name: 'Monoara Aktar Bithi', country: 'Bangladesh' },
-    { name: 'Sharia Sharmin Tonni', country: 'Bangladesh' },
-    { name: 'Md Al Fahat Hossain', country: 'Bangladesh' },
-    { name: 'Md Koushik Alam', country: 'Bangladesh' },
-    { name: 'Sagar Chandra Roy', country: 'Bangladesh' }
+    { name: 'Abhijeet Dutta', country: 'Canada' },
+    { name: 'Tasnim Jahan', country: 'Bangladesh' },
+    { name: 'Menhajur Rahman Jitu', country: 'Germany' },
+    { name: 'Raihan Khan Nayan', country: 'Bangladesh' },
+    { name: 'Hasib Mahmudul Hasan Rumi', country: 'Bangladesh' },
+    { name: 'Monoara Aktar Bithi', country: 'United States' },
+    { name: 'Sharia Sharmin Tonni', country: 'United States' },
+    { name: 'Md Al Fahat Hossain', country: 'United States' },
+    { name: 'Md Koushik Alam', country: 'United States' },
+    { name: 'Sagar Chandra Roy', country: 'United States' }
   ];
 
   return (

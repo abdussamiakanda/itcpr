@@ -8,6 +8,7 @@ import '../assets/css/internships.css';
  * Displays internship program information
  */
 function Internships() {
+  const location = useLocation();
   const [applicationStatus, setApplicationStatus] = useState('');
   const chartRef = useRef(null);
   const chartInstanceRef = useRef(null);
@@ -236,6 +237,11 @@ function EligibilitySection() {
       <div className="container">
         <div className="section-header">
           <h2>Eligibility Criteria</h2>
+        </div>
+        <div className="eligibility-notice">
+          <p className="notice-text">
+            <strong>Important:</strong> We currently only accept internship applications from applicants based in Bangladesh.
+          </p>
         </div>
         <ul className="eligibility-list">
           <li>

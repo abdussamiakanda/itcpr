@@ -188,33 +188,63 @@
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid transparent;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid var(--border-color);
   position: relative;
   animation: fadeInUp 0.8s ease-out both;
+  overflow: hidden;
+  cursor: pointer;
 }
 
+/* Gradient overlay background */
 .support-page .benefactor-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(157, 157, 189, 0.1), transparent);
-  transition: left 0.5s ease;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(157, 157, 189, 0.08) 0%, rgba(157, 157, 189, 0.03) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   z-index: 1;
   border-radius: 16px;
+  pointer-events: none;
+}
+
+/* Shimmer/shine effect */
+.support-page .benefactor-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg) translateX(-100%);
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .support-page .benefactor-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 
+    0 24px 48px rgba(157, 157, 189, 0.3),
+    0 0 0 1px rgba(157, 157, 189, 0.15),
+    0 0 40px rgba(157, 157, 189, 0.1);
   border-color: var(--primary-color);
+  background: linear-gradient(145deg, #ffffff, #f8f8fa);
 }
 
 .support-page .benefactor-card:hover::before {
-  left: 100%;
+  opacity: 1;
+}
+
+.support-page .benefactor-card:hover::after {
+  transform: rotate(45deg) translateX(100%);
 }
 
 .support-page .benefactor-card b {
@@ -224,14 +254,30 @@
   margin-bottom: 0.5rem;
   font-weight: 600;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  letter-spacing: -0.01em;
+}
+
+.support-page .benefactor-card:hover b {
+  color: var(--primary-color);
+  transform: translateX(6px);
+  letter-spacing: 0;
 }
 
 .support-page .benefactor-card span {
   font-size: 0.9375rem;
   color: var(--light-text);
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: inline-block;
+}
+
+.support-page .benefactor-card:hover span {
+  color: var(--text-color);
+  transform: translateX(6px);
+  font-weight: 500;
 }
 
 /* Responsive Design */
