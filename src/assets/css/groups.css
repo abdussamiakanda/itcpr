@@ -122,46 +122,90 @@
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid var(--border-color);
   position: relative;
   animation: fadeInUp 0.8s ease-out both;
 }
 
+/* Gradient overlay background */
 .groups-page .group-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(157, 157, 189, 0.1), transparent);
-  transition: left 0.5s ease;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(157, 157, 189, 0.08) 0%, rgba(157, 157, 189, 0.03) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   z-index: 1;
+  pointer-events: none;
+}
+
+/* Shimmer/shine effect */
+.groups-page .group-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg) translateX(-100%);
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 3;
+  pointer-events: none;
 }
 
 .groups-page .group-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 
+    0 24px 48px rgba(157, 157, 189, 0.3),
+    0 0 0 1px rgba(157, 157, 189, 0.15),
+    0 0 40px rgba(157, 157, 189, 0.1);
   border-color: var(--primary-color);
+  background: linear-gradient(145deg, #ffffff, #f8f8fa);
 }
 
 .groups-page .group-card:hover::before {
-  left: 100%;
+  opacity: 1;
+}
+
+.groups-page .group-card:hover::after {
+  transform: rotate(45deg) translateX(100%);
+}
+
+.groups-page .group-image-wrapper {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.groups-page .group-card:hover .group-image-wrapper {
+  border-bottom-color: var(--primary-color);
 }
 
 .groups-page .group-image {
   width: 100%;
-  height: 240px;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
   position: relative;
   z-index: 2;
+  filter: brightness(1);
+  display: block;
 }
 
 .groups-page .group-card:hover .group-image {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  filter: brightness(1.05);
 }
 
 .groups-page .group-content {
@@ -169,7 +213,7 @@
   position: relative;
   z-index: 2;
   background: white;
-  transition: background 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .groups-page .group-card:hover .group-content {
@@ -182,6 +226,14 @@
   color: var(--text-color);
   margin: 0;
   font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  letter-spacing: -0.01em;
+}
+
+.groups-page .group-card:hover .group-content h3 {
+  color: var(--primary-color);
+  letter-spacing: 0;
+  transform: translateY(-2px);
 }
 
 /* Responsive Design */

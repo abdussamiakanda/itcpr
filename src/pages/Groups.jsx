@@ -22,12 +22,12 @@ function Groups() {
       path: '/group/photonics',
       image: '/assets/image/group/photonics.png',
       alt: 'Photonics Research'
-    },
-    {
-      name: 'Materials Group',
-      path: '/group/materials',
-      image: '/assets/image/group/materials.png',
-      alt: 'Materials Research'
+    // },
+    // {
+    //   name: 'Materials Group',
+    //   path: '/group/materials',
+    //   image: '/assets/image/group/materials.png',
+    //   alt: 'Materials Research'
     }
   ];
 
@@ -119,7 +119,9 @@ function GroupCard({ group, navigate, index }) {
       aria-label={`View ${group.name}`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      <img src={group.image} alt={group.alt} className="group-image" />
+      <div className="group-image-wrapper">
+        <img src={group.image} alt={group.alt} className="group-image" />
+      </div>
       <div className="group-content">
         <h3>{group.name}</h3>
       </div>
