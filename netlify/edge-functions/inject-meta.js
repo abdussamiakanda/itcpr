@@ -156,11 +156,14 @@ const GROUP_SEO_CONFIG = {
 async function fetchNewsArticle(slug) {
   try {
     const supabaseUrl = Deno.env.get('VITE_SUPABASE_URL') || 
-                       Deno.env.get('SUPABASE_URL') || 
-                       'https://fkhqjzzqbypkwrpnldgk.supabase.co';
+                       Deno.env.get('SUPABASE_URL');
     const supabaseKey = Deno.env.get('VITE_SUPABASE_ANON_KEY') || 
-                       Deno.env.get('SUPABASE_ANON_KEY') || 
-                       '';
+                       Deno.env.get('SUPABASE_ANON_KEY');
+    
+    if (!supabaseUrl || !supabaseKey) {
+      console.error('Supabase credentials not configured');
+      return null;
+    }
     
     const response = await fetch(`${supabaseUrl}/rest/v1/news?select=*`, {
       headers: {
