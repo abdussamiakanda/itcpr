@@ -246,7 +246,7 @@ function EligibilitySection() {
         <ul className="eligibility-list">
           <li>
             Open to students currently enrolled in an undergraduate program
-            (minimum 3rd year) or a graduate program in physics or a related field.
+            (minimum 3rd year) in physics or a related field.
           </li>
           <li>
             Demonstrated interest in the specific research fields offered at
