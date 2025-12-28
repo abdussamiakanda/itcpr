@@ -240,7 +240,11 @@ function EligibilitySection() {
         </div>
         <div className="eligibility-notice">
           <p className="notice-text">
-            <strong>Important:</strong> We currently only accept internship applications from applicants based in Bangladesh. Our program prioritizes underprivileged students and those lacking access to formal research environments. For more information, visit our <Link to="/story">About</Link> pages.
+            <strong>Important:</strong> We currently only accept internship
+            applications from applicants based in Bangladesh. Our program
+            prioritizes underprivileged students and those lacking access
+            to formal research environments. For more information, visit
+            our <Link to="/story">Story</Link> page.
           </p>
         </div>
         <ul className="eligibility-list">

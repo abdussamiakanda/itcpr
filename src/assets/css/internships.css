@@ -139,6 +139,18 @@
   font-weight: 600;
 }
 
+.internships-page .eligibility-notice .notice-text a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.internships-page .eligibility-notice .notice-text a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
 /* Lists */
 .internships-page .program-list,
 .internships-page .eligibility-list,
