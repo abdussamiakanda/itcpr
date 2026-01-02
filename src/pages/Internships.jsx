@@ -78,6 +78,7 @@ function Internships() {
       const rawdata = {
         '2025-1': { total: 16, accepted: 14, rejected: 2, drop: 4 },
         '2025-2': { total: 15, accepted: 10, rejected: 5, drop: 0 },
+        '2026-1': { total: 7, accepted: 2, rejected: 5, drop: 0 },
       };
 
       const dataset = {};
