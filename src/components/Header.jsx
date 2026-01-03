@@ -79,6 +79,10 @@ function Header() {
       </div>
       <div className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`} id="mobile-menu">
         <div className="mobile-menu-header">
+          <Link to="/" className="mobile-menu-logo" onClick={() => handleMenu('c')}>
+            <img src="/assets/image/logo.png" alt="ITCPR Logo" />
+            <span>ITCPR</span>
+          </Link>
           <button className="close-menu" onClick={() => handleMenu('c')}>
             <i className="fa-solid fa-xmark"></i>
           </button>
