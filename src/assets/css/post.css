@@ -746,6 +746,11 @@
     align-items: flex-start;
     gap: 1rem;
   }
+
+  .news-page .content-wrapper img.news-image {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {

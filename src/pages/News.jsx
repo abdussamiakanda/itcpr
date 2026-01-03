@@ -201,7 +201,7 @@ function PageHeader({ newsData }) {
             {newsData.author && (
               <div className="post-meta-item">
                 <i className="fa-regular fa-user"></i>
-                <span>By <span className="author">{newsData.author}</span></span>
+                <span><span className="author">{newsData.author}</span></span>
               </div>
             )}
           </div>

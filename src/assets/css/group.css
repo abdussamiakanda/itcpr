@@ -538,16 +538,6 @@
     grid-template-columns: 1fr;
   }
 
-  .group-page .team-card {
-    flex-direction: column;
-  }
-
-  .group-page .team-card img {
-    width: 100%;
-    height: 200px;
-    min-height: 200px;
-  }
-
   .group-page .publication-card {
     padding: 1rem;
   }
