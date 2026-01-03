@@ -43,7 +43,7 @@ function People() {
 
         const advisorsList = all.filter(p => p.position === "Advisor").sort(sortByName);
         const teamList = all
-          .filter(p => p.position !== null && p.position !== "Advisor")
+          .filter(p => p.position === "Staff")
           .sort((a, b) => {
             const ai = roleRank(a.position);
             const bi = roleRank(b.position);
