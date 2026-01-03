@@ -265,6 +265,12 @@ function TeamSection({ people }) {
  * Team Card Component
  */
 function TeamCard({ person, index }) {
+  const isValidUrl = (url) => {
+    if (!url) return false;
+    const trimmed = String(url).trim();
+    return trimmed.startsWith('http://') || trimmed.startsWith('https://');
+  };
+
   return (
     <div 
       className="team-card"
@@ -274,9 +280,11 @@ function TeamCard({ person, index }) {
       <div className="team-info">
         <h3>{person.name}</h3>
         <span className="role">{person.role}</span>
-        <a href={person.url} className="profile-link" target="_blank" rel="noopener noreferrer">
-          Google Scholar <i className="fa-solid fa-arrow-right"></i>
-        </a>
+        {isValidUrl(person.url) && (
+          <a href={person.url} className="profile-link" target="_blank" rel="noopener noreferrer">
+            Google Scholar <i className="fa-solid fa-arrow-right"></i>
+          </a>
+        )}
       </div>
     </div>
   );

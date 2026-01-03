@@ -69,6 +69,12 @@ function People() {
 
   const safeImg = url => (url && String(url).trim()) || "/assets/image/placeholder-avatar.png";
   const safeUrl = url => (url && String(url).trim()) || "#";
+  const isValidUrl = url => {
+    if (!url) return false;
+    const trimmed = String(url).trim();
+    if (trimmed === '#' || trimmed === '') return false;
+    return trimmed.startsWith('http://') || trimmed.startsWith('https://');
+  };
 
   /**
    * Page Header Component
@@ -123,9 +129,11 @@ function People() {
       <div className="team-info">
         <h3>{person.name || ""}</h3>
         <p>{person.position || ""}</p>
-        <a href={safeUrl(person.url)} target="_blank" className="team-link" rel="noopener noreferrer">
-          Google Scholar <i className="fa-solid fa-arrow-right"></i>
-        </a>
+        {isValidUrl(person.url) && (
+          <a href={safeUrl(person.url)} target="_blank" className="team-link" rel="noopener noreferrer">
+            Google Scholar <i className="fa-solid fa-arrow-right"></i>
+          </a>
+        )}
       </div>
     </div>
   );
@@ -140,9 +148,11 @@ function People() {
       <div className="team-info">
         <h3>{person.name || ""}</h3>
         <p>{person.institute || ""}</p>
-        <a href={safeUrl(person.url)} target="_blank" className="team-link" rel="noopener noreferrer">
-          Google Scholar <i className="fa-solid fa-arrow-right"></i>
-        </a>
+        {isValidUrl(person.url) && (
+          <a href={safeUrl(person.url)} target="_blank" className="team-link" rel="noopener noreferrer">
+            Google Scholar <i className="fa-solid fa-arrow-right"></i>
+          </a>
+        )}
       </div>
     </div>
   );
@@ -157,9 +167,11 @@ function People() {
       <div className="team-info">
         <h3>{person.name || ""}</h3>
         <p>{person.group ? `${person.group} Group Lead` : "Group Lead"}</p>
-        <a href={safeUrl(person.url)} target="_blank" className="team-link" rel="noopener noreferrer">
-          Google Scholar <i className="fa-solid fa-arrow-right"></i>
-        </a>
+        {isValidUrl(person.url) && (
+          <a href={safeUrl(person.url)} target="_blank" className="team-link" rel="noopener noreferrer">
+            Google Scholar <i className="fa-solid fa-arrow-right"></i>
+          </a>
+        )}
       </div>
     </div>
   );
@@ -168,18 +180,21 @@ function People() {
    * Overlay Card Component
    * Card for members, collaborators, and interns with overlay effect
    */
-  const OverlayCard = ({ person, index }) => (
-    <div 
-      className="member-card"
-      onClick={() => window.open(safeUrl(person.url), "_blank", "noopener")}
-      style={{ cursor: 'pointer', animationDelay: `${index * 0.03}s` }}
-    >
-      <img src={safeImg(person.image)} alt={person.name || "Member"} />
-      <div className="member-overlay">
-        <span className="member-name">{person.name || ""}</span>
+  const OverlayCard = ({ person, index }) => {
+    const hasValidUrl = isValidUrl(person.url);
+    return (
+      <div 
+        className="member-card"
+        onClick={hasValidUrl ? () => window.open(safeUrl(person.url), "_blank", "noopener") : undefined}
+        style={{ cursor: hasValidUrl ? 'pointer' : 'default', animationDelay: `${index * 0.03}s` }}
+      >
+        <img src={safeImg(person.image)} alt={person.name || "Member"} />
+        <div className="member-overlay">
+          <span className="member-name">{person.name || ""}</span>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="people-page">
