@@ -76,14 +76,23 @@ const OverlayCard = memo(({ person, index }) => {
   );
 });
 
-const PeopleSection = memo(({ title, description, people, CardComponent, gridClass, emptyMessage }) => (
+const PeopleSection = memo(({ title, description, people, CardComponent, gridClass, emptyMessage, isLoading }) => (
   <section className="team-section">
     <div className="container">
       <div className="section-header">
         <h2>{title}</h2>
       </div>
       <p className="section-description">{description}</p>
-      {people.length === 0 && emptyMessage ? (
+      {isLoading ? (
+        <div className="people-loading">
+          <div className="loading-spinner">
+            <div className="spinner-ring"></div>
+            <div className="spinner-ring"></div>
+            <div className="spinner-ring"></div>
+          </div>
+          <p className="loading-text">Loading...</p>
+        </div>
+      ) : people.length === 0 && emptyMessage ? (
         <p className="empty-message">{emptyMessage}</p>
       ) : (
         <div className={gridClass}>
@@ -110,6 +119,7 @@ function People() {
     collaborators: [],
     interns: []
   });
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     let isMounted = true;
@@ -160,9 +170,13 @@ function People() {
             collaborators: byRole("Collaborator"),
             interns: byRole("Intern")
           });
+          setIsLoading(false);
         }
       } catch (err) {
         console.error("Error building people grids:", err);
+        if (isMounted) {
+          setIsLoading(false);
+        }
       }
     };
 
@@ -200,6 +214,7 @@ function People() {
         people={peopleData.team}
         CardComponent={TeamCard}
         gridClass="team-grid"
+        isLoading={isLoading}
       />
       <PeopleSection 
         title="Our Advisors"
@@ -207,6 +222,7 @@ function People() {
         people={peopleData.advisors}
         CardComponent={AdvisorCard}
         gridClass="team-grid"
+        isLoading={isLoading}
       />
       <PeopleSection 
         title="Research Group Leads"
@@ -214,6 +230,7 @@ function People() {
         people={peopleData.leads}
         CardComponent={LeadCard}
         gridClass="team-grid"
+        isLoading={isLoading}
       />
       <PeopleSection 
         title="Members"
@@ -221,6 +238,7 @@ function People() {
         people={peopleData.members}
         CardComponent={OverlayCard}
         gridClass="members-grid"
+        isLoading={isLoading}
       />
       <PeopleSection 
         title="Collaborators"
@@ -228,6 +246,7 @@ function People() {
         people={peopleData.collaborators}
         CardComponent={OverlayCard}
         gridClass="members-grid"
+        isLoading={isLoading}
       />
       <PeopleSection 
         title="Interns"
@@ -236,6 +255,7 @@ function People() {
         CardComponent={OverlayCard}
         gridClass="members-grid"
         emptyMessage="Interns data not found!"
+        isLoading={isLoading}
       />
     </div>
   );

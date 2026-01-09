@@ -14,6 +14,7 @@ function GroupPage() {
   const [publications, setPublications] = useState([]);
   const [people, setPeople] = useState([]);
   const [groupInfo, setGroupInfo] = useState(null);
+  const [isLoadingPeople, setIsLoadingPeople] = useState(true);
 
   const groupData = {
     spintronics: {
@@ -81,33 +82,39 @@ function GroupPage() {
     setGroupInfo(groupData[groupName] || groupData.spintronics);
 
     const fetchData = async () => {
-      const [pubResult, peopleResult] = await Promise.all([
-        supabase
-          .from('publications')
-          .select('*')
-          .eq('group', capitalizedGroupName)
-          .order('year', { ascending: true })
-          .order('month', { ascending: true }),
-        supabase
-          .from('itcpr_people')
-          .select('*')
-          .eq('group', capitalizedGroupName)
-          .order('name', { ascending: true })
-      ]);
+      try {
+        const [pubResult, peopleResult] = await Promise.all([
+          supabase
+            .from('publications')
+            .select('*')
+            .eq('group', capitalizedGroupName)
+            .order('year', { ascending: true })
+            .order('month', { ascending: true }),
+          supabase
+            .from('itcpr_people')
+            .select('*')
+            .eq('group', capitalizedGroupName)
+            .order('name', { ascending: true })
+        ]);
 
-      if (!pubResult.error && pubResult.data) {
-        setPublications(pubResult.data);
-      }
-      if (!peopleResult.error && peopleResult.data) {
-        const roleOrder = ['Lead', 'Supervisor', 'Member', 'Collaborator', 'Intern'];
-        const roleIndex = new Map(roleOrder.map((r, i) => [r, i]));
-        const sorted = peopleResult.data.sort((a, b) => {
-          const ai = roleIndex.has(a.role) ? roleIndex.get(a.role) : Number.POSITIVE_INFINITY;
-          const bi = roleIndex.has(b.role) ? roleIndex.get(b.role) : Number.POSITIVE_INFINITY;
-          if (ai !== bi) return ai - bi;
-          return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
-        });
-        setPeople(sorted);
+        if (!pubResult.error && pubResult.data) {
+          setPublications(pubResult.data);
+        }
+        if (!peopleResult.error && peopleResult.data) {
+          const roleOrder = ['Lead', 'Supervisor', 'Member', 'Collaborator', 'Intern'];
+          const roleIndex = new Map(roleOrder.map((r, i) => [r, i]));
+          const sorted = peopleResult.data.sort((a, b) => {
+            const ai = roleIndex.has(a.role) ? roleIndex.get(a.role) : Number.POSITIVE_INFINITY;
+            const bi = roleIndex.has(b.role) ? roleIndex.get(b.role) : Number.POSITIVE_INFINITY;
+            if (ai !== bi) return ai - bi;
+            return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+          });
+          setPeople(sorted);
+        }
+      } catch (err) {
+        console.error("Error fetching group data:", err);
+      } finally {
+        setIsLoadingPeople(false);
       }
     };
 
@@ -149,7 +156,7 @@ function GroupPage() {
           )}
         </>
       )}
-      <TeamSection people={people} />
+      <TeamSection people={people} isLoading={isLoadingPeople} />
       <PublicationsSection publications={publications} />
     </div>
   );
@@ -240,14 +247,23 @@ function ProjectsSection({ projects }) {
 /**
  * Team Section Component
  */
-function TeamSection({ people }) {
+function TeamSection({ people, isLoading }) {
   return (
     <section className="content-section">
       <div className="container">
         <div className="section-header">
           <h2>Team Members</h2>
         </div>
-        {people.length === 0 ? (
+        {isLoading ? (
+          <div className="group-loading">
+            <div className="loading-spinner">
+              <div className="spinner-ring"></div>
+              <div className="spinner-ring"></div>
+              <div className="spinner-ring"></div>
+            </div>
+            <p className="loading-text">Loading...</p>
+          </div>
+        ) : people.length === 0 ? (
           <p className="section-description">Team members will be available soon.</p>
         ) : (
           <div className="team-grid">
