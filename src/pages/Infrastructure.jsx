@@ -27,7 +27,7 @@ function Infrastructure() {
       { name: "Terminal", icon: "fa-solid fa-laptop-code", link: "https://terminal.itcpr.org", desc: "Online terminal for secure command-line access to ITCPR resources." },
       { name: "Server", icon: "fa-solid fa-server", link: "https://server.itcpr.org", desc: "Server portal for network access, Zero Trust configuration, and management." },
       { name: "Library", icon: "fa-solid fa-book-open-reader", link: "https://library.itcpr.org", desc: "Digital library with research papers, books, and learning resources." },
-      { name: "cloud", icon: "fa-solid fa-cloud", link: "https://cloud.itcpr.org", desc: "Cloud service for ITCPR members, interated with Github file storage and management." },
+      { name: "Cloud", icon: "fa-solid fa-cloud", link: "https://cloud.itcpr.org", desc: "Cloud service for ITCPR members, interated with Github file storage and management." },
       { name: "CodeLab", icon: "fa-solid fa-atom", link: "https://code.itcpr.org", desc: "Collaborative coding environment for research and development." },
       { name: "JupyterLab", icon: "fa-brands fa-python", link: "https://jupyter.itcpr.org", desc: "Interactive computational notebooks for data analysis and simulation." },
       { name: "Overleaf", icon: "fas fa-superscript", link: "https://overleaf.itcpr.org", desc: "Collaborative LaTeX platform for academic writing and publishing." },
