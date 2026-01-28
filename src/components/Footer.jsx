@@ -24,13 +24,16 @@ function Footer() {
     setIsSubmitting(true);
 
     try {
-      const { data: existing, error: fetchError } = await supabase
+      const { data: existingRows, error: fetchError } = await supabase
         .from('subscribers')
         .select('email')
         .eq('email', emailValue)
-        .maybeSingle();
+        .limit(1);
 
-      if (existing) {
+      if (fetchError) {
+        console.error("Subscriber check error:", fetchError);
+        setMessage("Something went wrong. Please try again.");
+      } else if (existingRows?.length > 0) {
         setMessage("You're already subscribed!");
       } else {
         const { error: insertError } = await supabase
