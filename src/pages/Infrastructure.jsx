@@ -23,7 +23,7 @@ function Infrastructure() {
       { name: "Application", icon: "fa-solid fa-clipboard", link: "https://apply.itcpr.org", desc: "Application portal for ITCPR internship program." },
       { name: "Portal", icon: "fa-solid fa-door-open", link: "https://portal.itcpr.org", desc: "Login portal for ITCPR members to access resources and services." },
       { name: "Webmail", icon: "fa-solid fa-envelope", link: "https://webmail.itcpr.org", desc: "Access your @mail.itcpr.org inbox via our custom webmail interface." },
-      { name: "Payments", icon: "fa-solid fa-money-bill", link: "https://pay.itcpr.org", desc: "Payment portal for ITCPR members to access invoices and payments." },
+      { name: "Account", icon: "fa-solid fa-money-bill", link: "https://account.itcpr.org", desc: "Account portal for ITCPR members to access invoices and payments." },
       { name: "Terminal", icon: "fa-solid fa-laptop-code", link: "https://terminal.itcpr.org", desc: "Online terminal for secure command-line access to ITCPR resources." },
       { name: "Server", icon: "fa-solid fa-server", link: "https://server.itcpr.org", desc: "Server portal for network access, Zero Trust configuration, and management." },
       { name: "Library", icon: "fa-solid fa-book-open-reader", link: "https://library.itcpr.org", desc: "Digital library with research papers, books, and learning resources." },
